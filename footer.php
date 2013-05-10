@@ -7,16 +7,21 @@
  * @package ac inuk
  */
 ?>
-
+               </div><!-- /.grid -->
+            </div><!-- /.container -->
 	</div><!-- #main -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+            <div class="container">
+                <div class="grid">
 		<div class="site-info">
 			<?php do_action( 'ac_inuk_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'ac_inuk' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'ac_inuk' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'ac_inuk' ), 'ac inuk', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div><!-- .site-info -->
+                </div><!-- /.grid -->
+            </div><!-- /.container  -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

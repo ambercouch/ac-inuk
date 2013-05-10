@@ -25,6 +25,8 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
+            <div class="container">
+                <div class="grid">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
@@ -36,6 +38,10 @@
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
+                </div><!-- /.grid -->
+            </div><!-- /.container -->
 	</header><!-- #masthead -->
 
 	<div id="main" class="site-main">
+            <div class="container" >
+                <div class="grid">

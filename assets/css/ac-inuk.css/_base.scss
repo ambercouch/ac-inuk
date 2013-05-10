@@ -1,0 +1,25 @@
+/*
+Document   : base
+Created on : 06-May-2013, 17:44:45
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+html{
+  
+}
+
+.container{
+  margin:0 auto;
+  max-width:720px;
+  @include media-query(desk){  
+          max-width:1200px; 
+          }
+ 
+}
