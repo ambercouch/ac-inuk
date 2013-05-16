@@ -22,7 +22,25 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+    
+    <div class="callbacks_container">
+        <ul class="rslides" id="slider4">
+          <li>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
+            <p class="caption">This is a caption</p>
+          </li>
+          <li>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/2.jpg" alt="">
+            <p class="caption">This is another caption</p>
+          </li>
+          <li>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img//3.jpg" alt="">
+            <p class="caption">The third caption</p>
+          </li>
+        </ul>
+      </div>
+    
+<div id="page"  class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
             <div class="container">
@@ -31,13 +49,7 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
-
-		<nav id="site-navigation" class="navigation-main" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'ac_inuk' ); ?></h1>
-			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'ac_inuk' ); ?>"><?php _e( 'Skip to content', 'ac_inuk' ); ?></a></div>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<?php do_action('site_nav'); ?>
                 </div><!-- /.grid -->
             </div><!-- /.container -->
 	</header><!-- #masthead -->

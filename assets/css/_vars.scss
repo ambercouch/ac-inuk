@@ -59,7 +59,7 @@ $use-greybox:       false;
  * Place any variables that should override inuit.css’ defaults here.
  */
 
-
+$brand-round:3px;
 
 
 
@@ -69,3 +69,16 @@ $use-greybox:       false;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+$white: #fff;
+$grey-light: #ccc;
+$grey-dark: #222;
+$brown: #C37850;
+$orange:  #EF9D70;
+$brand-color:       $orange;
+$brand-face:        "Helvetica Neue", sans-serif;
+
+$colour--button: $grey-light;
+$color--link: $orange;
+$color--heading_primary: $orange;
+$color--text: $grey-dark;
+$slider-height: 450px;

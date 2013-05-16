@@ -1,0 +1,41 @@
+/*
+Document   : header
+Created on : 11-May-2013, 15:50:53
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+[role="banner"]{
+    background: rgba(#FFF, 0.9);    
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    .container{
+        padding-top: $base-spacing-unit;
+        .site-branding{
+            @extend .desk-two-fifths;
+            @extend .grid__item;
+            .site-title{
+                line-height: 1;
+                margin-bottom: $half-spacing-unit;  
+                a{
+                    line-height: 1;
+                    text-decoration: none;
+                }
+            }
+        }
+        .navigation-main{
+            @extend .desk-three-fifths;
+            @extend .grid__item;
+        }
+        .site-description{
+            @extend.zeta
+        }
+    }
+}

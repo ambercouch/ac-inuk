@@ -12,14 +12,46 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 */
 
 html{
-  
-}
-
-.container{
-  margin:0 auto;
-  max-width:720px;
-  @include media-query(desk){  
-          max-width:1200px; 
-          }
- 
+  color: $color--text;
+    a{
+        color: $color--link;
+        &:link{
+            color: $color--link;
+        }
+        &:visited{
+            color: $color--link;
+        }
+        &:hover{
+            color: darken($color--link, 10%);
+        }
+        &:focus{
+            color: darken($color--link, 10%);
+        }
+    }
+    h1{
+        color: $color--heading_primary
+    }
+    h2{
+        color: $color--heading_primary
+    }
+    h3{
+        color: $color--heading_primary
+    }
+    h4{
+        color: $color--heading_primary
+    }
+    h5{
+        color: $color--heading_primary
+    }
+    h6{
+        color: $color--heading_primary
+    }
+        
+    .container{
+      margin:0 auto;        
+      max-width:720px;
+      @include media-query(desk){  
+              max-width:1200px; 
+      }
+    }
 }

@@ -1,0 +1,51 @@
+/*
+Document   : _nav
+Created on : 11-May-2013, 17:38:17
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+.nav{
+   &.nav--right{
+          float: right;  
+   }
+    
+   &.nav--pill{
+       font-size: 0;
+     li{
+         margin-left: $half-spacing-unit;
+         &:first-child{
+             margin-left: 0;
+         }
+         a{
+         font-size: $base-font-size; 
+         padding: 0.3em 1em;
+         background: $colour--button;
+         text-decoration: none;
+         color: $white;
+         @include vendor(border-radius, $brand-round);
+         margin-bottom:$half-spacing-unit;
+         &:hover{
+            background: darken($colour--button, 10%);                 }
+         }
+     }
+     &.nav--pill--small a{
+         @extend .zeta;
+     }
+     &.nav--pill--mini a{
+         font-size: $milli-size;
+     }
+     &.nav--pill--large a{
+         @extend .delta;
+     }
+     &.nav--pill--xlarge a{
+          @extend .gamma;
+     }
+   }
+}

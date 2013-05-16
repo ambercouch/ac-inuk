@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    Inuit Fixed
+\*------------------------------------*/
+
+/*
+ * display inline-block white-space fix
+ */
+.grid{
+  font-size: 0;    
+}
+.grid > *{
+  font-size: $base-font-size;    
+}
+.grid > .grid{
+  font-size: 0;    
+}

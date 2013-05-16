@@ -997,14 +997,14 @@ h2, .beta {
 }
 
 /* line 17, assets/css/inuit.css/base/_headings.scss */
-h3, .gamma {
+h3, .gamma, .nav.nav--pill.nav--pill--xlarge a {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
 }
 
 /* line 20, assets/css/inuit.css/base/_headings.scss */
-h4, .delta {
+h4, .delta, .nav.nav--pill.nav--pill--large a, .widget .widget-title {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2;
@@ -1018,7 +1018,7 @@ h5, .epsilon {
 }
 
 /* line 26, assets/css/inuit.css/base/_headings.scss */
-h6, .zeta {
+h6, .zeta, [role="banner"] .container .site-description, .nav.nav--pill.nav--pill--small a {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.71429;
@@ -1300,7 +1300,7 @@ img[height] {
  */
 /* line 27, assets/css/inuit.css/base/_images.scss */
 .img--round {
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 /**
@@ -1901,7 +1901,7 @@ label,
  * Grid
  */
 /* line 59, assets/css/inuit.css/objects/_grids.scss */
-.grid__item {
+.grid__item, [role="banner"] .container .site-branding, [role="banner"] .container .navigation-main, .site-main .container .content-area, .site-main .container .widget-area {
   display: inline-block;
   width: 100%;
   padding-left: 24px;
@@ -2862,22 +2862,22 @@ label,
   * Fifths
   */
   /* line 44, assets/css/inuit.css/generic/_widths.scss */
-  .desk-one-fifth, .desk-two-tenths {
+  .desk-one-fifth, .desk-two-tenths, .site-main .container .widget-area {
     width: 20%;
   }
 
   /* line 45, assets/css/inuit.css/generic/_widths.scss */
-  .desk-two-fifths, .desk-four-tenths {
+  .desk-two-fifths, .desk-four-tenths, [role="banner"] .container .site-branding {
     width: 40%;
   }
 
   /* line 46, assets/css/inuit.css/generic/_widths.scss */
-  .desk-three-fifths, .desk-six-tenths {
+  .desk-three-fifths, .desk-six-tenths, [role="banner"] .container .navigation-main {
     width: 60%;
   }
 
   /* line 47, assets/css/inuit.css/generic/_widths.scss */
-  .desk-four-fifths, .desk-eight-tenths {
+  .desk-four-fifths, .desk-eight-tenths, .site-main .container .content-area {
     width: 80%;
   }
 
@@ -2991,7 +2991,7 @@ label,
 /* line 8, assets/css/inuit.css/generic/_brand.scss */
 .brand {
   font-family: "Helvetica Neue", sans-serif!important;
-  color: #4a8ec2!important;
+  color: #ef9d70!important;
 }
 
 /* line 12, assets/css/inuit.css/generic/_brand.scss */
@@ -3002,7 +3002,7 @@ label,
 /* line 16, assets/css/inuit.css/generic/_brand.scss */
 .brand-color,
 .brand-colour {
-  color: #4a8ec2!important;
+  color: #ef9d70!important;
 }
 
 /*------------------------------------*\
@@ -3466,6 +3466,27 @@ label,
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
+/*------------------------------------*\
+    Inuit Fixed
+\*------------------------------------*/
+/*
+ * display inline-block white-space fix
+ */
+/* line 8, assets/css/ac-inuk.css/_inuit-fixes.scss */
+.grid {
+  font-size: 0;
+}
+
+/* line 11, assets/css/ac-inuk.css/_inuit-fixes.scss */
+.grid > * {
+  font-size: 16px;
+}
+
+/* line 14, assets/css/ac-inuk.css/_inuit-fixes.scss */
+.grid > .grid {
+  font-size: 0;
+}
+
 /*
 Document   : base
 Created on : 06-May-2013, 17:44:45
@@ -3477,14 +3498,273 @@ Purpose of the stylesheet follows.
 TODO customize this sample style
 Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 */
+/* line 14, assets/css/ac-inuk.css/_base.scss */
+html {
+  color: #222222;
+}
+/* line 16, assets/css/ac-inuk.css/_base.scss */
+html a {
+  color: #ef9d70;
+}
 /* line 18, assets/css/ac-inuk.css/_base.scss */
-.container {
+html a:link {
+  color: #ef9d70;
+}
+/* line 21, assets/css/ac-inuk.css/_base.scss */
+html a:visited {
+  color: #ef9d70;
+}
+/* line 24, assets/css/ac-inuk.css/_base.scss */
+html a:hover {
+  color: #ea7e42;
+}
+/* line 27, assets/css/ac-inuk.css/_base.scss */
+html a:focus {
+  color: #ea7e42;
+}
+/* line 31, assets/css/ac-inuk.css/_base.scss */
+html h1 {
+  color: #ef9d70;
+}
+/* line 34, assets/css/ac-inuk.css/_base.scss */
+html h2 {
+  color: #ef9d70;
+}
+/* line 37, assets/css/ac-inuk.css/_base.scss */
+html h3 {
+  color: #ef9d70;
+}
+/* line 40, assets/css/ac-inuk.css/_base.scss */
+html h4 {
+  color: #ef9d70;
+}
+/* line 43, assets/css/ac-inuk.css/_base.scss */
+html h5 {
+  color: #ef9d70;
+}
+/* line 46, assets/css/ac-inuk.css/_base.scss */
+html h6 {
+  color: #ef9d70;
+}
+/* line 50, assets/css/ac-inuk.css/_base.scss */
+html .container {
   margin: 0 auto;
   max-width: 720px;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 18, assets/css/ac-inuk.css/_base.scss */
-  .container {
+  /* line 50, assets/css/ac-inuk.css/_base.scss */
+  html .container {
     max-width: 1200px;
   }
+}
+
+/*
+Document   : header
+Created on : 11-May-2013, 15:50:53
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/* line 13, assets/css/ac-inuk.css/_header.scss */
+[role="banner"] {
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+/* line 19, assets/css/ac-inuk.css/_header.scss */
+[role="banner"] .container {
+  padding-top: 24px;
+}
+/* line 24, assets/css/ac-inuk.css/_header.scss */
+[role="banner"] .container .site-branding .site-title {
+  line-height: 1;
+  margin-bottom: 12px;
+}
+/* line 27, assets/css/ac-inuk.css/_header.scss */
+[role="banner"] .container .site-branding .site-title a {
+  line-height: 1;
+  text-decoration: none;
+}
+
+/*
+Document   : _main
+Created on : 11-May-2013, 19:49:47
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/* line 14, assets/css/ac-inuk.css/_main.scss */
+.site-main {
+  background: #FFFFFF;
+  position: relative;
+  top: 450px;
+  z-index: 333;
+}
+/* line 19, assets/css/ac-inuk.css/_main.scss */
+.site-main .container {
+  padding-top: 24px;
+}
+
+/*
+Document   : _nav
+Created on : 11-May-2013, 17:38:17
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/* line 15, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--right {
+  float: right;
+}
+/* line 19, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--pill {
+  font-size: 0;
+}
+/* line 21, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--pill li {
+  margin-left: 12px;
+}
+/* line 23, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--pill li:first-child {
+  margin-left: 0;
+}
+/* line 26, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--pill li a {
+  font-size: 16px;
+  padding: 0.3em 1em;
+  background: #cccccc;
+  text-decoration: none;
+  color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 12px;
+}
+/* line 34, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--pill li a:hover {
+  background: #b3b3b3;
+}
+/* line 41, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--pill.nav--pill--mini a {
+  font-size: 12px;
+}
+
+/*
+Document   : widgets
+Created on : 13-May-2013, 20:15:51
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/* line 18, assets/css/ac-inuk.css/_widgets.scss */
+.widget ul {
+  margin-left: 0;
+}
+/* line 20, assets/css/ac-inuk.css/_widgets.scss */
+.widget ul li {
+  list-style: none;
+}
+
+/*
+Document   : css-plugins
+Created on : 11-May-2013, 23:57:30
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/* line 14, assets/css/ac-inuk.css/_css-plugins.scss */
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 23, assets/css/ac-inuk.css/_css-plugins.scss */
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* line 32, assets/css/ac-inuk.css/_css-plugins.scss */
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+/* line 38, assets/css/ac-inuk.css/_css-plugins.scss */
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+}
+
+/*
+Document   : _responsive-slider
+Created on : 12-May-2013, 13:57:47
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/* line 14, assets/css/ac-inuk.css/_responsive-slider.scss */
+.callbacks_container {
+  height: 650px;
+  max-height: 450px;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+}
+/* line 21, assets/css/ac-inuk.css/_responsive-slider.scss */
+.callbacks_container .callbacks_nav {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 45%;
+  z-index: 10;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.3em 0.5em;
+  color: #fff;
+  text-decoration: none;
+}
+/* line 32, assets/css/ac-inuk.css/_responsive-slider.scss */
+.callbacks_container .callbacks_nav.next {
+  right: 0;
 }

@@ -1,0 +1,30 @@
+/*
+Document   : _main
+Created on : 11-May-2013, 19:49:47
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+.site-main{
+    background: #FFFFFF;
+    position: relative;
+    top: $slider-height;
+    z-index: 333;
+    .container{
+        padding-top: $base-spacing-unit;
+        .content-area{
+             @extend .grid__item;
+             @extend .desk-four-fifths;
+        }
+        .widget-area{
+            @extend .grid__item;
+            @extend .desk-one-fifth;
+        }
+    }
+}
