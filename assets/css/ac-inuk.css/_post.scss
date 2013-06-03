@@ -1,0 +1,61 @@
+/*
+Document   : _post
+Created on : 19-May-2013, 13:45:15
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+.post {
+    .entry-header{
+        text-align: center;
+            .entry-title{
+                 font-family:'Crete Round';
+                 font-style: italic;
+                 font-size: 1.3em;
+                 background: $wine;
+                 color: $white;
+                 font-weight: 400;
+                 display: inline-block;
+                 padding: $half-spacing-unit $base-spacing-unit;
+                 position: relative;
+                 @include vendor(box-shadow, 0 1.6em 0 -18px #FFF, 0 0 30px 0 rgba(0, 0, 0, 0.1));
+                 &:before{
+                    content: '';
+                    position: absolute;
+                    top: 18px;	
+                    left: -40%;
+                    background: $wine;
+                    width: 180%;
+                    height: 0;
+                    border: 1.2em solid transparent;
+                    border-left-color: $white;
+                    border-right-color: $white;
+                    z-index: -1;
+                 }
+                 &:after{
+                    content: '';
+                    width: 100%;
+                    height: 0;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                       z-index: -1;              
+                    border-top: 18px solid $wine-dark;
+                    border-left: 18px solid transparent;
+                    border-right: 18px solid transparent;
+                 }
+                 
+
+            }
+    }
+    .entry-content{
+                      text-align: justified;  
+                        padding: $base-spacing-unit 0; 
+                 }      
+}

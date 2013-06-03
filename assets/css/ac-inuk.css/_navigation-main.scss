@@ -1,0 +1,35 @@
+.navigation-main{
+            @extend .grid__item;
+            @include vendor(transition, height 0.3s ease);
+            height:0;
+            .menu-main-container{
+                margin-top: $half-spacing-unit;
+            }
+            &.fix-it{
+                 @include vendor(transition, height 0.3s ease);
+                 position: fixed;
+                 top: 0;
+                 left: 0;
+                 width:100%;
+                 background: $wine;
+                 height:60px;
+                 padding:0;
+                    .nav{
+                        width:100%;
+                        margin: 0;
+                        padding: 0;
+
+                    }
+                    &:after{
+                        border-top: 5px dotted $wine;
+                        content: "";
+                        height: 0px;
+                        position: absolute;
+                        bottom: -2px;
+                        width: 100%;
+                        z-index: 20;
+                    }
+                }
+
+            }
+        

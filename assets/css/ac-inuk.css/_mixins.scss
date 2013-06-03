@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+
+
+@mixin ac_sprite($format : "svg", $file : $site-name, $path : $img-folder){
+    background-image: url(#{$path}/#{$format}/#{$file}.#{$format});
+    background-repeat: no-repeat;
+}

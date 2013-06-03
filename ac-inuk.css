@@ -38,6 +38,12 @@
 /**
  * Place any variables that should override inuit.css’ defaults here.
  */
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+/**
+ * Note: `$push` variable above must be set to true before enabling these.
+ */
 /*------------------------------------*\
     $CUSTOM
 \*------------------------------------*/
@@ -914,7 +920,7 @@ pre,
 .island,
 .islet {
   margin-bottom: 24px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.33333rem;
 }
 /* line 28, assets/css/inuit.css/generic/_shared.scss */
 .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet
@@ -927,7 +933,7 @@ pre, .islet .form-fields > li, .islet
 .island, .islet
 .islet {
   margin-bottom: 12px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.66667rem;
 }
 
 /**
@@ -936,7 +942,7 @@ pre, .islet .form-fields > li, .islet
 /* line 38, assets/css/inuit.css/generic/_shared.scss */
 .landmark {
   margin-bottom: 48px;
-  margin-bottom: 3rem;
+  margin-bottom: 2.66667rem;
 }
 
 /**
@@ -946,7 +952,7 @@ pre, .islet .form-fields > li, .islet
 /* line 48, assets/css/inuit.css/generic/_shared.scss */
 hr {
   margin-bottom: 22px;
-  margin-bottom: 1.375rem;
+  margin-bottom: 1.22222rem;
 }
 
 /**
@@ -956,7 +962,7 @@ hr {
 /* line 58, assets/css/inuit.css/generic/_shared.scss */
 ul, ol, dd {
   margin-left: 48px;
-  margin-left: 3rem;
+  margin-left: 2.66667rem;
 }
 
 /**
@@ -967,7 +973,7 @@ ul, ol, dd {
 \*------------------------------------*/
 /* line 4, assets/css/inuit.css/base/_main.scss */
 html {
-  font: 1em/1.5 sans-serif;
+  font: 1.125em/1.33333 "PT Sans Narrow", sans-serif;
   overflow-y: scroll;
   min-height: 100%;
 }
@@ -985,42 +991,42 @@ html {
 /* line 11, assets/css/inuit.css/base/_headings.scss */
 h1, .alpha {
   font-size: 36px;
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.33333;
 }
 
 /* line 14, assets/css/inuit.css/base/_headings.scss */
 h2, .beta {
   font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 1.66667rem;
   line-height: 1.6;
 }
 
 /* line 17, assets/css/inuit.css/base/_headings.scss */
-h3, .gamma, .nav.nav--pill.nav--pill--xlarge a {
+h3, .gamma, .nav.nav--pill.nav--pill--xlarge a, .nav.nav--disc.nav--pill--xlarge a {
   font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 1.33333rem;
   line-height: 1;
 }
 
 /* line 20, assets/css/inuit.css/base/_headings.scss */
-h4, .delta, .nav.nav--pill.nav--pill--large a, .widget .widget-title {
+h4, .delta, .nav.nav--pill.nav--pill--large a, .nav.nav--disc.nav--pill--large a, .widget .widget-title {
   font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 1.11111rem;
   line-height: 1.2;
 }
 
 /* line 23, assets/css/inuit.css/base/_headings.scss */
 h5, .epsilon {
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 0.88889rem;
   line-height: 1.5;
 }
 
 /* line 26, assets/css/inuit.css/base/_headings.scss */
-h6, .zeta, [role="banner"] .container .site-description, .nav.nav--pill.nav--pill--small a {
+h6, .zeta, [role="banner"] .container .site-description, .nav.nav--pill.nav--pill--small a, .nav.nav--disc.nav--pill--small a {
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.77778rem;
   line-height: 1.71429;
 }
 
@@ -1046,21 +1052,21 @@ hgroup .hN {
 /* line 52, assets/css/inuit.css/base/_headings.scss */
 .giga {
   font-size: 96px;
-  font-size: 6rem;
+  font-size: 5.33333rem;
   line-height: 1;
 }
 
 /* line 55, assets/css/inuit.css/base/_headings.scss */
 .mega {
   font-size: 72px;
-  font-size: 4.5rem;
+  font-size: 4rem;
   line-height: 1;
 }
 
 /* line 58, assets/css/inuit.css/base/_headings.scss */
 .kilo {
   font-size: 48px;
-  font-size: 3rem;
+  font-size: 2.66667rem;
   line-height: 1;
 }
 
@@ -1074,9 +1080,9 @@ hgroup .hN {
 /* line 9, assets/css/inuit.css/base/_paragraphs.scss */
 .lede,
 .lead {
-  font-size: 18px;
+  font-size: 20.25px;
   font-size: 1.125rem;
-  line-height: 1.33333;
+  line-height: 1.18519;
 }
 
 /*------------------------------------*\
@@ -1089,14 +1095,14 @@ hgroup .hN {
 .smallprint,
 .milli {
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 0.66667rem;
   line-height: 2;
 }
 
 /* line 11, assets/css/inuit.css/base/_smallprint.scss */
 .micro {
   font-size: 10px;
-  font-size: 0.625rem;
+  font-size: 0.55556rem;
   line-height: 2.4;
 }
 
@@ -1901,7 +1907,7 @@ label,
  * Grid
  */
 /* line 59, assets/css/inuit.css/objects/_grids.scss */
-.grid__item, [role="banner"] .container .site-branding, [role="banner"] .container .navigation-main, .site-main .container .content-area, .site-main .container .widget-area {
+.grid__item, [role="banner"] .container .site-branding, .navigation-main, .site-main .container .content-area, .site-main .container .widget-area {
   display: inline-block;
   width: 100%;
   padding-left: 24px;
@@ -2223,7 +2229,7 @@ label,
  * Demo: jsfiddle.net/inuitcss/WS4Ge
  *
  */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 699px) {
   /**
   * Whole
   */
@@ -2371,7 +2377,7 @@ label,
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
+@media only screen and (min-width: 700px) and (max-width: 1023px) {
   /**
   * Whole
   */
@@ -2519,7 +2525,7 @@ label,
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 700px) {
   /**
   * Whole
   */
@@ -2867,12 +2873,12 @@ label,
   }
 
   /* line 45, assets/css/inuit.css/generic/_widths.scss */
-  .desk-two-fifths, .desk-four-tenths, [role="banner"] .container .site-branding {
+  .desk-two-fifths, .desk-four-tenths {
     width: 40%;
   }
 
   /* line 46, assets/css/inuit.css/generic/_widths.scss */
-  .desk-three-fifths, .desk-six-tenths, [role="banner"] .container .navigation-main {
+  .desk-three-fifths, .desk-six-tenths, .site-main .container .content-area.full-width {
     width: 60%;
   }
 
@@ -2975,6 +2981,901 @@ label,
 /**
  * Push classes, to move grid items over to the right by certain amounts.
  */
+/**
+ * Whole
+ */
+/* line 13, assets/css/inuit.css/generic/_push.scss */
+.push--one-whole {
+  left: 100%;
+}
+
+/**
+ * Halves
+ */
+/* line 19, assets/css/inuit.css/generic/_push.scss */
+.push--one-half, .push--two-quarters, .push--three-sixths, .push--four-eighths, .push--five-tenths, .push--six-twelfths {
+  left: 50%;
+}
+
+/**
+ * Thirds
+ */
+/* line 25, assets/css/inuit.css/generic/_push.scss */
+.push--one-third, .push--two-sixths, .push--four-twelfths {
+  left: 33.333%;
+}
+
+/* line 26, assets/css/inuit.css/generic/_push.scss */
+.push--two-thirds, .push--four-sixths, .push--eight-twelfths {
+  left: 66.666%;
+}
+
+/**
+ * Quarters
+ */
+/* line 32, assets/css/inuit.css/generic/_push.scss */
+.push--one-quarter, .push--two-eighths, .push--three-twelfths {
+  left: 25%;
+}
+
+/* line 34, assets/css/inuit.css/generic/_push.scss */
+.push--three-quarters, .push--six-eighths, .push--nine-twelfths {
+  left: 75%;
+}
+
+/**
+ * Fifths
+ */
+/* line 40, assets/css/inuit.css/generic/_push.scss */
+.push--one-fifth, .push--two-tenths {
+  left: 20%;
+}
+
+/* line 41, assets/css/inuit.css/generic/_push.scss */
+.push--two-fifths, .push--four-tenths {
+  left: 40%;
+}
+
+/* line 42, assets/css/inuit.css/generic/_push.scss */
+.push--three-fifths, .push--six-tenths {
+  left: 60%;
+}
+
+/* line 43, assets/css/inuit.css/generic/_push.scss */
+.push--four-fifths, .push--eight-tenths {
+  left: 80%;
+}
+
+/**
+ * Sixths
+ */
+/* line 49, assets/css/inuit.css/generic/_push.scss */
+.push--one-sixth, .push--two-twelfths {
+  left: 16.666%;
+}
+
+/* line 53, assets/css/inuit.css/generic/_push.scss */
+.push--five-sixths, .push--ten-twelfths {
+  left: 83.333%;
+}
+
+/**
+ * Eighths
+ */
+/* line 59, assets/css/inuit.css/generic/_push.scss */
+.push--one-eighth {
+  left: 12.5%;
+}
+
+/* line 61, assets/css/inuit.css/generic/_push.scss */
+.push--three-eighths {
+  left: 37.5%;
+}
+
+/* line 63, assets/css/inuit.css/generic/_push.scss */
+.push--five-eighths {
+  left: 62.5%;
+}
+
+/* line 65, assets/css/inuit.css/generic/_push.scss */
+.push--seven-eighths {
+  left: 87.5%;
+}
+
+/**
+ * Tenths
+ */
+/* line 71, assets/css/inuit.css/generic/_push.scss */
+.push--one-tenth {
+  left: 10%;
+}
+
+/* line 73, assets/css/inuit.css/generic/_push.scss */
+.push--three-tenths {
+  left: 30%;
+}
+
+/* line 77, assets/css/inuit.css/generic/_push.scss */
+.push--seven-tenths {
+  left: 70%;
+}
+
+/* line 79, assets/css/inuit.css/generic/_push.scss */
+.push--nine-tenths {
+  left: 90%;
+}
+
+/**
+ * Twelfths
+ */
+/* line 85, assets/css/inuit.css/generic/_push.scss */
+.push--one-twelfth {
+  left: 8.333%;
+}
+
+/* line 89, assets/css/inuit.css/generic/_push.scss */
+.push--five-twelfths {
+  left: 41.666%;
+}
+
+/* line 91, assets/css/inuit.css/generic/_push.scss */
+.push--seven-twelfths {
+  left: 58.333%;
+}
+
+/* line 95, assets/css/inuit.css/generic/_push.scss */
+.push--eleven-twelfths {
+  left: 91.666%;
+}
+
+/**
+ * Not a particularly great selector, but the DRYest way to do things.
+ */
+/* line 105, assets/css/inuit.css/generic/_push.scss */
+[class*="push--"] {
+  position: relative;
+}
+
+@media only screen and (max-width: 699px) {
+  /**
+   * Whole
+   */
+  /* line 13, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-one-whole {
+    left: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 19, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-one-half, .push--palm-two-quarters, .push--palm-three-sixths, .push--palm-four-eighths, .push--palm-five-tenths, .push--palm-six-twelfths {
+    left: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 25, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-one-third, .push--palm-two-sixths, .push--palm-four-twelfths {
+    left: 33.333%;
+  }
+
+  /* line 26, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-two-thirds, .push--palm-four-sixths, .push--palm-eight-twelfths {
+    left: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 32, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-one-quarter, .push--palm-two-eighths, .push--palm-three-twelfths {
+    left: 25%;
+  }
+
+  /* line 34, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-three-quarters, .push--palm-six-eighths, .push--palm-nine-twelfths {
+    left: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 40, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-one-fifth, .push--palm-two-tenths {
+    left: 20%;
+  }
+
+  /* line 41, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-two-fifths, .push--palm-four-tenths {
+    left: 40%;
+  }
+
+  /* line 42, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-three-fifths, .push--palm-six-tenths {
+    left: 60%;
+  }
+
+  /* line 43, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-four-fifths, .push--palm-eight-tenths {
+    left: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 49, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-one-sixth, .push--palm-two-twelfths {
+    left: 16.666%;
+  }
+
+  /* line 53, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-five-sixths, .push--palm-ten-twelfths {
+    left: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 59, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-one-eighth {
+    left: 12.5%;
+  }
+
+  /* line 61, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-three-eighths {
+    left: 37.5%;
+  }
+
+  /* line 63, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-five-eighths {
+    left: 62.5%;
+  }
+
+  /* line 65, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-seven-eighths {
+    left: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 71, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-one-tenth {
+    left: 10%;
+  }
+
+  /* line 73, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-three-tenths {
+    left: 30%;
+  }
+
+  /* line 77, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-seven-tenths {
+    left: 70%;
+  }
+
+  /* line 79, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-nine-tenths {
+    left: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 85, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-one-twelfth {
+    left: 8.333%;
+  }
+
+  /* line 89, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-five-twelfths {
+    left: 41.666%;
+  }
+
+  /* line 91, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-seven-twelfths {
+    left: 58.333%;
+  }
+
+  /* line 95, assets/css/inuit.css/generic/_push.scss */
+  .push--palm-eleven-twelfths {
+    left: 91.666%;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 1023px) {
+  /**
+   * Whole
+   */
+  /* line 13, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-one-whole {
+    left: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 19, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-one-half, .push--lap-two-quarters, .push--lap-three-sixths, .push--lap-four-eighths, .push--lap-five-tenths, .push--lap-six-twelfths {
+    left: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 25, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-one-third, .push--lap-two-sixths, .push--lap-four-twelfths {
+    left: 33.333%;
+  }
+
+  /* line 26, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-two-thirds, .push--lap-four-sixths, .push--lap-eight-twelfths {
+    left: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 32, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-one-quarter, .push--lap-two-eighths, .push--lap-three-twelfths {
+    left: 25%;
+  }
+
+  /* line 34, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-three-quarters, .push--lap-six-eighths, .push--lap-nine-twelfths {
+    left: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 40, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-one-fifth, .push--lap-two-tenths {
+    left: 20%;
+  }
+
+  /* line 41, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-two-fifths, .push--lap-four-tenths {
+    left: 40%;
+  }
+
+  /* line 42, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-three-fifths, .push--lap-six-tenths {
+    left: 60%;
+  }
+
+  /* line 43, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-four-fifths, .push--lap-eight-tenths {
+    left: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 49, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-one-sixth, .push--lap-two-twelfths {
+    left: 16.666%;
+  }
+
+  /* line 53, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-five-sixths, .push--lap-ten-twelfths {
+    left: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 59, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-one-eighth {
+    left: 12.5%;
+  }
+
+  /* line 61, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-three-eighths {
+    left: 37.5%;
+  }
+
+  /* line 63, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-five-eighths {
+    left: 62.5%;
+  }
+
+  /* line 65, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-seven-eighths {
+    left: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 71, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-one-tenth {
+    left: 10%;
+  }
+
+  /* line 73, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-three-tenths {
+    left: 30%;
+  }
+
+  /* line 77, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-seven-tenths {
+    left: 70%;
+  }
+
+  /* line 79, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-nine-tenths {
+    left: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 85, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-one-twelfth {
+    left: 8.333%;
+  }
+
+  /* line 89, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-five-twelfths {
+    left: 41.666%;
+  }
+
+  /* line 91, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-seven-twelfths {
+    left: 58.333%;
+  }
+
+  /* line 95, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-eleven-twelfths {
+    left: 91.666%;
+  }
+}
+@media only screen and (min-width: 700px) {
+  /**
+   * Whole
+   */
+  /* line 13, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-one-whole {
+    left: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 19, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-one-half, .push--lap-and-up-two-quarters, .push--lap-and-up-three-sixths, .push--lap-and-up-four-eighths, .push--lap-and-up-five-tenths, .push--lap-and-up-six-twelfths {
+    left: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 25, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-one-third, .push--lap-and-up-two-sixths, .push--lap-and-up-four-twelfths {
+    left: 33.333%;
+  }
+
+  /* line 26, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-two-thirds, .push--lap-and-up-four-sixths, .push--lap-and-up-eight-twelfths {
+    left: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 32, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-one-quarter, .push--lap-and-up-two-eighths, .push--lap-and-up-three-twelfths {
+    left: 25%;
+  }
+
+  /* line 34, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-three-quarters, .push--lap-and-up-six-eighths, .push--lap-and-up-nine-twelfths {
+    left: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 40, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-one-fifth, .push--lap-and-up-two-tenths {
+    left: 20%;
+  }
+
+  /* line 41, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-two-fifths, .push--lap-and-up-four-tenths {
+    left: 40%;
+  }
+
+  /* line 42, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-three-fifths, .push--lap-and-up-six-tenths {
+    left: 60%;
+  }
+
+  /* line 43, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-four-fifths, .push--lap-and-up-eight-tenths {
+    left: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 49, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-one-sixth, .push--lap-and-up-two-twelfths {
+    left: 16.666%;
+  }
+
+  /* line 53, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-five-sixths, .push--lap-and-up-ten-twelfths {
+    left: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 59, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-one-eighth {
+    left: 12.5%;
+  }
+
+  /* line 61, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-three-eighths {
+    left: 37.5%;
+  }
+
+  /* line 63, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-five-eighths {
+    left: 62.5%;
+  }
+
+  /* line 65, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-seven-eighths {
+    left: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 71, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-one-tenth {
+    left: 10%;
+  }
+
+  /* line 73, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-three-tenths {
+    left: 30%;
+  }
+
+  /* line 77, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-seven-tenths {
+    left: 70%;
+  }
+
+  /* line 79, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-nine-tenths {
+    left: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 85, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-one-twelfth {
+    left: 8.333%;
+  }
+
+  /* line 89, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-five-twelfths {
+    left: 41.666%;
+  }
+
+  /* line 91, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-seven-twelfths {
+    left: 58.333%;
+  }
+
+  /* line 95, assets/css/inuit.css/generic/_push.scss */
+  .push--lap-and-up-eleven-twelfths {
+    left: 91.666%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  /**
+   * Whole
+   */
+  /* line 13, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-one-whole {
+    left: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 19, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-one-half, .push--portable-two-quarters, .push--portable-three-sixths, .push--portable-four-eighths, .push--portable-five-tenths, .push--portable-six-twelfths {
+    left: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 25, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-one-third, .push--portable-two-sixths, .push--portable-four-twelfths {
+    left: 33.333%;
+  }
+
+  /* line 26, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-two-thirds, .push--portable-four-sixths, .push--portable-eight-twelfths {
+    left: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 32, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-one-quarter, .push--portable-two-eighths, .push--portable-three-twelfths {
+    left: 25%;
+  }
+
+  /* line 34, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-three-quarters, .push--portable-six-eighths, .push--portable-nine-twelfths {
+    left: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 40, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-one-fifth, .push--portable-two-tenths {
+    left: 20%;
+  }
+
+  /* line 41, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-two-fifths, .push--portable-four-tenths {
+    left: 40%;
+  }
+
+  /* line 42, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-three-fifths, .push--portable-six-tenths {
+    left: 60%;
+  }
+
+  /* line 43, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-four-fifths, .push--portable-eight-tenths {
+    left: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 49, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-one-sixth, .push--portable-two-twelfths {
+    left: 16.666%;
+  }
+
+  /* line 53, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-five-sixths, .push--portable-ten-twelfths {
+    left: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 59, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-one-eighth {
+    left: 12.5%;
+  }
+
+  /* line 61, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-three-eighths {
+    left: 37.5%;
+  }
+
+  /* line 63, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-five-eighths {
+    left: 62.5%;
+  }
+
+  /* line 65, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-seven-eighths {
+    left: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 71, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-one-tenth {
+    left: 10%;
+  }
+
+  /* line 73, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-three-tenths {
+    left: 30%;
+  }
+
+  /* line 77, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-seven-tenths {
+    left: 70%;
+  }
+
+  /* line 79, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-nine-tenths {
+    left: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 85, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-one-twelfth {
+    left: 8.333%;
+  }
+
+  /* line 89, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-five-twelfths {
+    left: 41.666%;
+  }
+
+  /* line 91, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-seven-twelfths {
+    left: 58.333%;
+  }
+
+  /* line 95, assets/css/inuit.css/generic/_push.scss */
+  .push--portable-eleven-twelfths {
+    left: 91.666%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /**
+   * Whole
+   */
+  /* line 13, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-one-whole {
+    left: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 19, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-one-half, .push--desk-two-quarters, .push--desk-three-sixths, .push--desk-four-eighths, .push--desk-five-tenths, .push--desk-six-twelfths {
+    left: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 25, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-one-third, .push--desk-two-sixths, .push--desk-four-twelfths {
+    left: 33.333%;
+  }
+
+  /* line 26, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-two-thirds, .push--desk-four-sixths, .push--desk-eight-twelfths {
+    left: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 32, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-one-quarter, .push--desk-two-eighths, .push--desk-three-twelfths {
+    left: 25%;
+  }
+
+  /* line 34, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-three-quarters, .push--desk-six-eighths, .push--desk-nine-twelfths {
+    left: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 40, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-one-fifth, .push--desk-two-tenths, .site-main .container .content-area.full-width {
+    left: 20%;
+  }
+
+  /* line 41, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-two-fifths, .push--desk-four-tenths {
+    left: 40%;
+  }
+
+  /* line 42, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-three-fifths, .push--desk-six-tenths {
+    left: 60%;
+  }
+
+  /* line 43, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-four-fifths, .push--desk-eight-tenths {
+    left: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 49, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-one-sixth, .push--desk-two-twelfths {
+    left: 16.666%;
+  }
+
+  /* line 53, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-five-sixths, .push--desk-ten-twelfths {
+    left: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 59, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-one-eighth {
+    left: 12.5%;
+  }
+
+  /* line 61, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-three-eighths {
+    left: 37.5%;
+  }
+
+  /* line 63, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-five-eighths {
+    left: 62.5%;
+  }
+
+  /* line 65, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-seven-eighths {
+    left: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 71, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-one-tenth {
+    left: 10%;
+  }
+
+  /* line 73, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-three-tenths {
+    left: 30%;
+  }
+
+  /* line 77, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-seven-tenths {
+    left: 70%;
+  }
+
+  /* line 79, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-nine-tenths {
+    left: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 85, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-one-twelfth {
+    left: 8.333%;
+  }
+
+  /* line 89, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-five-twelfths {
+    left: 41.666%;
+  }
+
+  /* line 91, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-seven-twelfths {
+    left: 58.333%;
+  }
+
+  /* line 95, assets/css/inuit.css/generic/_push.scss */
+  .push--desk-eleven-twelfths {
+    left: 91.666%;
+  }
+}
 /*------------------------------------*\
     $PULL
 \*------------------------------------*/
@@ -2991,7 +3892,7 @@ label,
 /* line 8, assets/css/inuit.css/generic/_brand.scss */
 .brand {
   font-family: "Helvetica Neue", sans-serif!important;
-  color: #ef9d70!important;
+  color: #a91d40!important;
 }
 
 /* line 12, assets/css/inuit.css/generic/_brand.scss */
@@ -3002,7 +3903,7 @@ label,
 /* line 16, assets/css/inuit.css/generic/_brand.scss */
 .brand-color,
 .brand-colour {
-  color: #ef9d70!important;
+  color: #a91d40!important;
 }
 
 /*------------------------------------*\
@@ -3378,7 +4279,7 @@ label,
   width: 1px!important;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 699px) {
   /* line 179, assets/css/inuit.css/generic/_helper.scss */
   .accessibility--palm,
   .visuallyhidden--palm {
@@ -3392,7 +4293,7 @@ label,
     width: 1px!important;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
+@media only screen and (min-width: 700px) and (max-width: 1023px) {
   /* line 179, assets/css/inuit.css/generic/_helper.scss */
   .accessibility--lap,
   .visuallyhidden--lap {
@@ -3406,7 +4307,7 @@ label,
     width: 1px!important;
   }
 }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 700px) {
   /* line 179, assets/css/inuit.css/generic/_helper.scss */
   .accessibility--lap-and-up,
   .visuallyhidden--lap-and-up {
@@ -3479,7 +4380,7 @@ label,
 
 /* line 11, assets/css/ac-inuk.css/_inuit-fixes.scss */
 .grid > * {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* line 14, assets/css/ac-inuk.css/_inuit-fixes.scss */
@@ -3487,6 +4388,9 @@ label,
   font-size: 0;
 }
 
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
 /*
 Document   : base
 Created on : 06-May-2013, 17:44:45
@@ -3504,47 +4408,47 @@ html {
 }
 /* line 16, assets/css/ac-inuk.css/_base.scss */
 html a {
-  color: #ef9d70;
+  color: #a91d40;
 }
 /* line 18, assets/css/ac-inuk.css/_base.scss */
 html a:link {
-  color: #ef9d70;
+  color: #a91d40;
 }
 /* line 21, assets/css/ac-inuk.css/_base.scss */
 html a:visited {
-  color: #ef9d70;
+  color: #a91d40;
 }
 /* line 24, assets/css/ac-inuk.css/_base.scss */
 html a:hover {
-  color: #ea7e42;
+  color: #7d1630;
 }
 /* line 27, assets/css/ac-inuk.css/_base.scss */
 html a:focus {
-  color: #ea7e42;
+  color: #7d1630;
 }
 /* line 31, assets/css/ac-inuk.css/_base.scss */
 html h1 {
-  color: #ef9d70;
+  color: #a91d40;
 }
 /* line 34, assets/css/ac-inuk.css/_base.scss */
 html h2 {
-  color: #ef9d70;
+  color: #a91d40;
 }
 /* line 37, assets/css/ac-inuk.css/_base.scss */
 html h3 {
-  color: #ef9d70;
+  color: #a91d40;
 }
 /* line 40, assets/css/ac-inuk.css/_base.scss */
 html h4 {
-  color: #ef9d70;
+  color: #a91d40;
 }
 /* line 43, assets/css/ac-inuk.css/_base.scss */
 html h5 {
-  color: #ef9d70;
+  color: #a91d40;
 }
 /* line 46, assets/css/ac-inuk.css/_base.scss */
 html h6 {
-  color: #ef9d70;
+  color: #a91d40;
 }
 /* line 50, assets/css/ac-inuk.css/_base.scss */
 html .container {
@@ -3569,7 +4473,7 @@ Purpose of the stylesheet follows.
 TODO customize this sample style
 Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 */
-/* line 13, assets/css/ac-inuk.css/_header.scss */
+/* line 14, assets/css/ac-inuk.css/_header.scss */
 [role="banner"] {
   background: rgba(255, 255, 255, 0.9);
   position: absolute;
@@ -3577,9 +4481,9 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
   width: 100%;
   z-index: 20;
 }
-/* line 19, assets/css/ac-inuk.css/_header.scss */
+/* line 20, assets/css/ac-inuk.css/_header.scss */
 [role="banner"] .container {
-  padding-top: 24px;
+  padding-top: 12px;
 }
 /* line 24, assets/css/ac-inuk.css/_header.scss */
 [role="banner"] .container .site-branding .site-title {
@@ -3590,6 +4494,106 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 [role="banner"] .container .site-branding .site-title a {
   line-height: 1;
   text-decoration: none;
+}
+/* line 38, assets/css/ac-inuk.css/_header.scss */
+[role="banner"]:after {
+  border-top: 5px dotted rgba(255, 255, 255, 0.8);
+  content: "";
+  height: 0px;
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  z-index: 20;
+}
+
+/* line 49, assets/css/ac-inuk.css/_header.scss */
+.admin-bar [role="banner"] {
+  top: 28px;
+}
+
+/* line 1, assets/css/ac-inuk.css/_navigation-main.scss */
+.navigation-main {
+  -webkit-transition: height 0.3s ease;
+  -moz-transition: height 0.3s ease;
+  -ms-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+  height: 0;
+}
+/* line 5, assets/css/ac-inuk.css/_navigation-main.scss */
+.navigation-main .menu-main-container {
+  margin-top: 12px;
+}
+/* line 8, assets/css/ac-inuk.css/_navigation-main.scss */
+.navigation-main.fix-it {
+  -webkit-transition: height 0.3s ease;
+  -moz-transition: height 0.3s ease;
+  -ms-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #a91d40;
+  height: 60px;
+  padding: 0;
+}
+/* line 17, assets/css/ac-inuk.css/_navigation-main.scss */
+.navigation-main.fix-it .nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* line 23, assets/css/ac-inuk.css/_navigation-main.scss */
+.navigation-main.fix-it:after {
+  border-top: 5px dotted #a91d40;
+  content: "";
+  height: 0px;
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  z-index: 20;
+}
+
+ /*
+Document   : _header-logo
+Created on : 16-May-2013, 21:50:59
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/* line 17, assets/css/ac-inuk.css/_header-logo.scss */
+.site-branding .site-title a {
+  background-image: url(assets/img/svg/ac-inuk.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  height: 115px;
+  text-indent: -99999px;
+}
+@media only screen and (min-width: 700px) {
+  /* line 17, assets/css/ac-inuk.css/_header-logo.scss */
+  .site-branding .site-title a {
+    background-size: auto;
+  }
+}
+/* line 29, assets/css/ac-inuk.css/_header-logo.scss */
+.site-branding .site-description {
+  display: none;
+}
+
+/* line 54, assets/css/ac-inuk.css/_header-logo.scss */
+[role="banner"] .container .site-branding {
+  text-align: center;
+}
+/* line 56, assets/css/ac-inuk.css/_header-logo.scss */
+[role="banner"] .container .site-branding a {
+  background-position: center top;
 }
 
 /*
@@ -3607,10 +4611,20 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .site-main {
   background: #FFFFFF;
   position: relative;
-  top: 450px;
-  z-index: 333;
+  top: 600px;
+  z-index: 10;
 }
 /* line 19, assets/css/ac-inuk.css/_main.scss */
+.site-main:before {
+  border-top: 5px dotted #FFFFFF;
+  content: "";
+  height: 10px;
+  position: absolute;
+  top: -2px;
+  width: 100%;
+  z-index: 20;
+}
+/* line 28, assets/css/ac-inuk.css/_main.scss */
 .site-main .container {
   padding-top: 24px;
 }
@@ -3626,27 +4640,35 @@ Purpose of the stylesheet follows.
 TODO customize this sample style
 Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 */
+/* line 14, assets/css/ac-inuk.css/_nav.scss */
+.nav {
+  margin-bottom: 12px;
+}
 /* line 15, assets/css/ac-inuk.css/_nav.scss */
 .nav.nav--right {
   float: right;
 }
-/* line 19, assets/css/ac-inuk.css/_nav.scss */
+/* line 18, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--center {
+  text-align: center;
+}
+/* line 22, assets/css/ac-inuk.css/_nav.scss */
 .nav.nav--pill {
   font-size: 0;
 }
-/* line 21, assets/css/ac-inuk.css/_nav.scss */
+/* line 24, assets/css/ac-inuk.css/_nav.scss */
 .nav.nav--pill li {
   margin-left: 12px;
 }
-/* line 23, assets/css/ac-inuk.css/_nav.scss */
+/* line 26, assets/css/ac-inuk.css/_nav.scss */
 .nav.nav--pill li:first-child {
   margin-left: 0;
 }
-/* line 26, assets/css/ac-inuk.css/_nav.scss */
+/* line 29, assets/css/ac-inuk.css/_nav.scss */
 .nav.nav--pill li a {
-  font-size: 16px;
+  font-size: 18px;
   padding: 0.3em 1em;
-  background: #cccccc;
+  background: #6e0c24;
   text-decoration: none;
   color: white;
   -webkit-border-radius: 3px;
@@ -3656,12 +4678,52 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
   border-radius: 3px;
   margin-bottom: 12px;
 }
-/* line 34, assets/css/ac-inuk.css/_nav.scss */
+/* line 37, assets/css/ac-inuk.css/_nav.scss */
 .nav.nav--pill li a:hover {
-  background: #b3b3b3;
+  background: #400715;
 }
-/* line 41, assets/css/ac-inuk.css/_nav.scss */
+/* line 44, assets/css/ac-inuk.css/_nav.scss */
 .nav.nav--pill.nav--pill--mini a {
+  font-size: 12px;
+}
+/* line 54, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--disc {
+  font-size: 0;
+}
+/* line 56, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--disc li {
+  margin-left: 12px;
+}
+/* line 58, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--disc li:first-child {
+  margin-left: 0;
+}
+/* line 61, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--disc li a {
+  background: #6e0c24;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  height: 7em;
+  line-height: 7em;
+  margin-bottom: 12px;
+  overflow: hidden;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: top;
+  width: 7em;
+}
+/* line 76, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--disc li a:hover {
+  background: #400715;
+}
+/* line 83, assets/css/ac-inuk.css/_nav.scss */
+.nav.nav--disc.nav--pill--mini a {
   font-size: 12px;
 }
 
@@ -3745,13 +4807,12 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 */
 /* line 14, assets/css/ac-inuk.css/_responsive-slider.scss */
 .callbacks_container {
-  height: 650px;
-  max-height: 450px;
+  max-height: 600px;
   position: fixed;
   overflow: hidden;
   width: 100%;
 }
-/* line 21, assets/css/ac-inuk.css/_responsive-slider.scss */
+/* line 20, assets/css/ac-inuk.css/_responsive-slider.scss */
 .callbacks_container .callbacks_nav {
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -3764,7 +4825,140 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
   color: #fff;
   text-decoration: none;
 }
-/* line 32, assets/css/ac-inuk.css/_responsive-slider.scss */
+/* line 31, assets/css/ac-inuk.css/_responsive-slider.scss */
 .callbacks_container .callbacks_nav.next {
   right: 0;
+}
+
+/*
+Document   : _post
+Created on : 19-May-2013, 13:45:15
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/* line 15, assets/css/ac-inuk.css/_post.scss */
+.post .entry-header {
+  text-align: center;
+}
+/* line 17, assets/css/ac-inuk.css/_post.scss */
+.post .entry-header .entry-title {
+  font-family: 'Crete Round';
+  font-style: italic;
+  font-size: 1.3em;
+  background: #a91d40;
+  color: white;
+  font-weight: 400;
+  display: inline-block;
+  padding: 12px 24px;
+  position: relative;
+  -webkit-box-shadow: 0 1.6em 0 -18px white, 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1.6em 0 -18px white, 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 1.6em 0 -18px white, 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 1.6em 0 -18px white, 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1.6em 0 -18px white, 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 28, assets/css/ac-inuk.css/_post.scss */
+.post .entry-header .entry-title:before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: -40%;
+  background: #a91d40;
+  width: 180%;
+  height: 0;
+  border: 1.2em solid transparent;
+  border-left-color: white;
+  border-right-color: white;
+  z-index: -1;
+}
+/* line 41, assets/css/ac-inuk.css/_post.scss */
+.post .entry-header .entry-title:after {
+  content: '';
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+  border-top: 18px solid #6e0c24;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+}
+/* line 57, assets/css/ac-inuk.css/_post.scss */
+.post .entry-content {
+  text-align: justified;
+  padding: 24px 0;
+}
+
+/*
+Document   : _footer
+Created on : 19-May-2013, 15:51:50
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/* line 14, assets/css/ac-inuk.css/_footer.scss */
+.site-footer {
+  background: none repeat scroll 0 0 #a91d40;
+  color: white;
+  position: relative;
+  top: 600px;
+  z-index: 10;
+  text-align: center;
+}
+/* line 21, assets/css/ac-inuk.css/_footer.scss */
+.site-footer a:link, .site-footer a:visited {
+  color: white;
+}
+/* line 24, assets/css/ac-inuk.css/_footer.scss */
+.site-footer:before {
+  border-top: 5px dotted #a91d40;
+  content: "";
+  height: 0;
+  position: absolute;
+  top: -2px;
+  width: 100%;
+  z-index: 20;
+  left: 0;
+}
+
+@font-face {
+  font-family: 'CopseRegular';
+  src: url("assets/fonts/corpse/Copse-Regular-webfont.eot");
+  src: url("assets/fonts/corpse/Copse-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/corpse/Copse-Regular-webfont.woff") format("woff"), url("assets/fonts/corpse/Copse-Regular-webfont.ttf") format("truetype"), url("assets/fonts/corpse/Copse-Regular-webfont.svg#CopseRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+Document   : _template-full-width
+Created on : 17-May-2013, 23:00:07
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/* line 14, assets/css/ac-inuk.css/_template-full-width.scss */
+.site-main .container .content-area.full-width {
+  position: relative;
+}
+/* line 18, assets/css/ac-inuk.css/_template-full-width.scss */
+.site-main .container .content-area.full-width .entry-title {
+  text-align: center;
+}
+/* line 21, assets/css/ac-inuk.css/_template-full-width.scss */
+.site-main .container .content-area.full-width .entry-content {
+  text-align: justified;
 }

@@ -59,9 +59,27 @@ $use-greybox:       false;
  * Place any variables that should override inuit.css’ defaults here.
  */
 
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+$lap-start:         700px;
+$desk-start:        1024px;
+$desk-wide-start:   1200px;
+
 $brand-round:3px;
+$base-font-family:  'PT Sans Narrow', sans-serif;
+$base-font-size:    18px;
+$base-line-height:  24px;
 
-
+$push:              true;
+/**
+ * Note: `$push` variable above must be set to true before enabling these.
+ */
+$palm-push:         true;
+$lap-push:          true;
+$lap-and-up-push:   true;
+$portable-push:     true;;
+$desk-push:         true;
 
 /*------------------------------------*\
     $CUSTOM
@@ -69,16 +87,28 @@ $brand-round:3px;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+
+
+$logo-image: true;
+$logo-nav4060: false;
+$logo-100: true;
+
+$site-name: "ac-inuk";
+$img-folder: "assets/img";
 $white: #fff;
 $grey-light: #ccc;
 $grey-dark: #222;
 $brown: #C37850;
 $orange:  #EF9D70;
-$brand-color:       $orange;
+$wine: #A91D40;
+$wine-dark: #6E0C24;
+$brand-color:       $wine;
 $brand-face:        "Helvetica Neue", sans-serif;
 
-$colour--button: $grey-light;
-$color--link: $orange;
-$color--heading_primary: $orange;
+$colour--button: $wine-dark;
+$color--link: $wine;
+$color--heading_primary: $wine;
 $color--text: $grey-dark;
-$slider-height: 450px;
+$slider-height:600px;
+
+$logo: "web-header.svg";

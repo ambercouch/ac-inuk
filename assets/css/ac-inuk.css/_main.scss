@@ -15,13 +15,23 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
     background: #FFFFFF;
     position: relative;
     top: $slider-height;
-    z-index: 333;
+    z-index: 10;
+    &:before{
+        border-top: 5px dotted #FFFFFF;
+        content: "";
+        height: 10px;
+        position: absolute;
+        top: -2px;
+        width: 100%;
+        z-index: 20;
+    }
     .container{
         padding-top: $base-spacing-unit;
         .content-area{
              @extend .grid__item;
              @extend .desk-four-fifths;
-        }
+            
+        } 
         .widget-area{
             @extend .grid__item;
             @extend .desk-one-fifth;

@@ -15,7 +15,10 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
    &.nav--right{
           float: right;  
    }
-    
+   &.nav--center{
+          text-align: center;  
+   }
+   margin-bottom:$half-spacing-unit; 
    &.nav--pill{
        font-size: 0;
      li{
@@ -48,4 +51,44 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
           @extend .gamma;
      }
    }
+   &.nav--disc{
+       font-size: 0;
+     li{
+         margin-left: $half-spacing-unit;
+         &:first-child{
+             margin-left: 0;
+         }
+         a{
+          background: $colour--button;
+          @include vendor(border-radius, 50%);
+          color: white;
+          display: inline-block;
+          font-size: $base-font-size;
+          height: 7em;
+          line-height: 7em;
+          margin-bottom:$half-spacing-unit;
+          overflow: hidden;
+          padding: 0;
+          text-decoration: none;
+          vertical-align: top;
+          width: 7em;
+          
+         &:hover{
+            background: darken($colour--button, 10%);                 }
+         }
+     }
+     &.nav--pill--small a{
+         @extend .zeta;
+     }
+     &.nav--pill--mini a{
+         font-size: $milli-size;
+     }
+     &.nav--pill--large a{
+         @extend .delta;
+     }
+     &.nav--pill--xlarge a{
+          @extend .gamma;
+     }
+   }
+   
 }

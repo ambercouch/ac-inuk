@@ -28,7 +28,7 @@ wp_nav_menu( $defaults );
 
 function site_nav(){ 
     $args = array( 'theme_location' => 'primary',
-                    'menu_class'      => 'nav  nav--right nav--pill ')  
+                    'menu_class'      => 'nav  nav--center nav--pill')  
     ?>
     
     <!-- Site Nav -->

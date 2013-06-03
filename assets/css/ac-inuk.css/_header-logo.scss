@@ -1,0 +1,65 @@
+ /*
+Document   : _header-logo
+Created on : 16-May-2013, 21:50:59
+Author     : Richard
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+@if $logo-image == true{
+        .site-branding{
+            .site-title{
+                a{
+                    @include ac_sprite;
+                    background-size: 100%;
+
+                    display: block;
+                    height: 115px;
+                    text-indent: -99999px;
+                    @include media-query(lap-and-up){
+                        background-size: auto;
+                    }
+                }
+            }
+            .site-description{
+                display:none;
+            }
+        }
+}
+
+@if $logo-nav4060 == true{
+    [role="banner"]{
+        .container{
+        
+            .site-branding{
+                @extend .desk-two-fifths;
+                @extend .grid__item;
+            }
+            .navigation-main{
+                @extend .desk-three-fifths;
+                @extend .grid__item;
+            }
+    }
+    }
+}
+@if $logo-100 == true{
+    [role="banner"]{
+        .container{
+        
+            .site-branding{
+                text-align: center;
+                a{
+                 background-position: center top;
+                 }
+            }
+            .navigation-main{
+                
+            }
+    }
+    }
+}

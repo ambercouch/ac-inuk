@@ -13,6 +13,8 @@
 <meta name="viewport" content="width=device-width" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -27,16 +29,16 @@
         <ul class="rslides" id="slider4">
           <li>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
-            <p class="caption">This is a caption</p>
+      
           </li>
-          <li>
+     <!--     <li>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/2.jpg" alt="">
-            <p class="caption">This is another caption</p>
+       
           </li>
           <li>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img//3.jpg" alt="">
-            <p class="caption">The third caption</p>
-          </li>
+          
+          </li> -->
         </ul>
       </div>
     
