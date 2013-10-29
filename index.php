@@ -12,8 +12,8 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+    <div class="grid" >
+	<div id="primary" class="grid__item content-area">
 		<div id="content" class="site-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -41,6 +41,8 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+        <div class="grid__item" >
+            <?php get_sidebar(); ?>
+        </div>
+    </div><!-- /.grid -->
 <?php get_footer(); ?>
