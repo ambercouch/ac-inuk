@@ -7,8 +7,8 @@
 
 get_header();
 ?>
-
-	<div id="primary" class="content-area image-attachment">
+<div class="grid" >
+	<div id="primary" class="grid__item content-area image-attachment">
 		<div id="content" class="site-content" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -123,5 +123,5 @@ get_header();
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
+        </div><!-- /.grid -->
 <?php get_footer(); ?>
