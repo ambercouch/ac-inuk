@@ -6,8 +6,8 @@
  */
 
 get_header(); ?>
-
-	<section id="primary" class="content-area">
+<div class="grid" >
+	<section id="primary" class="grid__item content-area">
 		<div id="content" class="site-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -34,5 +34,8 @@ get_header(); ?>
 		</div><!-- #content -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+        <div class="grid__item" >
+            <?php get_sidebar(); ?>
+        </div>
+        </div><!-- /.grid -->
 <?php get_footer(); ?>

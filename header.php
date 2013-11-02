@@ -25,17 +25,26 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+            <div class="container" >
+                <div class="grid">
+                     <div class="site-branding grid__item">
+                        <div class="content-site-branding">
+                            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                            <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                        </div><!-- /.content-site-branding -->
+                    </div><!-- /.site-branding -->
+                </div>
+            </div><!-- /.container -->
 
-		<nav id="site-navigation" class="navigation-main" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'ac_inuk' ); ?></h1>
-			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'ac_inuk' ); ?>"><?php _e( 'Skip to content', 'ac_inuk' ); ?></a></div>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		<nav id="site-navigation"  role="navigation">
+                    <div class="container" >
+                         <div class="grid">
+                             <div class="grid__item navigation-main">
+                                <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+                             </div>
+                        </div>
+                    </div><!-- /.container -->
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="main" class="site-main">
+	<div id="main" class="site-main container">
