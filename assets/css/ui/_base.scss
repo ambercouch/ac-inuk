@@ -1,0 +1,12 @@
+/**
+ *
+ * base layout styles
+ *
+ */
+
+body{
+    padding: 0 $base-spacing-unit;
+    @include media-query(lap-and-up){
+        padding: 0;
+    }
+}
