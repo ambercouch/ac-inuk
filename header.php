@@ -29,8 +29,13 @@
                 <div class="grid">
                      <div class="site-branding grid__item">
                         <div class="content-site-branding">
+                            <?php if(is_home() || is_front_page()) :?>
                             <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                             <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                            <?php else : ?>
+                            <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+                            <span class="site-description"><?php bloginfo( 'description' ); ?></span>
+                            <?php endif; ?>
                         </div><!-- /.content-site-branding -->
                     </div><!-- /.site-branding -->
                 </div>
