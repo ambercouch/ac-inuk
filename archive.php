@@ -107,9 +107,8 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</section><!-- #primary -->
+ 
+        <?php get_sidebar(); ?>
 
-        <div class="grid__item" >
-            <?php get_sidebar(); ?>
-        </div>
         </div><!-- /.grid -->
 <?php get_footer(); ?>

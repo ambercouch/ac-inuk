@@ -41,8 +41,8 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-        <div class="grid__item" >
-            <?php get_sidebar(); ?>
-        </div>
+      
+        <?php get_sidebar(); ?>
+        
     </div><!-- /.grid -->
 <?php get_footer(); ?>
