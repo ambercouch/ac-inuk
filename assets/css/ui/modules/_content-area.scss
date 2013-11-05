@@ -1,0 +1,10 @@
+/**
+ *
+ * .conent-area styles
+ *
+ */
+
+.content-area{
+    @extend .one-whole;
+    @extend .desk-three-quarters;
+}

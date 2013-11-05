@@ -1550,7 +1550,7 @@ label, .label {
 /**
 * Whole
 */
-.one-whole {
+.one-whole, .content-area, .side-bar {
   width: 100%; }
 
 /**
@@ -2081,10 +2081,10 @@ label, .label {
   /**
   * Quarters
   */
-  .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths {
+  .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths, .side-bar {
     width: 25%; }
 
-  .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths {
+  .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths, .content-area {
     width: 75%; }
 
   /**
@@ -2526,3 +2526,23 @@ body {
 @media only screen and (min-width: 1024px) {
   .container {
     width: 940px; } }
+
+/**
+ *
+ * .conent-area styles
+ *
+ */
+/**
+ *
+ * .side-bar styles
+ *
+ */
+/**
+ *
+ * .grid styles
+ *
+ */
+.grid {
+  font-size: 0; }
+.grid > * {
+  font-size: 16px; }
