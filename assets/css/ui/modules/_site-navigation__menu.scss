@@ -1,0 +1,13 @@
+/**
+ *
+ * .site-navigation__menu
+ *
+ */
+
+.site-navigation__menu{
+        ul{
+            @extend .nav;
+            @extend .nav--block;
+            margin-bottom: 0;
+        }
+}

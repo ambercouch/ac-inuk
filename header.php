@@ -41,10 +41,10 @@
                 </div>
             </div><!-- /.container -->
 
-		<nav id="site-navigation"  role="navigation">
+		<nav id="nav-main"class="site-navigation"  role="navigation">
                     <div class="container" >
                          <div class="grid">
-                             <div class="grid__item navigation-main">
+                             <div class="grid__item site-navigation__menu">
                                 <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
                              </div>
                         </div>
