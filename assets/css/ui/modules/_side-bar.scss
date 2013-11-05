@@ -1,0 +1,10 @@
+/**
+ *
+ * .side-bar styles
+ *
+ */
+
+.side-bar{
+    @extend .one-whole;
+    @extend .desk-one-quarter;
+}
