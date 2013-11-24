@@ -28,4 +28,7 @@
 @import "ui/modules/_content-area.scss";
 @import "ui/modules/_side-bar.scss";
 @import "ui/modules/_grid.scss";
-@import "ui/modules/_site-navigation__menu.scss";
+@import "ui/modules/site-navigation/_site-navigation";
+@import "ui/modules/site-navigation/_site-navigation--fixed-top";
+@import "ui/modules/site-navigation/_site-navigation__menu--responsive-toggle";
+

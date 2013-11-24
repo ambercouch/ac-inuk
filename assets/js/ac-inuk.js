@@ -3,6 +3,31 @@ ACINUK = {
         init : function(){
             console.log('common');
             
+            jQuery('body').addClass('js');
+              var $menu = jQuery('.menu-main-container'),
+                  $menulink = jQuery('.site-navigation__menu-link'),
+                  $container = jQuery('#nav-main'),
+                  container_height =  $container.height();
+          
+                  if($container.css('position') == 'absolute'){
+                      
+                       
+                     
+                       jQuery('body').css('margin-top', container_height);
+                      
+                       
+                  }
+
+              $menulink.click(function() {
+              
+              
+              $menulink.toggleClass('active');
+              $menu.toggleClass('active');
+              var height = jQuery('.menu-main-container.active').height();
+              console.log(height);
+              return false;
+             });
+            
         }
     },
     page : {
