@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Register widgetized area and update sidebar with default widgets
