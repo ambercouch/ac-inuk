@@ -750,7 +750,7 @@ label, input, textarea, button, select, option {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .site-navigation__menu .menu-main-container ul:after {
+.cf:after, .nav:after, .site-navigation__menu .menu-main-container ul:after, .site-navigation__menu--below-header .menu-main-container ul:after {
   content: "";
   display: table;
   clear: both; }
@@ -1551,10 +1551,10 @@ label, .label {
  * Demo: jsfiddle.net/inuitcss/Vnph4
  *
  */
-.nav, .site-navigation__menu .menu-main-container ul {
+.nav, .site-navigation__menu .menu-main-container ul, .site-navigation__menu--below-header .menu-main-container ul {
   list-style: none;
   margin-left: 0; }
-.nav > li, .site-navigation__menu .menu-main-container ul > li, .nav > li > a, .site-navigation__menu .menu-main-container ul > li > a {
+.nav > li, .site-navigation__menu .menu-main-container ul > li, .site-navigation__menu--below-header .menu-main-container ul > li, .nav > li > a, .site-navigation__menu .menu-main-container ul > li > a, .site-navigation__menu--below-header .menu-main-container ul > li > a {
   display: inline-block;
   *display: inline;
   zoom: 1; }
@@ -1570,9 +1570,9 @@ label, .label {
    </ul>
  *
  */
-.nav--stacked > li, .site-navigation__menu .menu-main-container ul > li {
+.nav--stacked > li, .site-navigation__menu--responsive-toggle .menu-main-container ul > li, .site-navigation__menu .menu-main-container ul > li {
   display: list-item; }
-.nav--stacked > li > a, .site-navigation__menu .menu-main-container ul > li > a {
+.nav--stacked > li > a, .site-navigation__menu--responsive-toggle .menu-main-container ul > li > a, .site-navigation__menu .menu-main-container ul > li > a {
   display: block; }
 
 /**
@@ -1600,7 +1600,7 @@ label, .label {
    </ul>
  *
  */
-.nav--block {
+.nav--block, .site-navigation__menu .menu-main-container ul, .site-navigation__menu--below-header .menu-main-container ul {
   line-height: 1;
   /**
    * Remove whitespace caused by `inline-block`.
@@ -1608,10 +1608,10 @@ label, .label {
   letter-spacing: -0.31em;
   word-spacing: -0.43em;
   white-space: nowrap; }
-.nav--block > li {
+.nav--block > li, .site-navigation__menu .menu-main-container ul > li, .site-navigation__menu--below-header .menu-main-container ul > li {
   letter-spacing: normal;
   word-spacing: normal; }
-.nav--block > li > a {
+.nav--block > li > a, .site-navigation__menu .menu-main-container ul > li > a, .site-navigation__menu--below-header .menu-main-container ul > li > a {
   padding: 12px; }
 
 /**
@@ -2665,11 +2665,62 @@ body {
  * .site-navigation
  *
  */
-.site-navigation__menu .site-navigation__menu-link {
+.site-navigation {
+  background: #999; }
+
+.site-navigation__menu .menu-main-container ul {
+  margin-bottom: 0; }
+
+.site-navigation__menu-link {
+  display: none; }
+
+.site-navigation__menu--below-header .menu-main-container ul {
+  margin-bottom: 0; }
+
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--border-spacers .menu .menu-item a, .site-navigation__menu .menu .menu-item a {
+    border-right: solid 1px; }
+  .site-navigation__menu--border-spacers .menu .menu-item:first-child a, .site-navigation__menu .menu .menu-item:first-child a {
+    border-left: solid 1px; } }
+
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--align-right .menu, .site-navigation__menu .menu {
+    text-align: right; } }
+
+/**
+ *
+ * .site-navigation--fixed-top
+ *
+ */
+.site-navigation--fixed-top, .site-navigation {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0; }
+
+.admin-bar .site-navigation--fixed-top, .admin-bar .site-navigation {
+  top: 28px; }
+
+/*
+    Document   : _site-navigation__menu--responsive-toggle
+    Created on : 23-Nov-2013, 14:37:08
+    Author     : Richard
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+.site-navigation__menu--responsive-toggle .site-navigation__menu-link, .site-navigation__menu .site-navigation__menu-link {
   float: right;
   display: block;
-  padding: 1em; }
-.site-navigation__menu .menu-main-container {
+  padding: 0.8em;
+  line-height: 1; }
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--responsive-toggle .site-navigation__menu-link, .site-navigation__menu .site-navigation__menu-link {
+    display: none; } }
+.site-navigation__menu--responsive-toggle .menu-main-container, .site-navigation__menu .menu-main-container {
   clear: both;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -2678,19 +2729,22 @@ body {
   transition: all 0.5s;
   overflow: hidden;
   max-height: 0; }
-.site-navigation__menu .menu-main-container.active {
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--responsive-toggle .menu-main-container, .site-navigation__menu .menu-main-container {
+    max-height: none; } }
+.site-navigation__menu--responsive-toggle .menu-main-container.active, .site-navigation__menu .menu-main-container.active {
   max-height: 15em; }
-.site-navigation__menu .menu-main-container ul {
+.site-navigation__menu--responsive-toggle .menu-main-container ul, .site-navigation__menu .menu-main-container ul {
   border-top: 1px solid #808080; }
-.site-navigation__menu .menu-main-container ul a {
-  display: block;
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--responsive-toggle .menu-main-container ul, .site-navigation__menu .menu-main-container ul {
+    border-top: none; } }
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--responsive-toggle .menu-main-container ul > li, .site-navigation__menu .menu-main-container ul > li {
+    display: inline-block; } }
+.site-navigation__menu--responsive-toggle .menu-main-container ul > li > a, .site-navigation__menu .menu-main-container ul > li > a {
   padding: 0.8em;
   border-bottom: 1px solid #808080; }
-
-.site-navigation--fixed, .site-navigation {
-  position: absolute;
-  top: 0;
-  width: 100%; }
-
-.admin-bar .site-navigation--fixed, .admin-bar .site-navigation {
-  top: 28px; }
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--responsive-toggle .menu-main-container ul > li > a, .site-navigation__menu .menu-main-container ul > li > a {
+    border-bottom: none; } }
