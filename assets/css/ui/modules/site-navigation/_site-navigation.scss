@@ -18,15 +18,16 @@
         @extend .site-navigation__menu--border-spacers;
         @extend .site-navigation__menu--align-right;
         .menu-main-container {
-            ul{
+            .menu{
                 @extend .nav;
                 @extend .nav--block;
                 margin-bottom:0;
+                font-size:0;
                 
-                
-                li{
+                .menu-item{
+                    @include x-rem(font-size, 1);
                     a{
-
+                       
                     }
                 }
             }

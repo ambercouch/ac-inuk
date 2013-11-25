@@ -750,7 +750,7 @@ label, input, textarea, button, select, option {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .site-navigation__menu .menu-main-container ul:after, .site-navigation__menu--below-header .menu-main-container ul:after {
+.cf:after, .nav:after, .site-navigation__menu .menu-main-container .menu:after, .site-navigation__menu--below-header .menu-main-container ul:after {
   content: "";
   display: table;
   clear: both; }
@@ -1551,10 +1551,10 @@ label, .label {
  * Demo: jsfiddle.net/inuitcss/Vnph4
  *
  */
-.nav, .site-navigation__menu .menu-main-container ul, .site-navigation__menu--below-header .menu-main-container ul {
+.nav, .site-navigation__menu .menu-main-container .menu, .site-navigation__menu--below-header .menu-main-container ul {
   list-style: none;
   margin-left: 0; }
-.nav > li, .site-navigation__menu .menu-main-container ul > li, .site-navigation__menu--below-header .menu-main-container ul > li, .nav > li > a, .site-navigation__menu .menu-main-container ul > li > a, .site-navigation__menu--below-header .menu-main-container ul > li > a {
+.nav > li, .site-navigation__menu .menu-main-container .menu > li, .site-navigation__menu--below-header .menu-main-container ul > li, .nav > li > a, .site-navigation__menu .menu-main-container .menu > li > a, .site-navigation__menu--below-header .menu-main-container ul > li > a {
   display: inline-block;
   *display: inline;
   zoom: 1; }
@@ -1600,7 +1600,7 @@ label, .label {
    </ul>
  *
  */
-.nav--block, .site-navigation__menu .menu-main-container ul, .site-navigation__menu--below-header .menu-main-container ul {
+.nav--block, .site-navigation__menu .menu-main-container .menu, .site-navigation__menu--below-header .menu-main-container ul {
   line-height: 1;
   /**
    * Remove whitespace caused by `inline-block`.
@@ -1608,10 +1608,10 @@ label, .label {
   letter-spacing: -0.31em;
   word-spacing: -0.43em;
   white-space: nowrap; }
-.nav--block > li, .site-navigation__menu .menu-main-container ul > li, .site-navigation__menu--below-header .menu-main-container ul > li {
+.nav--block > li, .site-navigation__menu .menu-main-container .menu > li, .site-navigation__menu--below-header .menu-main-container ul > li {
   letter-spacing: normal;
   word-spacing: normal; }
-.nav--block > li > a, .site-navigation__menu .menu-main-container ul > li > a, .site-navigation__menu--below-header .menu-main-container ul > li > a {
+.nav--block > li > a, .site-navigation__menu .menu-main-container .menu > li > a, .site-navigation__menu--below-header .menu-main-container ul > li > a {
   padding: 12px; }
 
 /**
@@ -2671,8 +2671,12 @@ body {
 .site-navigation {
   background: #999; }
 
-.site-navigation__menu .menu-main-container ul {
-  margin-bottom: 0; }
+.site-navigation__menu .menu-main-container .menu {
+  margin-bottom: 0;
+  font-size: 0; }
+.site-navigation__menu .menu-main-container .menu .menu-item {
+  font-size: 16px;
+  font-size: 1rem; }
 
 .site-navigation__menu-link {
   display: none; }
