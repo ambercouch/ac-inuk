@@ -1,0 +1,57 @@
+/*
+    Document   : _site-navigation__menu--responsive-toggle
+    Created on : 23-Nov-2013, 14:37:08
+    Author     : Richard
+    Description:
+    Purpose of the stylesheet follows.
+*/
+
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+.site-navigation__menu--responsive-toggle{
+        
+        .site-navigation__menu-link{
+            float: right;
+            display: block;
+            padding: 0.8em;
+            line-height: 1;
+            @include media-query(lap-and-up){
+                        display:none;
+            }
+        }
+        .menu-main-container {
+            clear: both;
+            @include vendor(transition, all 0.5s);
+            overflow: hidden;
+            max-height: 0;
+            @include media-query(lap-and-up){
+                max-height:none;
+            }
+            &.active{
+                max-height: 15em;
+            }
+            ul{
+                
+                @extend .nav--stacked;
+		border-top: 1px solid #808080;
+                @include media-query(lap-and-up){
+                    border-top: none;
+                }
+                > li{
+                    @include media-query(lap-and-up){
+                        display: inline-block;
+                    }
+                    > a{
+                        padding: 0.8em;
+                        border-bottom: 1px solid #808080;
+                        @include media-query(lap-and-up){
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+	}
+}
