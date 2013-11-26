@@ -827,7 +827,7 @@ h2, .beta {
   font-size: 1.875rem;
   line-height: 1.6; }
 
-h3, .gamma {
+h3, .gamma, .site-header--fixed-top .site-title, .site-header .site-title {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1; }
@@ -837,7 +837,7 @@ h4, .delta {
   font-size: 1.25rem;
   line-height: 1.2; }
 
-h5, .epsilon {
+h5, .epsilon, .site-header--fixed-top .site-description, .site-header .site-description {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -2755,3 +2755,33 @@ body {
 @media only screen and (min-width: 481px) {
   .site-navigation__menu--responsive-toggle .menu-main-container ul > li > a, .site-navigation__menu .menu-main-container ul > li > a {
     border-bottom: none; } }
+
+/*
+ * .site-header
+ */
+.site-header--fixed-top, .site-header {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 24px;
+  z-index: 999;
+  width: 100%; }
+@media only screen and (min-width: 1024px) {
+  .site-header--fixed-top, .site-header {
+    left: 0; } }
+.site-header--fixed-top .site-title, .site-header .site-title {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0.4em 0; }
+.site-header--fixed-top .site-title a, .site-header .site-title a {
+  text-decoration: none; }
+.site-header--fixed-top .site-description, .site-header .site-description {
+  display: none;
+  margin: 0;
+  padding-left: 1em; }
+@media only screen and (min-width: 1024px) {
+  .site-header--fixed-top .site-description, .site-header .site-description {
+    display: inline-block; } }
+
+.admin-bar .site-header--fixed-top, .admin-bar .site-header {
+  top: 28px; }
