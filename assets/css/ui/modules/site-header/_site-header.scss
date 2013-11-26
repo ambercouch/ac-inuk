@@ -2,41 +2,13 @@
  * .site-header
  */
 
-
 .site-header{
-    @extend .site-header--fixed-top
-}
-
-.site-header--fixed-top{
-    position: absolute;
-    pointer-events:none;
-    top: 0;
-    left: $base-spacing-unit;
-        @include media-query(desk){
-            left: 0;
-        }
-    z-index:999;
-    width:100%;
-    
+    @extend .site-header--fixed-top;
         .site-title{
-            @extend .gamma;
-             display:inline-block;
-             margin-bottom: 0;
-             padding: 0.4em 0;
-                    a{
-                        text-decoration:none;
-                    }
-        } 
-        .site-description{
-            display: none;
-            margin: 0;
-            padding-left: 1em;
-            @extend .epsilon;
-            @include media-query(desk){
-                display: inline-block;
-            }
+            @extend .site-header--fixed-top__site-title;
         }
-}
-.admin-bar .site-header--fixed-top{ 
-    top:28px;
+        .site-description{
+            @extend .site-header--fixed-top__site-description;
+
+        }
 }
