@@ -1570,9 +1570,9 @@ label, .label {
    </ul>
  *
  */
-.nav--stacked > li, .site-navigation__menu--responsive-toggle .menu-main-container ul > li, .site-navigation__menu .menu-main-container ul > li {
+.nav--stacked > li, .site-navigation__menu--responsive-toggle .menu-main-container .menu > li, .site-navigation__menu .menu-main-container .menu > li {
   display: list-item; }
-.nav--stacked > li > a, .site-navigation__menu--responsive-toggle .menu-main-container ul > li > a, .site-navigation__menu .menu-main-container ul > li > a {
+.nav--stacked > li > a, .site-navigation__menu--responsive-toggle .menu-main-container .menu > li > a, .site-navigation__menu .menu-main-container .menu > li > a {
   display: block; }
 
 /**
@@ -2741,17 +2741,17 @@ body {
     max-height: none; } }
 .site-navigation__menu--responsive-toggle .menu-main-container.active, .site-navigation__menu .menu-main-container.active {
   max-height: 15em; }
-.site-navigation__menu--responsive-toggle .menu-main-container ul, .site-navigation__menu .menu-main-container ul {
+.site-navigation__menu--responsive-toggle .menu-main-container .menu, .site-navigation__menu .menu-main-container .menu {
   border-top: 1px solid #808080; }
 @media only screen and (min-width: 481px) {
-  .site-navigation__menu--responsive-toggle .menu-main-container ul, .site-navigation__menu .menu-main-container ul {
+  .site-navigation__menu--responsive-toggle .menu-main-container .menu, .site-navigation__menu .menu-main-container .menu {
     border-top: none; } }
 @media only screen and (min-width: 481px) {
-  .site-navigation__menu--responsive-toggle .menu-main-container ul > li, .site-navigation__menu .menu-main-container ul > li {
+  .site-navigation__menu--responsive-toggle .menu-main-container .menu > .menu-item, .site-navigation__menu .menu-main-container .menu > .menu-item {
     display: inline-block; } }
-.site-navigation__menu--responsive-toggle .menu-main-container ul > li > a, .site-navigation__menu .menu-main-container ul > li > a {
+.site-navigation__menu--responsive-toggle .menu-main-container .menu > .menu-item > a, .site-navigation__menu .menu-main-container .menu > .menu-item > a {
   padding: 0.8em;
   border-bottom: 1px solid #808080; }
 @media only screen and (min-width: 481px) {
-  .site-navigation__menu--responsive-toggle .menu-main-container ul > li > a, .site-navigation__menu .menu-main-container ul > li > a {
+  .site-navigation__menu--responsive-toggle .menu-main-container .menu > .menu-item > a, .site-navigation__menu .menu-main-container .menu > .menu-item > a {
     border-bottom: none; } }
