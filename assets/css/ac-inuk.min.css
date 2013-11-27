@@ -827,7 +827,7 @@ h2, .beta {
   font-size: 1.875rem;
   line-height: 1.6; }
 
-h3, .gamma, .site-header--fixed-top__site-title, .site-header .site-title {
+h3, .gamma, .site-header--fixed-top__site-title {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1; }
@@ -837,7 +837,7 @@ h4, .delta {
   font-size: 1.25rem;
   line-height: 1.2; }
 
-h5, .epsilon, .site-header--fixed-top__site-description, .site-header .site-description {
+h5, .epsilon, .site-header--band__site-description, .site-header .site-description, .site-header--fixed-top__site-description {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -2759,10 +2759,41 @@ body {
 /*
  * .site-header
  */
+.site-header .site-title {
+  font-weight: bold; }
+.site-header .site-title a {
+  text-decoration: none; }
+.site-header .site-description {
+  font-weight: normal;
+  margin-bottom: 0; }
+
+.site-header--band, .site-header {
+  background: #eee;
+  margin-left: -24px;
+  width: 100%;
+  padding: 24px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  box-sizing: content-box; }
+@media only screen and (min-width: 1024px) {
+  .site-header--band, .site-header {
+    padding: 24px 0;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; } }
+
+.site-header--band__site-title, .site-header .site-title {
+  margin-bottom: 0; }
+
 /*
  * .site-header--fixed-top
  */
-.site-header--fixed-top, .site-header {
+.site-header--fixed-top {
   position: absolute;
   pointer-events: none;
   top: 0;
@@ -2771,23 +2802,21 @@ body {
   z-index: 999;
   width: 100%; }
 @media only screen and (min-width: 1024px) {
-  .site-header--fixed-top, .site-header {
+  .site-header--fixed-top {
     padding-left: 0; } }
 
-.admin-bar .site-header--fixed-top, .admin-bar .site-header {
+.admin-bar .site-header--fixed-top {
   top: 28px; }
 
-.site-header--fixed-top__site-title, .site-header .site-title {
+.site-header--fixed-top__site-title {
   display: inline-block;
   margin-bottom: 0;
   padding: 0.4em 0; }
-.site-header--fixed-top__site-title a, .site-header .site-title a {
-  text-decoration: none; }
 
-.site-header--fixed-top__site-description, .site-header .site-description {
+.site-header--fixed-top__site-description {
   display: none;
   margin: 0;
-  padding-left: 1em; }
+  padding-left: 0.5em; }
 @media only screen and (min-width: 1024px) {
-  .site-header--fixed-top__site-description, .site-header .site-description {
+  .site-header--fixed-top__site-description {
     display: inline-block; } }
