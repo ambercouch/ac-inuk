@@ -27,7 +27,7 @@
                 .menu-item{
                     @include x-rem(font-size, 1);
                     a{
-                       
+                       text-decoration: none;
                     }
                 }
             }
