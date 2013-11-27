@@ -2677,6 +2677,8 @@ body {
 .site-navigation__menu .menu-main-container .menu .menu-item {
   font-size: 16px;
   font-size: 1rem; }
+.site-navigation__menu .menu-main-container .menu .menu-item a {
+  text-decoration: none; }
 
 .site-navigation__menu-link {
   display: none; }
