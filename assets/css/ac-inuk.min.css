@@ -2643,6 +2643,9 @@ body {
   .container {
     width: 940px; } }
 
+.site-main {
+  margin-top: 24px; }
+
 /**
  *
  * .conent-area styles
