@@ -6,7 +6,7 @@
 
 body{
     padding: 0 $base-spacing-unit;
-    @include media-query(lap-and-up){
+    @include media-query(desk){
         padding: 0;
     }
 }
