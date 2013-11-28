@@ -2825,3 +2825,11 @@ body {
 @media only screen and (min-width: 1024px) {
   .site-header--fixed-top__site-description {
     display: inline-block; } }
+
+/**
+ *
+ * post
+ *
+ **/
+.post .entry-title a {
+  text-decoration: none; }
