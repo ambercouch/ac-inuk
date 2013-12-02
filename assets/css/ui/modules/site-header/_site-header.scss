@@ -8,6 +8,8 @@
         .site-title{
             //@extend .site-header--fixed-top__site-title;
             @extend .site-header--band__site-title;
+            @extend .kilo;
+            line-height: 1.333em;
             font-weight: bold;
         a{
             text-decoration:none;

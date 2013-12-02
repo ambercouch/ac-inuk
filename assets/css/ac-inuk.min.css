@@ -874,7 +874,7 @@ hgroup .hN {
   font-size: 4.5rem;
   line-height: 1; }
 
-.kilo {
+.kilo, .site-header .site-title {
   font-size: 48px;
   font-size: 3rem;
   line-height: 1; }
@@ -2765,6 +2765,7 @@ body {
  * .site-header
  */
 .site-header .site-title {
+  line-height: 1.333em;
   font-weight: bold; }
 .site-header .site-title a {
   text-decoration: none; }
