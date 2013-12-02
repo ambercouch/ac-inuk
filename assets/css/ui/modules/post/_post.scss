@@ -5,9 +5,14 @@
  **/ 
 
 .post{
-    .entry-title{
-        a{
-            text-decoration: none;
+    margin-bottom: $base-spacing-unit;
+    .entry-header{
+        margin-bottom: $base-spacing-unit;
+        .entry-title{
+            margin-bottom:0;
+            a{
+                text-decoration: none;
+            }
         }
     }
 }
