@@ -6,8 +6,8 @@ function ac_inuk_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'ac_inuk' ),
 		'id'            => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'before_widget' => '<aside id="%1$s" class="sidebar__widget %2$s"><div class="widget" >',
+		'after_widget'  => '</div></aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
