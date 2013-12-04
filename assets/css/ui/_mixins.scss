@@ -1,0 +1,7 @@
+/*
+ * rem value with pixle fallback
+ */
+@mixin x-rem ($property, $value) {
+  #{$property}: $value * $base-font-size;
+  #{$property}: #{$value}rem;
+}

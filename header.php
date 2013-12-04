@@ -40,16 +40,15 @@
                     </div><!-- /.site-branding -->
                 </div>
             </div><!-- /.container -->
-
-		<nav id="site-navigation"  role="navigation">
-                    <div class="container" >
-                         <div class="grid">
-                             <div class="grid__item navigation-main">
-                                <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-                             </div>
-                        </div>
-                    </div><!-- /.container -->
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
+        </header><!-- #masthead -->
+        <nav id="nav-main"class="site-navigation"  role="navigation">
+            <div class="container" >
+                 <div class="grid">
+                     <div class="grid__item site-navigation__menu">
+                         <a class="site-navigation__menu-link" href="#menu">Menu</a>
+                         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+                     </div>
+                </div>
+            </div><!-- /.container -->
+        </nav><!-- #site-navigation -->
 	<div id="main" class="site-main container">

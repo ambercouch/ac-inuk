@@ -750,7 +750,7 @@ label, input, textarea, button, select, option {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after {
+.cf:after, .nav:after, .site-navigation__menu .menu-main-container .menu:after, .site-navigation__menu--below-header .menu-main-container ul:after {
   content: "";
   display: table;
   clear: both; }
@@ -827,7 +827,7 @@ h2, .beta {
   font-size: 1.875rem;
   line-height: 1.6; }
 
-h3, .gamma {
+h3, .gamma, .site-header--fixed-top__site-title {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1; }
@@ -837,7 +837,7 @@ h4, .delta {
   font-size: 1.25rem;
   line-height: 1.2; }
 
-h5, .epsilon {
+h5, .epsilon, .site-header--band__site-description, .site-header .site-description, .site-header--fixed-top__site-description {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -874,7 +874,7 @@ hgroup .hN {
   font-size: 4.5rem;
   line-height: 1; }
 
-.kilo {
+.kilo, .site-header .site-title {
   font-size: 48px;
   font-size: 3rem;
   line-height: 1; }
@@ -1532,6 +1532,119 @@ label, .label {
   width: 100%;
   padding-left: 24px;
   vertical-align: top; }
+
+/*------------------------------------*\
+    $NAV
+\*------------------------------------*/
+/**
+ * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ * e.g.:
+ *
+   <ul class=nav>
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ * Demo: jsfiddle.net/inuitcss/Vnph4
+ *
+ */
+.nav, .site-navigation__menu .menu-main-container .menu, .site-navigation__menu--below-header .menu-main-container ul {
+  list-style: none;
+  margin-left: 0; }
+.nav > li, .site-navigation__menu .menu-main-container .menu > li, .site-navigation__menu--below-header .menu-main-container ul > li, .nav > li > a, .site-navigation__menu .menu-main-container .menu > li > a, .site-navigation__menu--below-header .menu-main-container ul > li > a {
+  display: inline-block;
+  *display: inline;
+  zoom: 1; }
+
+/**
+ * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
+ *
+   <ul class="nav  nav--stacked">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav--stacked > li, .site-navigation__menu--responsive-toggle .menu-main-container .menu > li, .site-navigation__menu .menu-main-container .menu > li {
+  display: list-item; }
+.nav--stacked > li > a, .site-navigation__menu--responsive-toggle .menu-main-container .menu > li > a, .site-navigation__menu .menu-main-container .menu > li > a {
+  display: block; }
+
+/**
+ * `.nav--banner` extends `.nav` and centres the list, e.g.:
+ *
+   <ul class="nav  nav--banner">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav--banner {
+  text-align: center; }
+
+/**
+ * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
+ *
+   <ul class="nav  nav--block">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav--block, .site-navigation__menu .menu-main-container .menu, .site-navigation__menu--below-header .menu-main-container ul {
+  line-height: 1;
+  /**
+   * Remove whitespace caused by `inline-block`.
+   */
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  white-space: nowrap; }
+.nav--block > li, .site-navigation__menu .menu-main-container .menu > li, .site-navigation__menu--below-header .menu-main-container ul > li {
+  letter-spacing: normal;
+  word-spacing: normal; }
+.nav--block > li > a, .site-navigation__menu .menu-main-container .menu > li > a, .site-navigation__menu--below-header .menu-main-container ul > li > a {
+  padding: 12px; }
+
+/**
+ * Force a nav to occupy 100% of the available width of its parent. Extends
+ * `.nav`, e.g.:
+ *
+   <ul class="nav  nav--fit">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ * Thanks to @pimpl for this idea!
+ */
+.nav--fit {
+  display: table;
+  width: 100%; }
+.nav--fit > li {
+  display: table-cell; }
+.nav--fit > li > a {
+  display: block; }
+
+/**
+ * Make a list of keywords. Extends `.nav`, e.g.:
+ *
+   `<ul class="nav  nav--keywords>`
+ *
+ */
+.nav--keywords > li:after {
+  content: "\002C" "\00A0"; }
+.nav--keywords > li:last-child:after {
+  display: none; }
 
 /**
  * Style trumps; helper and brand classes
@@ -2508,6 +2621,9 @@ label, .label {
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
+/*
+ * rem value with pixle fallback
+ */
 /**
  *
  * base layout styles
@@ -2515,7 +2631,7 @@ label, .label {
  */
 body {
   padding: 0 24px; }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 1024px) {
   body {
     padding: 0; } }
 
@@ -2526,6 +2642,9 @@ body {
 @media only screen and (min-width: 1024px) {
   .container {
     width: 940px; } }
+
+.site-main {
+  margin-top: 24px; }
 
 /**
  *
@@ -2546,3 +2665,178 @@ body {
   font-size: 0; }
 .grid > * {
   font-size: 16px; }
+
+/**
+ *
+ * .site-navigation
+ *
+ */
+.site-navigation {
+  background: #999; }
+
+.site-navigation__menu .menu-main-container .menu {
+  margin-bottom: 0;
+  font-size: 0; }
+.site-navigation__menu .menu-main-container .menu .menu-item {
+  font-size: 16px;
+  font-size: 1rem; }
+.site-navigation__menu .menu-main-container .menu .menu-item a {
+  text-decoration: none; }
+
+.site-navigation__menu-link {
+  display: none; }
+
+.site-navigation__menu--below-header .menu-main-container ul {
+  margin-bottom: 0; }
+
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--border-spacers .menu .menu-item a, .site-navigation__menu .menu .menu-item a {
+    border-right: solid 1px; }
+  .site-navigation__menu--border-spacers .menu .menu-item:first-child a, .site-navigation__menu .menu .menu-item:first-child a {
+    border-left: solid 1px; } }
+
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--align-right .menu, .site-navigation__menu .menu {
+    text-align: right; } }
+
+/**
+ *
+ * .site-navigation--fixed-top
+ *
+ */
+.site-navigation--fixed-top, .site-navigation {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0; }
+
+.admin-bar .site-navigation--fixed-top, .admin-bar .site-navigation {
+  top: 28px; }
+
+/*
+    Document   : _site-navigation__menu--responsive-toggle
+    Created on : 23-Nov-2013, 14:37:08
+    Author     : Richard
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+.site-navigation__menu--responsive-toggle .site-navigation__menu-link, .site-navigation__menu .site-navigation__menu-link {
+  float: right;
+  display: block;
+  padding: 0.8em;
+  line-height: 1; }
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--responsive-toggle .site-navigation__menu-link, .site-navigation__menu .site-navigation__menu-link {
+    display: none; } }
+.site-navigation__menu--responsive-toggle .menu-main-container, .site-navigation__menu .menu-main-container {
+  clear: both;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow: hidden;
+  max-height: 0; }
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--responsive-toggle .menu-main-container, .site-navigation__menu .menu-main-container {
+    max-height: none; } }
+.site-navigation__menu--responsive-toggle .menu-main-container.active, .site-navigation__menu .menu-main-container.active {
+  max-height: 15em; }
+.site-navigation__menu--responsive-toggle .menu-main-container .menu, .site-navigation__menu .menu-main-container .menu {
+  border-top: 1px solid #808080; }
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--responsive-toggle .menu-main-container .menu, .site-navigation__menu .menu-main-container .menu {
+    border-top: none; } }
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--responsive-toggle .menu-main-container .menu > .menu-item, .site-navigation__menu .menu-main-container .menu > .menu-item {
+    display: inline-block; } }
+.site-navigation__menu--responsive-toggle .menu-main-container .menu > .menu-item > a, .site-navigation__menu .menu-main-container .menu > .menu-item > a {
+  padding: 0.8em;
+  border-bottom: 1px solid #808080; }
+@media only screen and (min-width: 481px) {
+  .site-navigation__menu--responsive-toggle .menu-main-container .menu > .menu-item > a, .site-navigation__menu .menu-main-container .menu > .menu-item > a {
+    border-bottom: none; } }
+
+/*
+ * .site-header
+ */
+.site-header .site-title {
+  line-height: 1.333em;
+  font-weight: bold; }
+.site-header .site-title a {
+  text-decoration: none; }
+.site-header .site-description {
+  font-weight: normal;
+  margin-bottom: 0; }
+
+.site-header--band, .site-header {
+  background: #eee;
+  margin-left: -24px;
+  width: 100%;
+  padding: 24px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  box-sizing: content-box; }
+@media only screen and (min-width: 1024px) {
+  .site-header--band, .site-header {
+    padding: 24px 0;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; } }
+
+.site-header--band__site-title, .site-header .site-title {
+  margin-bottom: 0; }
+
+/*
+ * .site-header--fixed-top
+ */
+.site-header--fixed-top {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  padding-left: 0.8em;
+  z-index: 999;
+  width: 100%; }
+@media only screen and (min-width: 1024px) {
+  .site-header--fixed-top {
+    padding-left: 0; } }
+
+.admin-bar .site-header--fixed-top {
+  top: 28px; }
+
+.site-header--fixed-top__site-title {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0.4em 0; }
+
+.site-header--fixed-top__site-description {
+  display: none;
+  margin: 0;
+  padding-left: 0.5em; }
+@media only screen and (min-width: 1024px) {
+  .site-header--fixed-top__site-description {
+    display: inline-block; } }
+
+/**
+ *
+ * post
+ *
+ **/
+.post {
+  margin-bottom: 24px; }
+.post .entry-header {
+  margin-bottom: 24px; }
+.post .entry-header .entry-title {
+  margin-bottom: 0; }
+.post .entry-header .entry-title a {
+  text-decoration: none; }

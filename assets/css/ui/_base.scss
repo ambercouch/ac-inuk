@@ -6,7 +6,7 @@
 
 body{
     padding: 0 $base-spacing-unit;
-    @include media-query(lap-and-up){
+    @include media-query(desk){
         padding: 0;
     }
 }
@@ -18,4 +18,8 @@ body{
    @include media-query(desk){
         width: 940px;
    }
+}
+
+.site-main{
+    margin-top: $base-spacing-unit;
 }
