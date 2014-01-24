@@ -46,7 +46,7 @@
                  <div class="grid">
                      <div class="grid__item site-navigation__menu">
                          <a class="site-navigation__menu-link" href="#menu">Menu</a>
-                         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'menu multi-dropdown'  ) ); ?>
                      </div>
                 </div>
             </div><!-- /.container -->

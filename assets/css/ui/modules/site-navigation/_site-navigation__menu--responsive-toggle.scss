@@ -25,7 +25,7 @@
         .menu-main-container {
             clear: both;
             @include vendor(transition, all 0.5s);
-            overflow: hidden;
+            //overflow: hidden;
             max-height: 0;
             @include media-query(lap-and-up){
                 max-height:none;
@@ -44,12 +44,13 @@
                     @include media-query(lap-and-up){
                         display: inline-block;
                     }
-                    > a{
+                     a{
                         padding: 0.8em;
                         border-bottom: 1px solid #808080;
                         @include media-query(lap-and-up){
                             border-bottom: none;
                         }
+                        
                     }
                 }
             }
