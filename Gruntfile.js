@@ -6,29 +6,29 @@ module.exports = function(grunt) {
         
         watch: {
             css: {
-              files: 'assets/css/**/*.scss',
-              tasks: ['sass'],
+              files: 'assets/scss/**/*.scss',
+              tasks: ['compass'],
               options: {
                 livereload: true,
               },
             },
           },
-        sass: {
+        compass: {
              dist: {
                options: {
-                 style: 'expanded'
+                 sassDir: 'assets/scss',
+                 cssDir: 'assets/css'
                },
-               files: {
-                 'assets/css/ac-inuk.min.css': 'assets/css/style.scss',
-               }
+               
              }
            }   
+   
 
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-compass');
     
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
