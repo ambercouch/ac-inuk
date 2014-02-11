@@ -6,7 +6,7 @@
 
 //base navigation
 .site-navigation{
-    @extend .site-navigation--fixed-top;
+    @extend %site-navigation--fixed-top;
     background: #999;
 }
 
@@ -14,9 +14,9 @@
 
 //base navigation menu
 .site-navigation__menu{
-        @extend .site-navigation__menu--responsive-toggle;
-        @extend .site-navigation__menu--border-spacers;
-        @extend .site-navigation__menu--align-right;
+        @extend %site-navigation__menu--responsive-toggle;
+        @extend %site-navigation__menu--border-spacers;
+        @extend %site-navigation__menu--align-right;
         .menu-main-container {
             .menu{
                 @extend .nav;
@@ -57,7 +57,7 @@
         }
 }
 
-.site-navigation__menu--border-spacers{
+%site-navigation__menu--border-spacers{
     @include media-query(lap-and-up){
         .menu{
             .menu-item{
@@ -82,7 +82,7 @@
     }
 }
 
-.site-navigation__menu--align-right{
+%site-navigation__menu--align-right{
     @include media-query(lap-and-up){
                 .menu{
                     text-align:right;

@@ -11,7 +11,7 @@
     Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 */
 
-.site-navigation__menu--responsive-toggle{
+%site-navigation__menu--responsive-toggle{
         
         .site-navigation__menu-link{
             float: right;
@@ -25,7 +25,7 @@
         .menu-main-container {
             clear: both;
             @include vendor(transition, all 0.5s);
-            //overflow: hidden;
+            overflow: hidden;
             max-height: 0;
             @include media-query(lap-and-up){
                 max-height:none;

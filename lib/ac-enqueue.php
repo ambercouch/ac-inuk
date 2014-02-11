@@ -7,7 +7,7 @@ function ac_inuk_scripts() {
         
         wp_enqueue_script( 'ac_inuk', get_template_directory_uri() . '/assets/js/ac-inuk.js', array('jquery'), '20120206', true );
 
-	wp_enqueue_script( 'ac_inuk-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
+	//wp_enqueue_script( 'ac_inuk-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'ac_inuk-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
 
