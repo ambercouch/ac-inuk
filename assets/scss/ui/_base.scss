@@ -1,0 +1,25 @@
+/**
+ *
+ * base layout styles
+ *
+ */
+
+body{
+    padding: 0 $base-spacing-unit;
+    @include media-query(desk){
+        padding: 0;
+    }
+}
+
+.container{
+   width: auto;
+   margin-left: auto;
+   margin-right: auto;
+   @include media-query(desk){
+        width: 940px;
+   }
+}
+
+.site-main{
+    padding: $base-spacing-unit 0;
+}

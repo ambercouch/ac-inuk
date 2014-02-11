@@ -1,0 +1,36 @@
+/*
+ * .site-header--fixed-top
+ */
+
+.site-header--fixed-top{
+    position: absolute;
+    pointer-events:none;
+    top: 0;
+    left: 0;
+    padding-left: 0.8em;
+    @include media-query(desk){
+        padding-left: 0;
+    }
+    z-index:999;
+    width:100%;      
+}
+
+.admin-bar .site-header--fixed-top{ 
+    top:28px;
+}
+
+.site-header--fixed-top__site-title{
+     @extend .gamma;
+     display:inline-block;
+     margin-bottom: 0;
+     padding: 0.2em 0;
+     } 
+.site-header--fixed-top__site-description{
+    display: none;
+    margin: 0;
+    padding-left: 0.5em;
+    @extend .epsilon;
+    @include media-query(desk){
+        display: inline-block;
+    }
+}

@@ -1,0 +1,12 @@
+/**
+ *
+ * .grid styles
+ *
+ */
+
+.grid{
+    font-size: 0;
+        > * {
+            font-size: $base-font-size;
+        }
+}
