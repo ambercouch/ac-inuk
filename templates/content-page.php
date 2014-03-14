@@ -6,19 +6,19 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
+  <header class="page__header">
+    <h1 class="header"><?php the_title(); ?></h1>
+  </header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'ac_inuk' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'ac_inuk' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+  <div class="page_content">
+    <?php the_content(); ?>
+    <?php
+    wp_link_pages(array(
+        'before' => '<div class="page__page-links">' . __('Pages:', 'ac_inuk'),
+        'after' => '</div>',
+    ));
+    ?>
+  </div><!-- .entry-content -->
+  <?php edit_post_link(__('Edit', 'ac_inuk'), '<footer class="meta"><span class="meta__edit-link">', '</span></footer>'); ?>
 </article><!-- #post-## -->

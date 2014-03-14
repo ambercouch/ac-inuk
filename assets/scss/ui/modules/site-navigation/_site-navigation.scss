@@ -6,7 +6,7 @@
 
 //base navigation
 .site-navigation{
-    @extend %site-navigation--fixed-top;
+    @extend %site-navigation__menu--below-header;
     background: #999;
 }
 
@@ -14,9 +14,9 @@
 
 //base navigation menu
 .site-navigation__menu{
-        @extend %site-navigation__menu--responsive-toggle;
+        //@extend %site-navigation__menu--responsive-toggle;
         @extend %site-navigation__menu--border-spacers;
-        @extend %site-navigation__menu--align-right;
+        @extend %site-navigation__menu--align-center;
         .menu-main-container {
             .menu{
                 @extend .nav;
@@ -41,7 +41,9 @@
 }
 
 
-.site-navigation__menu--below-header{
+%site-navigation__menu--below-header{
+    margin-left: -24px;
+    margin-right: -24px;
     
     .menu-main-container {
             ul{
@@ -88,6 +90,17 @@
                     text-align:right;
                                 a{
                                     text-align: left;
+                                }
+                }
+    }
+}
+
+%site-navigation__menu--align-center{
+    @include media-query(lap-and-up){
+                .menu{
+                    text-align:center;
+                                a{
+                                    text-align: center;
                                 }
                 }
     }

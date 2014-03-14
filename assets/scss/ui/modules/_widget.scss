@@ -5,16 +5,11 @@
  */
 
 .widget{
-        .widget-title{
-            @extend .epsilon;
-            margin-bottom: 0.5em;
-                    
-        }
-        > ul{
-            margin: 0;
-                    li{
-                        list-style:none;
-                    }
-            }
+  > ul{
+    margin: 0;
+    li{
+      list-style:none;
+    }
+  }
 }
 

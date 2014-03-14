@@ -27,6 +27,29 @@ ACINUK = {
               console.log(height);
               return false;
              });
+             
+             /* TRUNK.JS*/
+             jQuery(function() {
+
+                    var items = jQuery('.slideRight, .slideLeft');
+                    var content = jQuery('.content');
+
+                    var open = function() {
+                                                                    jQuery(items).removeClass('close').addClass('open');
+                                                            }
+                    var close = function() { 
+                                                                    jQuery(items).removeClass('open').addClass('close');
+                                                            }
+
+                    jQuery('#navToggle').click(function(){
+                            if (content.hasClass('open')) {jQuery(close)}
+                            else {jQuery(open)}
+                    });
+                    content.click(function(){
+                            if (content.hasClass('open')) {jQuery(close)}
+                    });
+
+            });
             
         }
     },

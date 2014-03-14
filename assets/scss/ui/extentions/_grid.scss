@@ -1,0 +1,13 @@
+/**
+ *
+ * .grid styles
+ *
+ */
+
+.grid{
+  font-size: 0;
+  > * {
+    @extend .grid__item;
+    font-size: $base-font-size;
+  }
+}

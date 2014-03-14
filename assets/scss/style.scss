@@ -1,19 +1,19 @@
 @charset "UTF-8";
 /*------------------------------------*\
-    STYLE.CSS
+  STYLE.CSS
 \*------------------------------------*/
 /**
- *
- * sass --watch style.scss:style.min.css --style compressed
- *
- * Here we pull in some variables, include the inuit.css framework, then add our
- * project-specific components afterwards.
- */
+  *
+  * sass --watch style.scss:style.min.css --style compressed
+  *
+  * Here we pull in some variables, include the inuit.css framework, then add our
+  * project-specific components afterwards.
+*/
 
 
 /**
- * Setup
- */
+  * Setup
+*/
 @import "vars";
 @import "inuit.css/inuit";
 
@@ -22,22 +22,53 @@
 
 
 /**
- * She’s all yours, cap’n... Begin importing your stuff here.
- */
+  * She’s all yours, cap’n... Begin importing your stuff here.
+*/
 @import "ui/_mixins.scss";
 @import "ui/_base.scss";
-@import "ui/modules/_content-area.scss";
-@import "ui/modules/_sidebar.scss";
+
+@import "ui/extentions/grid.scss";
+
+@import "ui/modules/site.scss";
+@import "ui/modules/header.scss";
+@import "ui/modules/branding.scss";
+@import "ui/modules/navigation.scss";
+@import "ui/modules/menu.scss";
+@import "ui/modules/content.scss";
+@import "ui/modules/_post";
+@import "ui/modules/_sticky";
+@import "ui/modules/_title";
+@import "ui/modules/_meta";
+@import "ui/modules/_widget-area";
 @import "ui/modules/_widget";
-@import "ui/modules/_site-footer";
-@import "ui/modules/_grid.scss";
-@import "ui/modules/site-navigation/_site-navigation";
-@import "ui/modules/site-navigation/_site-navigation--fixed-top";
-@import "ui/modules/site-navigation/_site-navigation__menu--responsive-toggle";
+@import "ui/modules/_footer";
+
 @import "ui/modules/multidropdown/_multidropdown";
-@import "ui/modules/site-header/_site-header";
-@import "ui/modules/site-header/_site-header--fixed-top";
-@import "ui/modules/post/_post";
+@import "ui/modules/_multidropdown";
+
+@import "ui/modules/widgets/_widget_search";
+@import "ui/modules/widgets/_widget_calendar";
+
+/*@import "ui/modules/_branding.scss";
+  @import "ui/modules/_site-navigation.scss";
+  @import "ui/modules/_post.scss";
+
+
+  @import "ui/modules/_page.scss";
+  @import "ui/modules/_site-footer.scss";
+@import "ui/modules/_widget-area.scss";*/
+/*@import "ui/modules/_content-area.scss";
+  @import "ui/modules/_sidebar.scss";
+  @import "ui/modules/_widget";
+  @import "ui/modules/_site-footer";
+  @import "ui/modules/_grid.scss";
+  @import "ui/modules/site-navigation/_site-navigation";
+  @import "ui/modules/site-navigation/_site-navigation--fixed-top";
+  @import "ui/modules/site-navigation/_site-navigation__menu--responsive-toggle";
+  @import "ui/modules/multidropdown/_multidropdown";
+  @import "ui/modules/site-header/_site-header";
+  @import "ui/modules/site-header/_site-header--fixed-top";
+@import "ui/modules/post/_post";*/
 
 
 
