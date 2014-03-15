@@ -4,11 +4,11 @@
   *
 **/
 
-.post{
-  @extend %post__img;
+.page{
+  @extend %post_img;
   padding: $half-spacing-unit;
   margin-bottom: $base-spacing-unit;
-  .post__header{
+  .page__header{
     margin-bottom: $base-spacing-unit;
     .title{
       margin-bottom:0;
