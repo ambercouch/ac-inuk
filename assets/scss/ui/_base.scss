@@ -19,7 +19,8 @@ body{
   padding-left: $half-spacing-unit;
   padding-right: $half-spacing-unit;
   @include media-query(desk){
-    width: 940px;
+    max-width: 70em;
+    width: 90%
   }
 }
 
