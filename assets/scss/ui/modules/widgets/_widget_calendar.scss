@@ -1,0 +1,15 @@
+.widget_calendar{
+  @extend .smallprint;
+  table{
+    th{
+      padding: 0;
+      text-align: center;
+    }
+    td{
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+}
+

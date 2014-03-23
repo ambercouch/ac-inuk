@@ -1,0 +1,18 @@
+.title{
+  text-decoration: none;
+  margin-bottom: 0;
+}
+.title--article{
+  @extend .title;
+  color: $brand-col-2;
+  &:hover{
+    color: $brand-col-1;
+  }
+}
+
+.title--widget{
+  @extend .title;
+  @extend .epsilon;
+  color: $brand-col-2;
+
+}

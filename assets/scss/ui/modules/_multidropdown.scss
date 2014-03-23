@@ -1,0 +1,11 @@
+%multi-dropdown {
+  ul{
+    background: $brand-col-4;
+    li{
+      a{
+        display:block;
+        padding: $half-spacing-unit;
+      }
+    }
+  }
+}

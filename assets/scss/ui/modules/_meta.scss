@@ -1,0 +1,9 @@
+.meta{
+  @extend .smallprint;
+}
+.meta--footer{
+  @extend .meta;
+}
+.meta--header{
+  @extend .meta;
+}

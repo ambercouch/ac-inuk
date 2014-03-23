@@ -1,0 +1,8 @@
+.footer{
+
+}
+.footer--master{
+  @extend .footer;
+  @extend .container;
+}
+

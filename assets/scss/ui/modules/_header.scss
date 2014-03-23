@@ -1,0 +1,20 @@
+.header{
+
+}
+.header--master{
+  @extend .header;
+  @extend .container;
+
+}
+.header--master__branding{
+  overflow: hidden;
+}
+
+.header--article{
+  @extend .header;
+  margin-bottom: 0;
+  .header--article__title{
+    margin-bottom: 0;
+  }
+}
+
