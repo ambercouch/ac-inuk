@@ -42,7 +42,7 @@ module.exports = function(grunt) {
             separator: ';',
           },
           dist: {
-            src: ['assets/vendor/jquery/dist/jquery.min.js', 'assets/js/ac-inuk.js'],
+            src: ['assets/vendor/jquery/dist/jquery.min.js'],
             dest: 'assets/js/script.js',
           },
         },
