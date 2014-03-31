@@ -37,12 +37,22 @@ module.exports = function(grunt) {
             dest: 'assets/css'
           }
         },
+        concat: {
+         options: {
+            separator: ';',
+          },
+          dist: {
+            src: ['assets/vendor/jquery/dist/jquery.min.js', 'assets/js/ac-inuk.js'],
+            dest: 'assets/js/script.js',
+          },
+        },
 
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-autoprefixer');
