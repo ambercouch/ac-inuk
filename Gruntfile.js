@@ -3,7 +3,6 @@ module.exports = function(grunt) {
     // 1. All configuration goes here
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
         watch: {
             css: {
               files: 'assets/scss/**/*.scss',
@@ -50,6 +49,7 @@ module.exports = function(grunt) {
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
