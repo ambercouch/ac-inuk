@@ -1,11 +1,14 @@
 .content{
   @extend .container;
 }
-.content__post-list{
+
+.content__post-list,
+.content__single-post{
   @extend .one-whole;
   @extend .lap-two-thirds;
   @extend .desk-four-fifths;
 }
+
 .content__widget-area{
   @extend .one-whole;
   @extend .lap-one-third;
