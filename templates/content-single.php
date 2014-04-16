@@ -6,12 +6,17 @@
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
   <header class="post__header">
-    <h1 class="header"><?php the_title(); ?></h1>
+    <div class="header--article">
+      <h1 class="header--article__title">
+        <span class="title--article" ><?php the_title(); ?></span>
+      </h1>
 
-    <div class="post__meta--header">
-      <?php ac_inuk_posted_on(); ?>
-    </div><!-- .entry-meta -->
-
+      <div class="header--article__meta--header">
+        <div  class="meta--header">
+          <?php ac_inuk_posted_on(); ?>
+        </div>
+      </div><!-- .entry-meta -->
+    </div>
   </header><!-- .entry-header -->
 
   <div class="post__content">
