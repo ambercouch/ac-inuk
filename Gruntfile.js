@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         watch: {
             css: {
               files: 'assets/scss/**/*.scss',
-              tasks: ['compass'],
+              tasks: ['sass'],
               options: {
                 livereload: true,
               },
@@ -45,6 +45,17 @@ module.exports = function(grunt) {
             dest: 'assets/js/script.js',
           },
         },
+        sass: {                              // Task
+          dist: {                            // Target
+            options: {                       // Target options
+              style: 'expanded'
+            },
+            files: {                         // Dictionary of files
+              'assets/css/style.css': 'assets/scss/style.scss'      // 'destination': 'source'
+
+            }
+          }
+  }
 
     });
 

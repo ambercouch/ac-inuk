@@ -1,4 +1,6 @@
-.navigation{}
+.navigation{
+  display: block;
+}
 .navigation--main{
   @extend .navigation;
   @extend .container;
