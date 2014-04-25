@@ -1906,6 +1906,7 @@ label,
 * Whole
 */
 .one-whole, .navigation--main__menu, .content__post-list,
+.content__post-archive,
 .content__single-post, .content__widget-area {
   width: 100%;
 }
@@ -2187,6 +2188,7 @@ label,
   }
 
   .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths, .content__post-list,
+  .content__post-archive,
   .content__single-post {
     width: 66.666%;
   }
@@ -2590,6 +2592,7 @@ label,
   }
 
   .desk-four-fifths, .desk-eight-tenths, .content__post-list,
+  .content__post-archive,
   .content__single-post {
     width: 80%;
   }
