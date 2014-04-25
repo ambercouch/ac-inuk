@@ -37,7 +37,7 @@ if (post_password_required())
       </nav><!-- #comment-nav-before -->
     <?php endif; // check for comment navigation  ?>
 
-    <ol class="comment-list">
+    <ol class="comments__list">
       <?php
       /* Loop through and list the comments. Tell wp_list_comments()
        * to use ac_inuk_comment() to format the comments.
@@ -66,6 +66,6 @@ if (post_password_required())
     <p class="no-comments"><?php _e('Comments are closed.', 'ac_inuk'); ?></p>
   <?php endif; ?>
 
-  <?php comment_form(); ?>
+  <?php require( get_template_directory() . '/comment-form.php' ); ?>
 
 </div><!-- #comments -->
