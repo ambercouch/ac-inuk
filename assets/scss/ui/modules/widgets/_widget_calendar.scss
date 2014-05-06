@@ -1,5 +1,5 @@
 .widget_calendar{
-  @extend .smallprint;
+  @extend .milli;
   table{
     th{
       padding: 0;
@@ -10,6 +10,5 @@
       text-align: center;
     }
   }
-
 }
 
