@@ -8,10 +8,14 @@
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
   <header class="page__header">
-    <h1 class="header"><?php the_title(); ?></h1>
+    <div class="header--article">
+      <h1 class="header">
+        <span class="title--article" ><?php the_title(); ?></span>
+      </h1>
+    </div>
   </header><!-- .entry-header -->
 
-  <div class="page_content">
+  <div class="page__content">
     <?php the_content(); ?>
     <?php
     wp_link_pages(array(

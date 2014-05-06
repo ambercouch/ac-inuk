@@ -4,7 +4,9 @@
 
 .content__post-list,
 .content__post-archive,
-.content__single-post{
+.content__single-post,
+.content__single-page,
+.content__search-list{
   @extend .one-whole;
   @extend .lap-two-thirds;
   @extend .desk-four-fifths;
