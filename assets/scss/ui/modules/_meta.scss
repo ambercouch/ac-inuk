@@ -3,6 +3,12 @@
 }
 .meta--footer{
   @extend .meta;
+  .meta--footer__cat-links:after{
+    content: "|";
+    @include media-query (desk){
+      content: "";
+    }
+  }
 }
 .meta--header{
   @extend .meta;

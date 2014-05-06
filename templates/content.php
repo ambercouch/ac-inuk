@@ -13,7 +13,7 @@
 
       <?php if ('post' == get_post_type()) : ?>
         <div class="header--article__meta--header">
-          <div  class="meta--header">
+          <div class="meta--header" >
             <?php ac_inuk_posted_on(); ?>
           </div>
         </div><!-- .entry-meta -->
@@ -55,11 +55,9 @@
         $tags_list = get_the_tag_list('', __(', ', 'ac_inuk'));
         if ($tags_list) :
           ?>
-          <span class="meta--footer__sep"> | </span>
           <span class="meta--footer__tags-links">
             <?php printf(__('Tagged %1$s', 'ac_inuk'), $tags_list); ?>
           </span>
-          <span class="meta--footer__sep"> | </span>
         <?php endif; // End if $tags_list ?>
       <?php endif; // End if 'post' == get_post_type() ?>
 
