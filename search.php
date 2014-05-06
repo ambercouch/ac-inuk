@@ -7,13 +7,13 @@
 get_header();
 ?>
 <div class="grid" >
-  <section class="grid__item content-area" id="primary"  >
-    <div class="site-content page" id="content"  role="main">
+  <section class="content__search-list" id="primary"  >
+    <div class="search-list" id="content"  role="main">
 
       <?php if (have_posts()) : ?>
 
-        <header class="page__header">
-          <h1 class="header"><?php printf(__('Search Results for: %s', 'ac_inuk'), '<span>' . get_search_query() . '</span>'); ?></h1>
+        <header class="search-list__header">
+          <h1 class="header"><?php printf(__('Search Results for: %s', 'ac_inuk'), '<span class="search-list__term">' . get_search_query() . '</span>'); ?></h1>
         </header><!-- .page-header -->
 
         <?php /* Start the Loop */ ?>
@@ -34,8 +34,8 @@ get_header();
     </div><!-- #content -->
   </section><!-- #primary -->
 
-  <div class="grid__item" >
-    <?php get_sidebar(); ?>
-  </div>
+
+  <?php get_sidebar(); ?>
+
 </div><!-- /.grid -->
 <?php get_footer(); ?>

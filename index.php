@@ -13,8 +13,8 @@
 get_header();
 ?>
 <div class="grid" >
-  <div id="primary" class="content__post-list">
-    <div id="content" class="post-list" role="main">
+  <div class="content__post-list" id="primary" >
+    <div class="post-list" id="content" role="main">
 
       <?php if (have_posts()) : ?>
 
