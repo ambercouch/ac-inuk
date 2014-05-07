@@ -37,19 +37,20 @@
 @import "ui/modules/_menu.scss";
 @import "ui/modules/_content.scss";
 @import "ui/modules/_post";
+@import "ui/modules/_post__img";
 @import "ui/modules/_sticky";
 @import "ui/modules/_title";
 @import "ui/modules/_meta";
 @import "ui/modules/_widget-area";
 @import "ui/modules/_widget";
 @import "ui/modules/_footer";
-@import "ui/modules/_post__img";
 @import "ui/modules/_site-info";
+@import "ui/modules/_multidropdown";
 
 @import "ui/modules/navigation/_responsive-toggle.scss";
 
 @import "ui/modules/MultiDropdown/_multidropdown";
-@import "ui/modules/_multidropdown";
+
 
 @import "ui/modules/widgets/_widget_search";
 @import "ui/modules/widgets/_widget_calendar";
