@@ -10,15 +10,11 @@ html{
   }
 }
 body{
-  font-weight:300;
-  font-family: $sans-serif;
-  color: $brand-col-2;
   font-size: 90%;
   @include media-query(lap-and-up){
     font-size: 100%
   }
 }
-
 
 
 .site-main{
