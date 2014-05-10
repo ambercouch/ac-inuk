@@ -19,7 +19,13 @@
   @if type-of($line-height) == number{
     line-height:ceil($font-size / $line-height) * ($line-height / $font-size);
   }
-
 }
 
+/*
+ * rem value with pixle fallback
+ */
+@mixin x-rem ($property, $value) {
+  #{$property}: $value * $base-font-size;
+  #{$property}: #{$value}rem;
+}
 
