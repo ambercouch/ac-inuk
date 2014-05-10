@@ -14,7 +14,10 @@
   @extend .header;
   margin-bottom: 0;
   .header--article__title{
-    margin-bottom: 0;
+    color: $brand-col-2;
+    border-bottom: 1px solid $brand-col-2;
+    margin-bottom: 0.25em;
+    padding-bottom: 0.25em;
   }
 }
 
