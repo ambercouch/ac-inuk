@@ -1,15 +1,31 @@
+/*
+ * .header module
+ */
+
+/* Just a base class to extend all modifiers*/
 .header{
   display: block;
 }
+
+/*
+ * .header--master modifier. It's at the top of the site!
+ */
+
+/* Just a container */
 .header--master{
   @extend .header;
   @extend .container;
-
 }
+
+/* ? */
 .header--master__branding{
   overflow: hidden;
 }
 
+/*
+ * .header--article modifier. The title containers above articles.
+ * also see _title.scss
+ */
 .header--article{
   @extend .header;
   margin-bottom: 0;
