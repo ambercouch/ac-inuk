@@ -19,7 +19,8 @@
     display:none;
   }
 }
-[id=nav-main]{
+
+[id=nav-main][data-responsive-clone]{
   display: none;
   @include media-query(lap-and-up){
     display:block;

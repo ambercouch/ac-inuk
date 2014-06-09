@@ -22,6 +22,7 @@
   </head>
 
   <body <?php body_class(); ?> <?php ac_body_data(); ?>>
+    <?php (AC_MENU_ABOVE_HEADER === TRUE) ? get_template_part('templates/snippets/site__navigation--main') : ''; ?>
     <div id="page" class="hfeed site">
       <?php do_action('before'); ?>
       <header class="site__header--master" id="masthead"   role="banner">
@@ -41,18 +42,7 @@
           </div><!-- /.grid -->
         </div><!-- /.header -->
       </header><!-- /.site__header -->
-      <div class="site__navigation--main" id="nav-main"   role="navigation">
-        <div class="navigation--main" >
-          <div class="grid">
-            <div class="navigation--main__menu">
-              <div class="menu--site ">
-                <a id="site_menu_toggle" class="menu--responsive-toggle__toggle" href="#menu">Menu</a>
-                <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'menu--site__container', 'menu_class' => 'menu--site__menu-list')); ?>
-              </div><!--
-              <!-- menu -->
-            </div>
-          </div>
-        </div><!-- /.container -->
-      </div><!-- #site-navigation -->
+
+      <?php (AC_MENU_ABOVE_HEADER === FALSE) ? get_template_part('templates/snippets/site__navigation--main') : ''; ?>
       <div class="site__content" id="main" >
         <div class="content">
