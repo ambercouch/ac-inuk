@@ -4,7 +4,10 @@
  *
  */
 html{
-
+  font:#{($base-font-size/16px)*0.9em}/#{$line-height-ratio} $base-font-family;
+  @include media-query(lap-and-up){
+    font:#{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+  }
 }
 body{
   font-size: 90%;
