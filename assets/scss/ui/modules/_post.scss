@@ -28,6 +28,15 @@
     @include media-query(desk){
       padding-left:20%;
     }
+    p{
+      max-width: 33em;
+    }
+    li{
+      max-width: 33em;
+    }
+    dd{
+      max-width: 33em;
+    }
   }
   .post__summary{
     @include media-query(desk){
