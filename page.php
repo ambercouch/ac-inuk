@@ -13,12 +13,9 @@ get_header();
 ?>
 <div class="grid" >
   <div id="primary" class="content__single-page">
-    <div id="content" class="site-content" role="main">
-
+    <div id="content" class="single-page" role="main">
       <?php while (have_posts()) : the_post(); ?>
-
         <?php get_template_part('templates/content', 'page'); ?>
-
         <?php
         // If comments are open or we have at least one comment, load up the comment template
         // And we allow comments on pages.
@@ -26,13 +23,9 @@ get_header();
           ?>
           <?php comments_template(); ?>
         <?php endif; ?>
-
       <?php endwhile; // end of the loop.  ?>
-
-    </div><!-- #content -->
-  </div><!-- #primary -->
-
+    </div><!-- /.site-content -->
+  </div><!-- /.content__single-page -->
   <?php get_sidebar(); ?>
-
 </div><!-- /.grid -->
 <?php get_footer(); ?>
