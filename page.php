@@ -21,12 +21,13 @@ get_header();
 
         <?php
         // If comments are open or we have at least one comment, load up the comment template
+        // And we allow comments on pages.
         if ((comments_open() || '0' != get_comments_number()) && AC_PAGE_COMMENTS === TRUE) :
           ?>
           <?php comments_template(); ?>
         <?php endif; ?>
 
-      <?php endwhile; // end of the loop. ?>
+      <?php endwhile; // end of the loop.  ?>
 
     </div><!-- #content -->
   </div><!-- #primary -->
