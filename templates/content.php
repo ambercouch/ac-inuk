@@ -3,7 +3,6 @@
  * @package ac inuk
  */
 ?>
-
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
   <header class="post__header">
     <div class="header--article">
@@ -16,15 +15,15 @@
           <div class="meta--header" >
             <?php ac_inuk_posted_on(); ?>
           </div>
-        </div><!-- .entry-meta -->
+        </div><!-- /.header--article__meta--header -->
       <?php endif; ?>
     </div>
-  </header><!-- .entry-header -->
+  </header><!-- /.post__header -->
 
   <?php if (is_search()) : // Only display Excerpts for Search ?>
     <div class="post__summary">
       <?php the_excerpt(); ?>
-    </div><!-- .entry-summary -->
+    </div><!-- /.post__summary -->
   <?php else : ?>
     <div class="post__content">
       <?php the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'ac_inuk')); ?>
@@ -34,7 +33,7 @@
           'after' => '</div>',
       ));
       ?>
-    </div><!-- .entry-content -->
+    </div><!-- /.post__content -->
   <?php endif; ?>
 
   <footer class="post__meta--footer">
@@ -67,6 +66,6 @@
       <?php endif; ?>
 
       <?php edit_post_link(__('Edit', 'ac_inuk'), '<span class="meta--footer__sep"> | </span><span class="meta--footer__edit-link">', '</span>'); ?>
-    </div>
-  </footer><!-- .entry-meta -->
+    </div><!-- /.meta--footer -->
+  </footer><!-- .post__meta--footer -->
 </article><!-- #post-## -->
