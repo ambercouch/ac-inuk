@@ -13,7 +13,7 @@
         <span class="title--article" ><?php the_title(); ?></span>
       </h1>
     </div>
-  </header><!-- .entry-header -->
+  </header><!-- /.page__header -->
 
   <div class="page__content">
     <?php the_content(); ?>
@@ -23,6 +23,6 @@
         'after' => '</div>',
     ));
     ?>
-  </div><!-- .entry-content -->
+  </div><!-- /.page__content -->
   <?php edit_post_link(__('Edit', 'ac_inuk'), '<footer class="meta"><span class="meta__edit-link">', '</span></footer>'); ?>
 </article><!-- #post-## -->
