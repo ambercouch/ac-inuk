@@ -38,6 +38,7 @@
 @import "ui/modules/post";
 @import "ui/modules/post__img";
 @import "ui/modules/sticky";
+@import "ui/modules/page";
 @import "ui/modules/title";
 @import "ui/modules/meta";
 @import "ui/modules/widget-area";
@@ -52,5 +53,7 @@
 
 @import "ui/modules/widgets/widget_search";
 @import "ui/modules/widgets/widget_calendar";
+@import "ui/modules/wp-caption";
 
 @import "ui/states/is-empty";
+
