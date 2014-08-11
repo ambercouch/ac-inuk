@@ -19,6 +19,13 @@ get_header();
 
         <?php get_template_part('templates/content', 'page'); ?>
 
+        <?php
+        // If comments are open or we have at least one comment, load up the comment template
+        if ((comments_open() || '0' != get_comments_number()) && AC_PAGE_COMMENTS === TRUE) :
+          ?>
+          <?php comments_template(); ?>
+        <?php endif; ?>
+
       <?php endwhile; // end of the loop. ?>
 
     </div><!-- #content -->

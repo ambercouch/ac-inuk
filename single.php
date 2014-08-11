@@ -18,16 +18,17 @@ get_header();
 
         <?php
         // If comments are open or we have at least one comment, load up the comment template
-        if (comments_open() || '0' != get_comments_number())
-          comments_template();
-        ?>
+        if (comments_open() || '0' != get_comments_number()) :
+          ?>
+          <?php comments_template(); ?>
+        <?php endif; ?>
 
-      <?php endwhile; // end of the loop. ?>
+<?php endwhile; // end of the loop.  ?>
 
     </div><!-- #content -->
   </div><!-- #primary -->
 
-  <?php get_sidebar(); ?>
+<?php get_sidebar(); ?>
 
 </div><!-- /.grid -->
 <?php get_footer(); ?>
