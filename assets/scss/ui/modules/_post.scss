@@ -25,11 +25,15 @@
     }
   }
   .post__content{
+    @extend .cf;
     @include media-query(desk){
       padding-left:20%;
     }
     p{
       max-width: 33em;
+      .wp-caption-text{
+        max-width: none;
+      }
     }
     li{
       max-width: 33em;
