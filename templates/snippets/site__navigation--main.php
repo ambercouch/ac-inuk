@@ -6,7 +6,13 @@
           <div class="menu--site__branding">
             <div class="branding">
               <?php if (is_home() || is_front_page()) : ?>
-                <h1 class="branding__title"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+                <h1 class="branding__site-title">
+                  <a class="site-title" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
+                    <svg preserveAspectRatio="none" class="icon site-title__icon">
+                    <use xlink:href="<?php //echo '/content/themes/ac-inuk/assets/images/defs.svg';      ?>#icon-cdc_logo_large_text" />
+                    </svg>
+                  </a>
+                </h1>
                 <h2 class="branding__description"><?php bloginfo('description'); ?></h2>
               <?php else : ?>
                 <div class="branding__title"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a></div>

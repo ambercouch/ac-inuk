@@ -4,6 +4,7 @@
 .navigation--main{
   @extend .navigation;
   @extend .container;
+  position: relative;
 
 }
 .navigation--main__menu{

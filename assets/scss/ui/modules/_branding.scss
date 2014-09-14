@@ -1,7 +1,8 @@
 .branding{
-  .branding__title{
+  .branding__site-title{
     @extend .kilo;
-    margin-bottom: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: bold;
     line-height: 1.333em;
     color: $brand-col-2;
@@ -12,6 +13,7 @@
   }
   .branding__description{
     @extend .epsilon;
+    display:none;
     color: $brand-col-2;
     margin-bottom: 0;
     font-weight: normal;

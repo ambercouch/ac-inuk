@@ -55,8 +55,25 @@ module.exports = function(grunt) {
 
             }
           }
-  }
+        },//sass
+        svgstore: {
+          options: {
+            svg:{
+              style: "display:none"
+            },
+            prefix : 'icon-', // This will prefix each ID
+            svg: { // will be added as attributes to the resulting SVG
+              viewBox : '0 0 100 100'
+            }
+          },
+          default : {
+          files: {
+            'assets/images/defs.svg': ['assets/images/svg/*.svg'],
+          },
+          //your_target: {
 
+          },
+        }//svgstore
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
@@ -67,6 +84,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-svgstore');
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.

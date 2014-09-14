@@ -21,12 +21,15 @@
   </head>
 
   <body <?php body_class(); ?> <?php ac_body_data(); ?>>
+    <div style="display:none;">
+      <?php include_once("assets/images/defs.svg"); ?>
+    </div>
     <?php (AC_MENU_ABOVE_HEADER === TRUE) ? get_template_part('templates/snippets/site__navigation--main') : ''; ?>
     <div id="page" class="hfeed site">
       <?php do_action('before'); ?>
       <header class="site__header--master" id="masthead"   role="banner">
         <div class="header--master" >
-
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/jpg/smile-makeover-cardiff.jpg" alt="" />
         </div><!-- /.header--master -->
       </header><!-- /.site__header -->
       <?php get_template_part('templates/snippets/site__navigation--services'); ?>
