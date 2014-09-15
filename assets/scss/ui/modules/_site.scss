@@ -1,11 +1,14 @@
 .site{
-  background: $brand-col-5;
+  background: $brand-col-6;
+  color: $brand-col-1;
 }
 .site__header--master{
   padding: 0;
+  @include x-rem(margin-bottom,2.5)
 }
 .site__navigation--main{
   background: $brand-col-2;
+  border-bottom: solid 3px $brand-col-2--tint;
 }
 .site__content{
   padding: $base-spacing-unit 0;
@@ -13,4 +16,16 @@
 .site__footer{
   padding: $base-spacing-unit 0;
   background: $brand-col-3;
+}
+.site__tel{
+  @include media-query(desk){
+    display:none;
+  }
+  display: block;
+  text-decoration: none;
+  background: $brand-col-6;
+  color: $brand-col-2;
+  text-align: center;
+  @include x-rem(padding-top, 0.75);
+  @include x-rem(padding-bottom, 0.75);
 }

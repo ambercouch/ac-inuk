@@ -34,7 +34,7 @@ $use-media:         false;
 $use-marginalia:    false;
 $use-island:        false;
 $use-block-list:    false;
-$use-matrix:        false;
+$use-matrix:        true;
 $use-split:         false;
 $use-this-or-this:  false;
 $use-link-complex:  false;
@@ -61,17 +61,24 @@ $use-greybox:       false;
 
 $base-font-size:    17px;
 $base-line-height:  25px;
+
+/**
+ * Base font-family.
+ */
+$base-font-family:  proxima-nova, sans-serif;
+
 /*------------------------------------*\
     $CUSTOM
 \*------------------------------------*/
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
-$brand-col-1: #000;
+$brand-col-1: #4d4b4a;
 $brand-col-2: #650360;
 $brand-col-2--shade: #333;
-$brand-col-2--tint: #333;
-$brand-col-3: #666;
+$brand-col-2--tint: tint($brand-col-2,25%);
+$brand-col-3: #92836d;
+$brand-col-3--tint: #cfccc4;
 $brand-col-4: #bbb;
 $brand-col-5: #ddd;
-$brand-col-6: #fff;
+$brand-col-6: #eaece9;

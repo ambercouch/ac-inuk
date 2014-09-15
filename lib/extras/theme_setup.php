@@ -74,6 +74,11 @@ if (!function_exists('ac_inuk_setup')) :
      * Enable support for Post Formats
      */
     add_theme_support('html5', array('comment-list', 'search-form', 'comment-form',));
+
+    /**
+     * Enable support for Post thumnails4
+     */
+    add_theme_support('post-thumbnails');
   }
 
 endif; // ac_inuk_setup

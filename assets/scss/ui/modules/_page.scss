@@ -16,3 +16,12 @@
     max-width: 33em;
   }
 }
+
+.page__header{
+  body.home &{
+    display:none;
+  }
+}
+.page__content{
+  text-align: justify;
+}

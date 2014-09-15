@@ -5,6 +5,10 @@
   @extend .navigation;
   @extend .container;
   position: relative;
+}
+.navigation--services{
+  @extend .navigation;
+  @extend .container;
 
 }
 .navigation--main__menu{

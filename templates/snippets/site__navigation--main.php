@@ -9,7 +9,7 @@
                 <h1 class="branding__site-title">
                   <a class="site-title" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
                     <svg preserveAspectRatio="none" class="icon site-title__icon">
-                    <use xlink:href="<?php //echo '/content/themes/ac-inuk/assets/images/defs.svg';      ?>#icon-cdc_logo_large_text" />
+                    <use xlink:href="<?php //echo '/content/themes/ac-inuk/assets/images/defs.svg';       ?>#icon-cdc_logo_large_text" />
                     </svg>
                   </a>
                 </h1>
@@ -27,3 +27,4 @@
       </div>
     </div><!-- /.container -->
   </div><!-- #site-navigation -->
+</div>

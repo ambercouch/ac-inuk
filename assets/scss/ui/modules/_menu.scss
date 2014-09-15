@@ -23,6 +23,41 @@
     }
   }
 }
+.menu--services{
+  border-top: solid 1px $brand-col-3--tint;
+  border-bottom: solid 1px $brand-col-3--tint;
+  @include x-rem(padding-top, 1.5);
+  @include x-rem(padding-bottom, 1.5);
+}
+.menu--services__menu-list{
+  @extend .matrix;
+  @extend .two-cols;
+  font-size: 0.8em;
+  margin: 0 auto;
+  border: none;;
+  max-width:320px;
+  .menu-item{
+    text-align: center;
+    padding:0;
+    position: relative;
+    border-width: 3px;;
+    border-color: $brand-col-6;
+
+    img{
+      width: 100%;
+    }
+  }
+}
+.menu--services__title{
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  left: 0;
+  display: block;
+  padding: 0.5em;
+  background: rgba($brand-col-2,0.8)
+}
 
 
 %has-sep{
