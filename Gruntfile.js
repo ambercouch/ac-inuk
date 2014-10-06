@@ -21,7 +21,7 @@ module.exports = function (grunt) {
         options: {
           sassDir: 'assets/scss',
           cssDir: 'assets/css'
-        },
+        }
       }
     },
     cssmin: {
@@ -41,12 +41,12 @@ module.exports = function (grunt) {
     },
     concat: {
       options: {
-        separator: ';',
+        separator: ';'
       },
       dist: {
         src: ['assets/vendor/jquery/dist/jquery.min.js'],
-        dest: 'assets/js/script.js',
-      },
+        dest: 'assets/js/script.js'
+      }
     },
     sass: {// Task
       dist: {// Target
@@ -72,10 +72,10 @@ module.exports = function (grunt) {
       default: {
         files: {
           'assets/images/defs.svg': ['assets/images/svg/*.svg'],
-        },
+        }
         //your_target: {
 
-      },
+      }
     }//svgstore
   });
 
