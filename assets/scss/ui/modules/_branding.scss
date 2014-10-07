@@ -1,9 +1,13 @@
 .branding{
+  position: absolute;
+  left:20px;
+  top:20px;
   .branding__title{
     @extend .kilo;
-    margin-bottom: 0;
+    margin: 0 !important
+      ;
     font-weight: bold;
-    line-height: 1.333em;
+    line-height: 0;
     color: $brand-col-2;
     a{
       color: $brand-col-2;
@@ -15,6 +19,7 @@
     color: $brand-col-2;
     margin-bottom: 0;
     font-weight: normal;
+    display: none;
 
   }
 }

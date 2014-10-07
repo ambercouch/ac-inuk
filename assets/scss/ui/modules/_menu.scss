@@ -15,10 +15,10 @@
   a{
     text-decoration: none;
     color: $brand-col-1;
-    background: $brand-col-4;
+    background: transparent;
     text-decoration:none !important;
     &:hover{
-      background: darken($brand-col-4, 10%);
+      background:  transparent;
       text-decoration:none !important;
     }
   }

@@ -21,22 +21,14 @@
   </head>
 
   <body <?php body_class(); ?> <?php ac_body_data(); ?>>
+    <div style="display:none;">
+      <?php include_once("assets/images/defs.svg"); ?>
+    </div>
     <?php (AC_MENU_ABOVE_HEADER === TRUE) ? get_template_part('templates/snippets/site__navigation--main') : ''; ?>
     <div id="page" class="hfeed site">
       <?php do_action('before'); ?>
       <header class="site__header--master" id="masthead"   role="banner">
         <div class="header--master" >
-          <div class="header--master__branding">
-            <div class="branding">
-              <?php if (is_home() || is_front_page()) : ?>
-                <h1 class="branding__title"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-                <h2 class="branding__description"><?php bloginfo('description'); ?></h2>
-              <?php else : ?>
-                <div class="branding__title"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a></div>
-                <span class="branding__description"><?php bloginfo('description'); ?></span>
-              <?php endif; ?>
-            </div><!-- /.branding -->
-          </div><!-- /.header--master__branding -->
         </div><!-- /.header--master -->
       </header><!-- /.site__header -->
       <?php (AC_MENU_ABOVE_HEADER === FALSE) ? get_template_part('templates/snippets/site__navigation--main') : ''; ?>
