@@ -46,6 +46,8 @@
 @import "ui/modules/footer";
 @import "ui/modules/site-info";
 @import "ui/modules/multidropdown";
+@import "ui/modules/sticky-footer";
+@import "ui/modules/site-title";
 
 @import "ui/modules/navigation/responsive-toggle.scss";
 
@@ -58,4 +60,7 @@
 @import "ui/pages/home";
 
 @import "ui/states/is-empty";
+@import "ui/states/is-presentation";
+@import "ui/states/align";
+@import "ui/states/box-shadow";
 

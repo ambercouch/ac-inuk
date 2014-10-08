@@ -7,6 +7,20 @@
 /*
  * Set relative bottom margin
  */
+html, p{
+  color: #fff;
+}
+a:link, a:active,a:visited{
+  color: #fff;
+  font-style: italic;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+em{
+  color: $brand-col-1;
+}
 @include headings(){
   margin-bottom: 0.75em;
 }

@@ -8,11 +8,13 @@
 }
 .menu--site__menu-list{
   @extend .menu;
-  @extend .nav--block;
+  @extend .nav--banner;
   @extend .multi-dropdown;
   @extend %has-sep;
   margin-bottom: 0;
   a{
+    text-transform: lowercase;
+    font-style: italic;
     text-decoration: none;
     color: $brand-col-1;
     background: transparent;
@@ -20,6 +22,7 @@
     &:hover{
       background:  transparent;
       text-decoration:none !important;
+      color: $brand-col-1--dark;
     }
   }
 }

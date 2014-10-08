@@ -8,7 +8,7 @@
               <?php if (is_home() || is_front_page()) : ?>
                 <h1 class="branding__site-title">
                   <a class="site-title" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
-                    <svg preserveAspectRatio="none" class="icon site-title__icon--mobile ">
+                    <svg preserveAspectRatio="none" class="icon site-title__icon ">
                     <use xlink:href="#icon-timarnold-logo" />
                     </svg>
                     <!-- <svg preserveAspectRatio="none" class="icon site-title__icon--desk ">
@@ -20,11 +20,11 @@
               <?php else : ?>
                 <div class="branding__site-title">
                   <a  class="site-title test" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
-                    <svg preserveAspectRatio="none" class="icon site-title__icon--mobile ">
+                    <svg preserveAspectRatio="none" class="icon site-title__icon ">
                     <use xlink:href="#icon-cdc_logo_large_text" />
                     </svg>
                     <!-- <svg preserveAspectRatio="none" class="icon site-title__icon--desk ">
-                    <use xlink:href="<?php //echo '/content/themes/ac-inuk/assets/images/defs.svg';                ?>#icon-cdc_logo_strap" />
+                    <use xlink:href="<?php //echo '/content/themes/ac-inuk/assets/images/defs.svg';                 ?>#icon-cdc_logo_strap" />
                     </svg> -->
                   </a>
                 </div>
