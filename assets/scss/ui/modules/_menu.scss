@@ -5,6 +5,7 @@
 .menu--site{
   @extend .menu;
   @extend %menu--responsive-toggle;
+  visibility: hidden;
 }
 .menu--site__menu-list{
   @extend .menu;

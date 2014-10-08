@@ -3846,11 +3846,16 @@ h6, .zeta {
   }
 }
 
-/* line 9, ../scss/ui/modules/_menu.scss */
+/* line 5, ../scss/ui/modules/_menu.scss */
+.menu--site {
+  visibility: hidden;
+}
+
+/* line 10, ../scss/ui/modules/_menu.scss */
 .menu--site__menu-list {
   margin-bottom: 0;
 }
-/* line 15, ../scss/ui/modules/_menu.scss */
+/* line 16, ../scss/ui/modules/_menu.scss */
 .menu--site__menu-list a {
   text-transform: lowercase;
   font-style: italic;
@@ -3859,23 +3864,23 @@ h6, .zeta {
   background: transparent;
   text-decoration: none !important;
 }
-/* line 22, ../scss/ui/modules/_menu.scss */
+/* line 23, ../scss/ui/modules/_menu.scss */
 .menu--site__menu-list a:hover {
   background: transparent;
   text-decoration: none !important;
   color: #8e6f45;
 }
 
-/* line 32, ../scss/ui/modules/_menu.scss */
+/* line 33, ../scss/ui/modules/_menu.scss */
 .menu--site__menu-list a {
   border-right: solid 1px;
 }
-/* line 36, ../scss/ui/modules/_menu.scss */
+/* line 37, ../scss/ui/modules/_menu.scss */
 .menu--site__menu-list .menu-item a {
   border: none;
   border-left: none !important;
 }
-/* line 43, ../scss/ui/modules/_menu.scss */
+/* line 44, ../scss/ui/modules/_menu.scss */
 .menu--site__menu-list .menu-item:first-child a {
   border-left: solid 1px;
 }
