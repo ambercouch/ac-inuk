@@ -3749,7 +3749,7 @@ h6, .zeta {
 /* line 14, ../scss/ui/modules/_site.scss */
 .site__footer {
   padding: 28px 0;
-  background: #b68e55;
+  background: rgba(196, 164, 119, 0.8);
 }
 
 /*
