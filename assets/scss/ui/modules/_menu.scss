@@ -5,13 +5,17 @@
 .menu--site{
   @extend .menu;
   @extend %menu--responsive-toggle;
-  visibility: hidden;
+
 }
 .menu--site__menu-list{
   @extend .menu;
   @extend .nav--banner;
   @extend .multi-dropdown;
   @extend %has-sep;
+  visibility: hidden;
+  .logged-in &{
+    visibility: visible;
+  }
   margin-bottom: 0;
   a{
     text-transform: lowercase;
