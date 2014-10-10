@@ -17,13 +17,13 @@ function ac_cpt() {
       'not_found' => __('No Lyrics found'),
       'not_found_in_trash' => __('No Lyrics found in the Trash'),
       'parent_item_colon' => '',
-      'menu_name' => 'lyrics'
+      'menu_name' => 'Lyrics'
   );
   $args = array(
       'labels' => $labels,
       'description' => 'Tim Arnold Lyrics',
       'public' => true,
-      'menu_position' => 2,
+      'menu_position' => 55,
       //'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'page-attributes','comments' ,'post-formats' ),
       'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
       'has_archive' => true,
@@ -43,18 +43,70 @@ function ac_cpt() {
       'not_found' => __('No Reviews found'),
       'not_found_in_trash' => __('No Reviews found in the Trash'),
       'parent_item_colon' => '',
-      'menu_name' => 'reviews'
+      'menu_name' => 'Reviews'
   );
   $args = array(
       'labels' => $labels,
       'description' => 'Tim Arnold Reviews',
       'public' => true,
-      'menu_position' => 3,
+      'menu_position' => 55,
       //'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'page-attributes','comments' ,'post-formats' ),
       'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
       'has_archive' => true,
   );
   register_post_type('reviews', $args);
+
+  $labels = array(
+      'name' => _x('Videos', 'Song videos'),
+      'singular_name' => _x('Videos', 'Song lyrics'),
+      'add_new' => _x('Add New', 'Video'),
+      'add_new_item' => __('Add New Video'),
+      'edit_item' => __('Edit Video'),
+      'new_item' => __('New Video'),
+      'all_items' => __('All Videos'),
+      'view_item' => __('View Video'),
+      'search_items' => __('Search Videos'),
+      'not_found' => __('No Videos found'),
+      'not_found_in_trash' => __('No Videos found in the Trash'),
+      'parent_item_colon' => '',
+      'menu_name' => 'Videos'
+  );
+  $args = array(
+      'labels' => $labels,
+      'description' => 'Tim Arnold Videos',
+      'public' => true,
+      'menu_position' => 55,
+      //'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'page-attributes','comments' ,'post-formats' ),
+      'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+      'has_archive' => true,
+  );
+  register_post_type('videos', $args);
+
+  $labels = array(
+      'name' => _x('Projects', 'Projects'),
+      'singular_name' => _x('Project', 'Projects'),
+      'add_new' => _x('Add Project', 'Project'),
+      'add_new_item' => __('Add New Project'),
+      'edit_item' => __('Edit Project'),
+      'new_item' => __('New Project'),
+      'all_items' => __('All Projects'),
+      'view_item' => __('View Project'),
+      'search_items' => __('Search Projects'),
+      'not_found' => __('No Projects found'),
+      'not_found_in_trash' => __('No Projects found in the Trash'),
+      'parent_item_colon' => '',
+      'menu_name' => 'Projects'
+  );
+  $args = array(
+      'labels' => $labels,
+      'description' => 'Tim Arnold Projects',
+      'public' => true,
+      'menu_position' => 55,
+      //'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'page-attributes','comments' ,'post-formats' ),
+      'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+      'has_archive' => true,
+  );
+  register_post_type('projects', $args);
 }
 
 add_action('init', 'ac_cpt');
@@ -80,7 +132,7 @@ function ac_tax() {
       'labels' => $labels,
       'hierarchical' => true,
   );
-  register_taxonomy('Albums', array('lyrics', 'reviews'), $args);
+  register_taxonomy('album', array('lyrics', 'reviews', 'videos'), $args);
 
 //  $labels = array(
 //      'name' => _x('Service Types', 'taxonomy general name'),
