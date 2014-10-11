@@ -46,12 +46,14 @@ get_header();
                   <img class="image--album" src="<?php echo $img['src']; ?>" alt="<?php echo $album->name; ?>" >
                 <?php endif; ?>
               </div>
-              <div class="album__review">
-                <blockquote class="review">
-                  <p class="review__body"> <?php echo $album->description; ?></p>
-                  <cite class="review__cite"><?php echo get_tax_meta($album->term_id, 'ac_text_field_cite') ?></cite>
-                </blockquote>
-              </div>
+              <?php if ($album->description != '') : ?>
+                <div class="album__review">
+                  <blockquote class="review">
+                    <p class="review__body"> <?php echo $album->description; ?></p>
+                    <cite class="review__cite"><?php echo get_tax_meta($album->term_id, 'ac_text_field_cite') ?></cite>
+                  </blockquote>
+                </div>
+              <?php endif; ?>
               <?php query_posts(array('album' => $album->category_nicename, 'posts_per_page' => -1)); ?>
               <?php if (have_posts()) : ?>
                 <div class="album__track--list">
@@ -59,7 +61,11 @@ get_header();
                     <h3 class="title--tracks">Tracks</h3>
                     <ol>
                       <?php while (have_posts()) : the_post(); ?>
-                        <li><?php the_title(); ?></li>
+                        <?php if (get_the_content() != '') : ?>
+                          <li><a href="<?php the_permalink() ?>" ><?php the_title(); ?></a></li>
+                        <?php else : ?>
+                          <li><?php the_title(); ?></li>
+                        <?php endif; ?>
                       <?php endwhile; ?>
                     </ol>
                   </div>
