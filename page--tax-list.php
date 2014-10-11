@@ -56,7 +56,7 @@ get_header();
               <?php endif; ?>
               <?php query_posts(array('album' => $album->category_nicename, 'posts_per_page' => -1)); ?>
               <?php if (have_posts()) : ?>
-                <div class="album__track--list">
+                <div class="album__track-list">
                   <div class="track-list--tax">
                     <h3 class="title--tracks">Tracks</h3>
                     <ol>

@@ -4222,6 +4222,12 @@ and open the template in the editor.
   border-bottom: solid 1px #fff;
 }
 
+/* line 41, ../scss/ui/modules/_album.scss */
+.album__track-list {
+  height: 150px;
+  overflow: auto;
+}
+
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
