@@ -1,0 +1,15 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 11-Oct-2014, 11:56:49
+    Author     : Richard
+*/
+
+.albums-list__album{
+  @extend .desk-one-third;
+  @extend .palm-one-whole;
+  margin-bottom: $base-spacing-unit
+}
