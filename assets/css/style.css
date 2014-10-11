@@ -4204,18 +4204,20 @@ and open the template in the editor.
 /* line 22, ../scss/ui/modules/_album.scss */
 .album__image {
   text-align: center;
-  margin-bottom: 1em;
+  margin: 0 -1em 1em;
+  padding: 1em  1em 0;
+  border-bottom: solid 1px #fff;
 }
-/* line 26, ../scss/ui/modules/_album.scss */
+/* line 28, ../scss/ui/modules/_album.scss */
 .album__image .image--album {
   border: solid 1px #fff;
+  margin-bottom: 1em;
 }
 
-/* line 32, ../scss/ui/modules/_album.scss */
+/* line 35, ../scss/ui/modules/_album.scss */
 .album__review {
   margin: 0 -1em 1em;
   padding: 1em  1em 0;
-  border-top: solid 1px #fff;
   border-bottom: solid 1px #fff;
 }
 
