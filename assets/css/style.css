@@ -3823,6 +3823,10 @@ h6, .zeta {
   line-height: 0;
   margin: 0;
 }
+/* line 29, ../scss/ui/modules/_branding.scss */
+body.home .branding__site-title {
+  display: none;
+}
 
 /* line 1, ../scss/ui/modules/_navigation.scss */
 .navigation, .navigation--main {
@@ -3853,7 +3857,6 @@ h6, .zeta {
 
 /* line 10, ../scss/ui/modules/_menu.scss */
 .menu--site__menu-list {
-  visibility: hidden;
   margin-bottom: 0;
 }
 /* line 16, ../scss/ui/modules/_menu.scss */

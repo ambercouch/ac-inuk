@@ -12,7 +12,7 @@
   @extend .nav--banner;
   @extend .multi-dropdown;
   @extend %has-sep;
-  visibility: hidden;
+  //visibility: hidden;
   .logged-in &{
     visibility: visible;
 

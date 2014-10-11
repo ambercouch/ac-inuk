@@ -25,6 +25,9 @@
 }
 .branding__site-title{
   line-height: 0;
-  margin: 0
+  margin: 0;
+  body.home &{
+    display: none
+  }
 }
 
