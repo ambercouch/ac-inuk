@@ -3857,6 +3857,7 @@ body.home .branding__site-title {
 
 /* line 10, ../scss/ui/modules/_menu.scss */
 .menu--site__menu-list {
+  visibility: visible;
   margin-bottom: 0;
 }
 /* line 16, ../scss/ui/modules/_menu.scss */
