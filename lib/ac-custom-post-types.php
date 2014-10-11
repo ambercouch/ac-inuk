@@ -30,31 +30,31 @@ function ac_cpt() {
   );
   register_post_type('lyrics', $args);
 
-  $labels = array(
-      'name' => _x('Reviews', 'Reviews'),
-      'singular_name' => _x('Review', 'Song Reviews'),
-      'add_new' => _x('Add New', 'Review'),
-      'add_new_item' => __('Add New Review'),
-      'edit_item' => __('Edit Review'),
-      'new_item' => __('New Review'),
-      'all_items' => __('All Reviews'),
-      'view_item' => __('View Review'),
-      'search_items' => __('Search Reviews'),
-      'not_found' => __('No Reviews found'),
-      'not_found_in_trash' => __('No Reviews found in the Trash'),
-      'parent_item_colon' => '',
-      'menu_name' => 'Reviews'
-  );
-  $args = array(
-      'labels' => $labels,
-      'description' => 'Tim Arnold Reviews',
-      'public' => true,
-      'menu_position' => 55,
-      //'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'page-attributes','comments' ,'post-formats' ),
-      'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
-      'has_archive' => true,
-  );
-  register_post_type('reviews', $args);
+//  $labels = array(
+//      'name' => _x('Reviews', 'Reviews'),
+//      'singular_name' => _x('Review', 'Song Reviews'),
+//      'add_new' => _x('Add New', 'Review'),
+//      'add_new_item' => __('Add New Review'),
+//      'edit_item' => __('Edit Review'),
+//      'new_item' => __('New Review'),
+//      'all_items' => __('All Reviews'),
+//      'view_item' => __('View Review'),
+//      'search_items' => __('Search Reviews'),
+//      'not_found' => __('No Reviews found'),
+//      'not_found_in_trash' => __('No Reviews found in the Trash'),
+//      'parent_item_colon' => '',
+//      'menu_name' => 'Reviews'
+//  );
+//  $args = array(
+//      'labels' => $labels,
+//      'description' => 'Tim Arnold Reviews',
+//      'public' => true,
+//      'menu_position' => 55,
+//      //'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'page-attributes','comments' ,'post-formats' ),
+//      'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+//      'has_archive' => true,
+//  );
+//  register_post_type('reviews', $args);
 
   $labels = array(
       'name' => _x('Videos', 'Song videos'),
