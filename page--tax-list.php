@@ -8,7 +8,7 @@ get_header();
   <div id="primary" class="content__tax--list">
     <div id="content" class="single-page" role="main">
       <?php while (have_posts()) : the_post(); ?>
-        <?php get_template_part('templates/content', 'page'); ?>
+        <?php get_template_part('templates/content', 'page--tax'); ?>
         <?php $tax = the_field('taxonomy'); ?>
         <?php
         // If comments are open or we have at least one comment, load up the comment template
@@ -19,14 +19,37 @@ get_header();
 
         <?php endif; ?>
       <?php endwhile; // end of the loop.  ?>
-      <pre>
-        <?php print_r(get_categories(array('taxonomy' => 'album'))); ?>
+      <div class="albums-list grid">
         <?php foreach (get_categories(array('taxonomy' => 'album')) as $album): ?>
-                <h1 class="" ><?php echo $album->name; ?></h1>
-          <?php //print_r(get_tax_meta($album->term_id, 'ac_date_field_release')); ?>
+          <div class="albums-list__album">
+            <div class="album" >
+              <pre style="display:none;">
+                <?php print_r($album); ?>
+              </pre>
+              <div class="album__title">
+                <h1 class="title--album" ><?php echo $album->name; ?></h1>
+              </div>
 
+              <div class="album__image">
+                <?php $img = get_tax_meta($album->term_id, 'ac_image_field_album_cover'); ?>
+                <img src="<?php echo $img['src']; ?>" alt="<?php echo $album->name; ?>" >
+              </div>
+              <div class="album__review">
+                <blockquote class="review">
+                  <p class="review__body"> <?php echo $album->description; ?></p>
+                  <cite class="review__cite"><?php echo get_tax_meta($album->term_id, 'ac_text_field_cite') ?></cite>
+                </blockquote>
+              </div>
+              <div class="album__track--list">
+                <div class="track-list--tax">
+
+                </div>
+              </div>
+            </div><!-- .album -->
+          </div><!-- .albums-list__album -->
         <?php endforeach; ?>
-      </pre>
+      </div>
+
     </div><!-- /.site-content -->
   </div><!-- /.content__single-page -->
 </div><!-- /.grid -->

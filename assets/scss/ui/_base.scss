@@ -14,7 +14,7 @@ body{
   @include media-query(lap-and-up){
     font-size: 100%
   }
-  background: url('/content/themes/ac-inuk/assets/images/jpg/bg.jpg');
+  background: $brand-col-2 url('/content/themes/ac-inuk/assets/images/jpg/bg.jpg') repeat-x;
 }
 
 

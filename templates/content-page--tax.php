@@ -10,7 +10,7 @@
   <header class="page__header">
     <div class="header--article">
       <h1 class="header__title">
-        <span class="title--article" ><?php the_title(); ?></span>
+        <span class="title--article" ><?php //the_title();  ?></span>
       </h1>
     </div>
   </header><!-- /.page__header -->

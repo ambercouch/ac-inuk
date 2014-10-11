@@ -38,14 +38,14 @@
 /**
  * Place any variables that should override inuit.cssÔÇÖ defaults here.
  */
+/**
+* Base font-family.
+*/
 /*------------------------------------*\
     $CUSTOM
 \*------------------------------------*/
 /**
  * Place any of your own variables that sit on top of inuit.css here.
- */
-/**
- * Base font-family.
  */
 /*------------------------------------*\
     INUIT.CSS
@@ -1000,7 +1000,7 @@ h2, .beta {
 }
 
 /* line 17, ../vendor/inuit.css/base/_headings.scss */
-h3, .gamma {
+h3, .gamma, .title--album {
   font-size: 24px;
   font-size: 1.2rem;
   line-height: 1.16667;
@@ -2239,7 +2239,7 @@ label,
   * Whole
   */
   /* line 17, ../vendor/inuit.css/generic/_widths.scss */
-  .palm-one-whole {
+  .palm-one-whole, .albums-list__album {
     width: 100%;
   }
 
@@ -2851,7 +2851,7 @@ label,
   * Thirds
   */
   /* line 29, ../vendor/inuit.css/generic/_widths.scss */
-  .desk-one-third, .desk-two-sixths, .desk-four-twelfths {
+  .desk-one-third, .desk-two-sixths, .desk-four-twelfths, .albums-list__album {
     width: 33.333%;
   }
 
@@ -3504,7 +3504,7 @@ html {
 /* line 12, ../scss/ui/_base.scss */
 body {
   font-size: 90%;
-  background: url("/content/themes/ac-inuk/assets/images/jpg/bg.jpg");
+  background: #cad0e0 url("/content/themes/ac-inuk/assets/images/jpg/bg.jpg") repeat-x;
 }
 @media only screen and (min-width: 481px) {
   /* line 12, ../scss/ui/_base.scss */
@@ -3561,6 +3561,11 @@ em {
 /* line 35, ../vendor/inuit.css/generic/_mixins.scss */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.75em;
+}
+
+/* line 28, ../scss/ui/_typography.scss */
+.sub-text, .review__body, .review__cite {
+  font-size: 0.947em;
 }
 
 /*------------------------------------*\
@@ -3633,14 +3638,14 @@ h2, .beta {
 }
 
 /* line 27, ../scss/ui/extentions/base/_headings.scss */
-h3, .gamma {
+h3, .gamma, .title--album {
   font-size: 18.46154px;
   font-size: 0.92308rem;
   line-height: 1.16667;
 }
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
   /* line 27, ../scss/ui/extentions/base/_headings.scss */
-  h3, .gamma {
+  h3, .gamma, .title--album {
     font-size: 21.81818px;
     font-size: 1.09091rem;
     line-height: 1.16667;
@@ -3648,7 +3653,7 @@ h3, .gamma {
 }
 @media only screen and (min-width: 1024px) {
   /* line 27, ../scss/ui/extentions/base/_headings.scss */
-  h3, .gamma {
+  h3, .gamma, .title--album {
     font-size: 24px;
     font-size: 1.2rem;
     line-height: 1.16667;
@@ -3781,8 +3786,8 @@ h6, .zeta {
 }
 /* line 34, ../scss/ui/modules/_header.scss */
 .header--article .header--article__title {
-  color: #333333;
-  border-bottom: 1px solid #333333;
+  color: #cad0e0;
+  border-bottom: 1px solid #cad0e0;
   margin-bottom: 0.25em;
   padding-bottom: 0.25em;
 }
@@ -3798,16 +3803,16 @@ h6, .zeta {
   margin: 0 !important;
   font-weight: bold;
   line-height: 0;
-  color: #333333;
+  color: #cad0e0;
 }
 /* line 12, ../scss/ui/modules/_branding.scss */
 .branding .branding__title a {
-  color: #333333;
+  color: #cad0e0;
   text-decoration: none;
 }
 /* line 17, ../scss/ui/modules/_branding.scss */
 .branding .branding__description {
-  color: #333333;
+  color: #cad0e0;
   margin-bottom: 0;
   font-weight: normal;
   display: none;
@@ -3909,11 +3914,11 @@ h6, .zeta {
   }
 }
 /* line 20, ../scss/ui/modules/_post.scss */
-.post .post__header .title, .post .post__header .title--article, .post .post__header .title--widget {
+.post .post__header .title, .post .post__header .title--article, .post .post__header .title--widget, .post .post__header .title--album {
   margin-bottom: 0;
 }
 /* line 22, ../scss/ui/modules/_post.scss */
-.post .post__header .title a, .post .post__header .title--article a, .post .post__header .title--widget a {
+.post .post__header .title a, .post .post__header .title--article a, .post .post__header .title--widget a, .post .post__header .title--album a {
   text-decoration: none;
 }
 @media only screen and (min-width: 1024px) {
@@ -4021,7 +4026,7 @@ h6, .zeta {
  * Remove the margin and uderline
  */
 /* line 9, ../scss/ui/modules/_title.scss */
-.title, .title--article, .title--widget {
+.title, .title--article, .title--widget, .title--album {
   text-decoration: none;
   margin-bottom: 0;
 }
@@ -4029,7 +4034,7 @@ h6, .zeta {
 /* colours for the article titles */
 /* line 15, ../scss/ui/modules/_title.scss */
 .title--article {
-  color: #333333;
+  color: #b68e55;
 }
 /* line 18, ../scss/ui/modules/_title.scss */
 .title--article:hover {
@@ -4039,7 +4044,13 @@ h6, .zeta {
 /* colours and size for the widget titles */
 /* line 24, ../scss/ui/modules/_title.scss */
 .title--widget {
-  color: #333333;
+  color: #cad0e0;
+}
+
+/* line 30, ../scss/ui/modules/_title.scss */
+.title--album {
+  font-weight: normal;
+  font-style: italic;
 }
 
 /* line 6, ../scss/ui/modules/_meta.scss */
@@ -4141,6 +4152,82 @@ and open the template in the editor.
 .site-title__icon {
   height: 30px;
   width: 200px;
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 11-Oct-2014, 11:56:49
+    Author     : Richard
+*/
+/* line 11, ../scss/ui/modules/_album-list.scss */
+.albums-list__album {
+  margin-bottom: 28px;
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 11-Oct-2014, 12:06:59
+    Author     : Richard
+*/
+/* line 11, ../scss/ui/modules/_album.scss */
+.album {
+  padding: 0 1em 1em;
+  border: solid 1px #fff;
+  height: 800px;
+  background: rgba(170, 179, 205, 0.6);
+}
+
+/* line 17, ../scss/ui/modules/_album.scss */
+.album__title {
+  border-bottom: solid 1px #fff;
+  margin: 0 -1em 1em;
+  padding: 1em;
+}
+
+/* line 22, ../scss/ui/modules/_album.scss */
+.album__image {
+  text-align: center;
+  margin-bottom: 1em;
+}
+/* line 26, ../scss/ui/modules/_album.scss */
+.album__image img {
+  border: solid 1px #fff;
+}
+
+/* line 32, ../scss/ui/modules/_album.scss */
+.album__review {
+  margin: 0 -1em;
+  padding: 1em  1em 0;
+  border-top: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 11-Oct-2014, 13:36:36
+    Author     : Richard
+*/
+/* line 11, ../scss/ui/modules/_review.scss */
+.review {
+  font-size: 0.9em;
+}
+
+/* line 17, ../scss/ui/modules/_review.scss */
+.review__cite {
+  text-align: right;
+  display: block;
 }
 
 /* line 4, ../scss/ui/modules/navigation/_responsive-toggle.scss */
@@ -4361,6 +4448,6 @@ and open the template in the editor.
     Author     : Richard
 */
 /* line 11, ../scss/ui/states/_box-shadow.scss */
-.box-shadow--soft {
+.box-shadow--soft, .album__image img {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 }

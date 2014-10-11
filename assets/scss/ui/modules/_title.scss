@@ -14,7 +14,7 @@
 /* colours for the article titles */
 .title--article{
   @extend .title;
-  color: $brand-col-2;
+  color: $brand-col-1;
   &:hover{
     color: $brand-col-1;
   }
@@ -26,4 +26,10 @@
   @extend .epsilon;
   color: $brand-col-2;
 
+}
+.title--album{
+  @extend .title;
+  @extend  .gamma;
+  font-weight: normal;
+  font-style: italic
 }

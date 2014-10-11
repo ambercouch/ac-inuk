@@ -59,8 +59,13 @@ $use-greybox:       false;
  * Place any variables that should override inuit.css’ defaults here.
  */
 
-$base-font-size:    17px;
-$base-line-height:  25px;
+/**
+* Base font-family.
+*/
+$base-font-family:  ltc-bodoni-175;
+
+$base-font-size:    20px;
+$base-line-height:  28px;
 /*------------------------------------*\
     $CUSTOM
 \*------------------------------------*/
@@ -69,18 +74,13 @@ $base-line-height:  25px;
  */
 $ta-gold: #b68e55;
 $ta-gold--dark:  #8e6f45;
+$ta-pale-blue: #CAD0E0;
 $brand-col-1: $ta-gold;
 $brand-col-1--dark: $ta-gold--dark;
-$brand-col-2: #333;
+$brand-col-2: $ta-pale-blue;
 $brand-col-3: #666;
 $brand-col-4: #bbb;
 $brand-col-5: #ddd;
 $brand-col-6: #fff;
 
-/**
- * Base font-family.
- */
-$base-font-family:  ltc-bodoni-175;
 
-$base-font-size:    20px;
-$base-line-height:  28px;
