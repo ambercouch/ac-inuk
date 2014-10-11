@@ -32,7 +32,19 @@ get_header();
 
               <div class="album__image">
                 <?php $img = get_tax_meta($album->term_id, 'ac_image_field_album_cover'); ?>
-                <img src="<?php echo $img['src']; ?>" alt="<?php echo $album->name; ?>" >
+
+                <?php if (get_tax_meta($album->term_id, 'ac_text_field_i_tunes') != '') : ?>
+
+                  <a href="<?php echo get_tax_meta($album->term_id, 'ac_text_field_i_tunes'); ?>" >
+                    <img class="image--album" src="<?php echo $img['src']; ?>" alt="<?php echo $album->name; ?>" >
+                    <p>
+                      <img class="alignnone size-medium wp-image-10" src="/content/uploads/2014/10/itunes.svg" alt="itunes" />
+                      <br>Download on itunes
+                    </p>
+                  </a>
+                <?php else: ?>
+                  <img class="image--album" src="<?php echo $img['src']; ?>" alt="<?php echo $album->name; ?>" >
+                <?php endif; ?>
               </div>
               <div class="album__review">
                 <blockquote class="review">
@@ -40,11 +52,19 @@ get_header();
                   <cite class="review__cite"><?php echo get_tax_meta($album->term_id, 'ac_text_field_cite') ?></cite>
                 </blockquote>
               </div>
-              <div class="album__track--list">
-                <div class="track-list--tax">
-
+              <?php query_posts(array('album' => $album->category_nicename, 'posts_per_page' => -1)); ?>
+              <?php if (have_posts()) : ?>
+                <div class="album__track--list">
+                  <div class="track-list--tax">
+                    <h3 class="title--tracks">Tracks</h3>
+                    <ol>
+                      <?php while (have_posts()) : the_post(); ?>
+                        <li><?php the_title(); ?></li>
+                      <?php endwhile; ?>
+                    </ol>
+                  </div>
                 </div>
-              </div>
+              <?php endif; ?>
             </div><!-- .album -->
           </div><!-- .albums-list__album -->
         <?php endforeach; ?>

@@ -33,3 +33,10 @@
   font-weight: normal;
   font-style: italic
 }
+
+.title--tracks{
+  @extend .title;
+  @extend  .delta;
+  font-weight: normal;
+  font-style: italic
+}

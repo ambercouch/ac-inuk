@@ -23,14 +23,14 @@ and open the template in the editor.
   text-align: center;
   margin-bottom: 1em;
 
-  img{
+  .image--album{
     border: solid 1px #fff;
     @extend .box-shadow--soft;
   }
 }
 
 .album__review{
-  margin: 0 -1em;
+  margin: 0 -1em 1em;
   padding: 1em  1em 0;
   border-top: solid 1px #fff;
   border-bottom: solid 1px #fff;

@@ -1007,7 +1007,7 @@ h3, .gamma, .title--album {
 }
 
 /* line 20, ../vendor/inuit.css/base/_headings.scss */
-h4, .delta {
+h4, .delta, .title--tracks {
   font-size: 20px;
   font-size: 1rem;
   line-height: 1.4;
@@ -3661,14 +3661,14 @@ h3, .gamma, .title--album {
 }
 
 /* line 36, ../scss/ui/extentions/base/_headings.scss */
-h4, .delta {
+h4, .delta, .title--tracks {
   font-size: 16.66667px;
   font-size: 0.83333rem;
   line-height: 1.4;
 }
 @media only screen and (min-width: 481px) {
   /* line 36, ../scss/ui/extentions/base/_headings.scss */
-  h4, .delta {
+  h4, .delta, .title--tracks {
     font-size: 20px;
     font-size: 1rem;
     line-height: 1.4;
@@ -3914,11 +3914,11 @@ h6, .zeta {
   }
 }
 /* line 20, ../scss/ui/modules/_post.scss */
-.post .post__header .title, .post .post__header .title--article, .post .post__header .title--widget, .post .post__header .title--album {
+.post .post__header .title, .post .post__header .title--article, .post .post__header .title--widget, .post .post__header .title--album, .post .post__header .title--tracks {
   margin-bottom: 0;
 }
 /* line 22, ../scss/ui/modules/_post.scss */
-.post .post__header .title a, .post .post__header .title--article a, .post .post__header .title--widget a, .post .post__header .title--album a {
+.post .post__header .title a, .post .post__header .title--article a, .post .post__header .title--widget a, .post .post__header .title--album a, .post .post__header .title--tracks a {
   text-decoration: none;
 }
 @media only screen and (min-width: 1024px) {
@@ -4026,7 +4026,7 @@ h6, .zeta {
  * Remove the margin and uderline
  */
 /* line 9, ../scss/ui/modules/_title.scss */
-.title, .title--article, .title--widget, .title--album {
+.title, .title--article, .title--widget, .title--album, .title--tracks {
   text-decoration: none;
   margin-bottom: 0;
 }
@@ -4049,6 +4049,12 @@ h6, .zeta {
 
 /* line 30, ../scss/ui/modules/_title.scss */
 .title--album {
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* line 37, ../scss/ui/modules/_title.scss */
+.title--tracks {
   font-weight: normal;
   font-style: italic;
 }
@@ -4198,13 +4204,13 @@ and open the template in the editor.
   margin-bottom: 1em;
 }
 /* line 26, ../scss/ui/modules/_album.scss */
-.album__image img {
+.album__image .image--album {
   border: solid 1px #fff;
 }
 
 /* line 32, ../scss/ui/modules/_album.scss */
 .album__review {
-  margin: 0 -1em;
+  margin: 0 -1em 1em;
   padding: 1em  1em 0;
   border-top: solid 1px #fff;
   border-bottom: solid 1px #fff;
@@ -4224,7 +4230,7 @@ and open the template in the editor.
   font-size: 0.9em;
 }
 
-/* line 17, ../scss/ui/modules/_review.scss */
+/* line 18, ../scss/ui/modules/_review.scss */
 .review__cite {
   text-align: right;
   display: block;
@@ -4448,6 +4454,6 @@ and open the template in the editor.
     Author     : Richard
 */
 /* line 11, ../scss/ui/states/_box-shadow.scss */
-.box-shadow--soft, .album__image img {
+.box-shadow--soft, .album__image .image--album {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 }
