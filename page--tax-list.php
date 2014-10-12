@@ -10,17 +10,11 @@ get_header();
       <?php while (have_posts()) : the_post(); ?>
         <?php get_template_part('templates/content', 'page--tax'); ?>
         <?php $tax = the_field('taxonomy'); ?>
-        <?php
-        // If comments are open or we have at least one comment, load up the comment template
-        // And we allow comments on pages.
-        if ((comments_open() || '0' != get_comments_number()) && AC_PAGE_COMMENTS === TRUE) :
-          ?>
-          <?php // comments_template(); ?>
-
-        <?php endif; ?>
       <?php endwhile; // end of the loop.  ?>
       <div class="albums-list grid">
-        <?php foreach (get_categories(array('taxonomy' => 'album')) as $album): ?>
+        <?php $albums = ac_tax_loop(); ?>
+
+        <?php foreach ($albums as $album): ?>
           <div class="albums-list__album">
             <div class="album" >
               <pre style="display:none;">
@@ -54,7 +48,7 @@ get_header();
                   </blockquote>
                 </div>
               <?php endif; ?>
-              <?php query_posts(array('album' => $album->category_nicename, 'posts_per_page' => -1)); ?>
+              <?php query_posts(array('album' => $album->category_nicename, 'posts_per_page' => -1, 'order' => 'ASC')); ?>
               <?php if (have_posts()) : ?>
                 <div class="album__track-list">
                   <div class="track-list--tax">
