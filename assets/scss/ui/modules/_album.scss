@@ -11,7 +11,7 @@ and open the template in the editor.
 .album{
   padding: 0 1em 1em;
   border: solid 1px #fff;
-  height: 800px;
+
   background: rgba(darken($brand-col-2,10%), .6);
 }
 .album__title{
@@ -39,6 +39,5 @@ and open the template in the editor.
 
 }
 .album__track-list{
-  height: 150px;
-  overflow: auto;
+
 }
