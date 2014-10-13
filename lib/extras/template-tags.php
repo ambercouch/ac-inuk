@@ -161,14 +161,8 @@ if (!function_exists('ac_inuk_comment')) :
   add_action('edit_category', 'ac_inuk_category_transient_flusher');
   add_action('save_post', 'ac_inuk_category_transient_flusher');
 
-  function ac_tax_loop() {
-    $args = array('orderby' => 'ac_date_field_release',
-        'taxonomy' => 'album');
+  function ac_tax_loop($tax = 'album') {
+    $args = array('taxonomy' => $tax);
 
-    $taxs = get_categories($args);
-    foreach ($taxs as $key => $term) {
-      $tax_sort[strtotime(get_tax_meta($term->term_id, 'ac_date_field_release'))] = $taxs[$key];
-    }
-    arsort($tax_sort);
-    return $tax_sort;
+    return get_categories($args);
   }
