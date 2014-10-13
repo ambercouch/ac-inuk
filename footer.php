@@ -17,7 +17,7 @@
     <div class="grid">
       <div class="footer--master__site-info" >
         <div class="site-info">
-          <a href="mailto:info@timarnold.co.uk" title="contact">info@timarnold.co.uk</a>
+          <small>&COPY; Tim Arnold | <a href="mailto:info@timarnold.co.uk" title="contact">info@timarnold.co.uk</a> | <a href="http://ambercouch.co.uk" >Ambercouch Website Design Cardiff</a></small>
         </div><!-- .site-info -->
       </div>
     </div>

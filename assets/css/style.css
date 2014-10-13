@@ -3564,7 +3564,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 28, ../scss/ui/_typography.scss */
-.sub-text, .review__body, .review__cite {
+.sub-text, .album__track-list ol, .review__body, .review__cite {
   font-size: 0.947em;
 }
 
@@ -4219,6 +4219,11 @@ and open the template in the editor.
   margin: 0 -1em 1em;
   padding: 1em  1em 0;
   border-bottom: solid 1px #fff;
+}
+
+/* line 42, ../scss/ui/modules/_album.scss */
+.album__track-list ol {
+  margin-left: 1em;
 }
 
 /*
