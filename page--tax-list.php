@@ -22,12 +22,16 @@ get_header();
               </pre>
               <div class="album__title">
                 <h1 class="title--album" ><?php echo $album->name; ?></h1>
+                <small class="album__genre"><?php echo substr(get_tax_meta($album->term_id, 'ac_date_field_release'), -4);
+              echo (get_tax_meta($album->term_id, 'ac_text_field_genre') == '') ? '' : ' | ' . get_tax_meta($album->term_id, 'ac_text_field_genre');
+                ?> </small>
+
               </div>
 
               <div class="album__image">
                 <?php $img = get_tax_meta($album->term_id, 'ac_image_field_album_cover'); ?>
 
-                <?php if (get_tax_meta($album->term_id, 'ac_text_field_i_tunes') != '') : ?>
+  <?php if (get_tax_meta($album->term_id, 'ac_text_field_i_tunes') != '') : ?>
 
                   <a href="<?php echo get_tax_meta($album->term_id, 'ac_text_field_i_tunes'); ?>" >
                     <img class="image--album" src="<?php echo $img['src']; ?>" alt="<?php echo $album->name; ?>" >
@@ -38,9 +42,9 @@ get_header();
                   </a>
                 <?php else: ?>
                   <img class="image--album" src="<?php echo $img['src']; ?>" alt="<?php echo $album->name; ?>" >
-                <?php endif; ?>
+              <?php endif; ?>
               </div>
-              <?php if ($album->description != '') : ?>
+  <?php if ($album->description != '') : ?>
                 <div class="album__review">
                   <blockquote class="review">
                     <p class="review__body"> <?php echo $album->description; ?></p>
@@ -49,7 +53,7 @@ get_header();
                 </div>
               <?php endif; ?>
               <?php query_posts(array('album' => $album->category_nicename, 'posts_per_page' => -1, 'order' => 'ASC')); ?>
-              <?php if (have_posts()) : ?>
+  <?php if (have_posts()) : ?>
                 <div class="album__track-list">
                   <div class="track-list--tax">
                     <h3 class="title--tracks">Tracks</h3>
@@ -60,14 +64,14 @@ get_header();
                         <?php else : ?>
                           <li><?php the_title(); ?></li>
                         <?php endif; ?>
-                      <?php endwhile; ?>
+    <?php endwhile; ?>
                     </ol>
                   </div>
                 </div>
-              <?php endif; ?>
+  <?php endif; ?>
             </div><!-- .album -->
           </div><!-- .albums-list__album -->
-        <?php endforeach; ?>
+<?php endforeach; ?>
       </div>
 
     </div><!-- /.site-content -->

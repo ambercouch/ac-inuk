@@ -17,7 +17,11 @@ and open the template in the editor.
 .album__title{
   border-bottom: solid 1px #fff;
   margin: 0 -1em 1em;
-  padding: 1em  ;
+  padding: 1em;
+}
+.album__genre{
+  float: right;
+  line-height: 33px;
 }
 .album__image{
   text-align: center;
