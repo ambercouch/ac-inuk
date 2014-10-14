@@ -22,9 +22,10 @@ get_header();
               </pre>
               <div class="album__title">
                 <h1 class="title--album" ><?php echo $album->name; ?></h1>
-                <small class="album__genre"><?php echo substr(get_tax_meta($album->term_id, 'ac_date_field_release'), -4);
-              echo (get_tax_meta($album->term_id, 'ac_text_field_genre') == '') ? '' : ' | ' . get_tax_meta($album->term_id, 'ac_text_field_genre');
-                ?> </small>
+                <small class="album__genre"><?php
+                  echo substr(get_tax_meta($album->term_id, 'ac_date_field_release'), -4);
+                  echo (get_tax_meta($album->term_id, 'ac_text_field_genre') == '') ? '' : ' | ' . get_tax_meta($album->term_id, 'ac_text_field_genre');
+                  ?> </small>
 
               </div>
 
@@ -35,10 +36,16 @@ get_header();
 
                   <a href="<?php echo get_tax_meta($album->term_id, 'ac_text_field_i_tunes'); ?>" >
                     <img class="image--album" src="<?php echo $img['src']; ?>" alt="<?php echo $album->name; ?>" >
-                    <p>
-                      <img class="alignnone size-medium wp-image-10" src="/content/uploads/2014/10/itunes.svg" alt="itunes" />
-                      <br>Download on itunes
-                    </p>
+    <?php if (get_tax_meta($album->term_id, 'ac_text_field_download_text') == '') : ?>
+                      <p>
+                        <img class="alignnone size-medium wp-image-10" src="/content/uploads/2014/10/itunes.svg" alt="itunes" />
+                        <br>Download on itunes
+                      </p>
+                      <?php else : ?>
+                      <p>
+                      <?php echo get_tax_meta($album->term_id, 'ac_text_field_download_text'); ?>
+                      </p>
+                  <?php endif; ?>
                   </a>
                 <?php else: ?>
                   <img class="image--album" src="<?php echo $img['src']; ?>" alt="<?php echo $album->name; ?>" >
