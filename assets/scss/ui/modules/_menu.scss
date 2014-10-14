@@ -32,6 +32,29 @@
     }
   }
 }
+.menu--top-right__menu-list{
+  @extend .menu;
+  @extend .nav--banner;
+  margin-bottom: 0;
+  a[rel] svg{
+    width:25px;
+    height: 25px;
+    margin: 0 5px;
+  }
+}
+.menu--top-right__container{
+
+  display: none;
+  @include media-query(lap-and-up){
+    display: block;
+  }
+  @include media-query(desk){
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+  }
+
+}
 
 
 %has-sep{

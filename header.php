@@ -28,13 +28,14 @@
   <body <?php body_class(); ?> <?php ac_body_data(); ?>>
 
     <div style="display:none;">
-<?php include_once("assets/images/defs.svg"); ?>
+      <?php include_once("assets/images/defs.svg"); ?>
     </div>
-        <?php (AC_MENU_ABOVE_HEADER === TRUE) ? get_template_part('templates/snippets/site__navigation--main') : ''; ?>
+    <?php (AC_MENU_ABOVE_HEADER === TRUE) ? get_template_part('templates/snippets/site__navigation--main') : ''; ?>
+    <?php get_template_part('templates/snippets/site__navigation--social'); ?>
     <div id="page" class="hfeed site">
       <div class="sticky__wrapper">
-<?php do_action('before'); ?>
+        <?php do_action('before'); ?>
 
-<?php (AC_MENU_ABOVE_HEADER === FALSE) ? get_template_part('templates/snippets/site__navigation--main') : ''; ?>
+        <?php (AC_MENU_ABOVE_HEADER === FALSE) ? get_template_part('templates/snippets/site__navigation--main') : ''; ?>
         <div class="site__content" id="main" >
           <div class="content">

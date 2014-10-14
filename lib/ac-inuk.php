@@ -12,6 +12,7 @@ require( get_template_directory() . '/lib/ac-widget-areas.php' );
 require( get_template_directory() . '/lib/ac-enqueue.php' );
 require( get_template_directory() . '/lib/ac-body-data.php' );
 require( get_template_directory() . '/lib/ac-custom-post-types.php' );
+require( get_template_directory() . '/lib/ac-nav-menu-filter.php' );
 
 /**
  * Implement the Custom Header feature

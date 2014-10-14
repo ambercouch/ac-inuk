@@ -24,7 +24,7 @@
                     <use xlink:href="#icon-timarnold-logo" />
                     </svg>
                     <!-- <svg preserveAspectRatio="none" class="icon site-title__icon--desk ">
-                    <use xlink:href="<?php //echo '/content/themes/ac-inuk/assets/images/defs.svg';                  ?>#icon-cdc_logo_strap" />
+                    <use xlink:href="<?php //echo '/content/themes/ac-inuk/assets/images/defs.svg';                    ?>#icon-cdc_logo_strap" />
                     </svg> -->
                   </a>
                 </div>
@@ -33,6 +33,7 @@
             </div><!-- /.branding -->
             <a id="site_menu_toggle" class="menu--responsive-toggle__toggle" href="#menu">Menu</a>
             <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'menu--site__container', 'menu_class' => 'menu--site__menu-list')); ?>
+
           </div>
           <!-- menu -->
         </div>
