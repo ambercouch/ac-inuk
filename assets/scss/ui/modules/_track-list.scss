@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 02-Nov-2014, 20:06:06
+    Author     : Richard
+*/
+
+.track-list{
+
+}
+.track-list__title{
+  font-weight: 500;
+  font-style: italic;
+  cursor: pointer;
+  @include x-rem(font-size,1);
+  .icon{
+    width:10px;
+    height:10px;
+    margin-left: 0.5em;
+  }
+}
+
+.track-list__title__icon__closed{
+  display: inline-block;
+  .open &{
+    display: none;
+  }
+}
+.track-list__title__icon__open{
+  display: none;
+  .open &{
+    display: inline-block;
+  }
+}
+.track-list__list{
+  transition: max-height 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 0;
+  &.open{
+    transition: max-height 0.3s ease;
+    max-height: 23em;
+  }
+}
