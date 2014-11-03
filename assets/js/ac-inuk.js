@@ -1,7 +1,16 @@
 ACINUK = {
   common: {
-    init: function() {
+    init: function () {
       console.log('common');
+
+      jQuery('[data-js="slideToggle"]').on('click', function (e) {
+        //el.addClass('open');
+        jQuery(this).toggleClass('open');
+        jQuery(this).next().toggleClass('open');
+
+
+      });
+
 
       if (jQuery('#nav-main').data('responsive-clone')) {
         $clone_nav = jQuery('#nav-main').clone();
@@ -10,7 +19,7 @@ ACINUK = {
 
         $clone_nav.prependTo('body');
 
-        els = jQuery('#nav-responsive *').each(function() {
+        els = jQuery('#nav-responsive *').each(function () {
           if (jQuery(this).attr('id')) {
             id = jQuery(this).attr('id');
             jQuery(this).attr('id', id + '-clone');
@@ -35,7 +44,7 @@ ACINUK = {
         jQuery('body').css('margin-top', container_height);
       }
 
-      $menulink.click(function() {
+      $menulink.click(function () {
 
         $menulink.toggleClass('active');
         $menu.toggleClass('active');
@@ -44,7 +53,7 @@ ACINUK = {
         return false;
       });
 
-      jQuery('p').each(function(i) {
+      jQuery('p').each(function (i) {
         if (jQuery(this).text() == '') {
           jQuery(this).addClass('is-empty');
         }
@@ -53,18 +62,37 @@ ACINUK = {
     }
   },
   page: {
-    init: function() {
+    init: function () {
       console.log('all pages');
+    },
+    albums: function () {
+
+      $('.track-list__list').on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function () {
+        $('[data-js="isotope"]').isotope({
+          // options...
+          itemSelector: '[data-js="isotope__item"]',
+          masonry: {
+          }
+        });
+      });
+
+      console.log('albums');
+      $('[data-js="isotope"]').isotope({
+        // options...
+        itemSelector: '[data-js="isotope__item"]',
+        masonry: {
+        }
+      });
     }
   },
   post: {
-    init: function() {
+    init: function () {
       console.log('all posts');
     }
   }
 };
 UTIL = {
-  exec: function(template, handle) {
+  exec: function (template, handle) {
     var ns = ACINUK,
             handle = (handle === undefined) ? "init" : handle;
 
@@ -72,7 +100,7 @@ UTIL = {
       ns[template][handle]();
     }
   },
-  init: function() {
+  init: function () {
     var body = document.body,
             template = body.getAttribute('data-post-type'),
             handle = body.getAttribute('data-post-slug');
