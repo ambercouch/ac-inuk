@@ -49,6 +49,10 @@
       color: $brand-col-1--dark;
     }
   }
+  @include media-query(lap-and-up){
+    border-bottom: none !important;
+    border-top: none !important;
+  }
 }
 .menu--top-right__menu-list{
   @extend .menu;
