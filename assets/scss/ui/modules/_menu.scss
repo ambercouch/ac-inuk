@@ -5,6 +5,22 @@
 .menu--site{
   @extend .menu;
   @extend %menu--responsive-toggle;
+  .menu-item{
+    width: 49%;
+    display: inline-block !important;
+   
+    
+    @include media-query(lap-and-up){
+      width:auto;
+      background: transparent;
+    }
+    a{
+      border-bottom:none !important;
+    }
+  }
+  .menu--site__container.active{
+    background: rgba(#fff, 0.2);
+  }
 
 }
 .menu--site__menu-list{
@@ -13,6 +29,8 @@
   @extend .multi-dropdown;
   @extend %has-sep;
   visibility: visible;
+  border-top:solid 1px #fff !important;
+  border-bottom:solid 1px #fff !important;
   .logged-in &{
     visibility: visible;
 
