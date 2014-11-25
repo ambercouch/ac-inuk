@@ -76,7 +76,14 @@ module.exports = function (grunt) {
         //your_target: {
 
       }
-    }//svgstore
+    },//svgstore
+    uglify: {
+      my_target: {
+        files: {
+          'assets/js/plugins.js': ['assets/vendor/isotope/dist/isotope.pkgd.js']
+        }
+      }
+    }
   });
 
   // 3. Where we tell Grunt we plan to use this plug-in.
