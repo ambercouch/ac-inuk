@@ -18,11 +18,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
     <![endif]-->
     <?php wp_head(); ?>
-    <script src="//use.typekit.net/vzt7jdb.js"></script>
-    <script>try {
-        Typekit.load();
-      } catch (e) {
-      }</script>
+
   </head>
 
   <body <?php body_class(); ?> <?php ac_body_data(); ?>>
