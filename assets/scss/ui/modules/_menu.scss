@@ -5,6 +5,9 @@
 .menu--site{
   @extend .menu;
   @extend %menu--responsive-toggle;
+  @include media-query(lap-and-up){
+    margin: 1.5em 0 0.5em;
+  }
   .menu-item{
     width: 49%;
     display: inline-block !important;
@@ -13,6 +16,7 @@
     @include media-query(lap-and-up){
       width:auto;
       background: transparent;
+      
     }
     a{
       border-bottom:none !important;
