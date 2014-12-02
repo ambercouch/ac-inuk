@@ -66,14 +66,19 @@
 }
 .menu--top-right__container{
 
-  display: none;
+  display: block;
+  position: absolute;
+  left: .5em;
+  top: .5em;
   @include media-query(lap-and-up){
     display: block;
+    position: inherit;
   }
   @include media-query(desk){
     position: absolute;
     right: .5em;
     top: .5em;
+    left: auto;
   }
 
 }
