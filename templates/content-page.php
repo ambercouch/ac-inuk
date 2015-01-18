@@ -8,11 +8,9 @@
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
   <header class="page__header">
-    <div class="header--article">
-      <h1 class="header">
-        <span class="title--article" ><?php the_title(); ?></span>
-      </h1>
-    </div>
+    <h1 class="header--article">
+      <span class="header--article__title" ><?php the_title(); ?></span>
+    </h1>
   </header><!-- .entry-header -->
 
   <div class="page__content">

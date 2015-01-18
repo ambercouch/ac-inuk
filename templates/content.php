@@ -6,11 +6,15 @@
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
   <header class="post__header">
-    <div class="header--article">
-      <h1 class="header--article__title">
+    <div class="header--article <?php echo (has_post_thumbnail()) ? 'has-post-thumbnail' : ''; ?>">
+      <?php if (has_post_thumbnail()) : ?>
+        <div class="header--article__post-thumb">
+          <?php the_post_thumbnail(); ?>
+        </div>
+      <?php endif; ?>
+      <h1 class="header--article__title has-meta ">
         <a class="title--article" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
       </h1>
-
       <?php if ('post' == get_post_type()) : ?>
         <div class="header--article__meta--header">
           <div class="meta--header" >

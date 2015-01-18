@@ -14,9 +14,14 @@
     <title><?php wp_title('|', true, 'right'); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <!--[if lt IE 9]>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-    <![endif]-->
+    <script src="//use.typekit.net/keo4usu.js"></script>
+    <script>try {
+        Typekit.load();
+      } catch (e) {
+      }</script>
+    <!--[if lt IE 9] >
+    < script src = "<?php echo get_template_directory_uri(); ?>/js/html5.js" type = "text/javascript" ></script>
+  <![endif]-->
 
     <?php wp_head(); ?>
   </head>
@@ -30,7 +35,7 @@
             <div class="header--master__branding">
               <div class="branding">
                 <?php if (is_home() || is_front_page()) : ?>
-                  <h1 class="branding__title"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+                  <h1 class="branding__title"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/studio22-logo.png" /></a></h1>
                   <h2 class="branding__description"><?php bloginfo('description'); ?></h2>
                 <?php else : ?>
                   <div class="branding__title"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a></div>
@@ -38,6 +43,9 @@
                 <?php endif; ?>
               </div><!-- /.branding -->
             </div><!-- /.header__branding -->
+            <!-- header-aside -->
+            <?php get_template_part('templates/snippets/header-aside'); ?>
+            <!-- /.header-aside -->
           </div><!-- /.grid -->
         </div><!-- /.header -->
       </header><!-- /.site__header -->
@@ -55,4 +63,9 @@
         </div><!-- /.container -->
       </div><!-- #site-navigation -->
       <div class="site__content" id="main" >
+        <?php if ((is_page() && get_the_post_thumbnail($post->ID, 'full') != '') || is_front_page()) : ?>
+          <div class="site__content__header-image">
+            <?php echo (is_front_page()) ? "<img src='" . get_template_directory_uri() . "/assets/images/jpg/cardiff-bands1.jpg' />" : get_the_post_thumbnail($post->ID, 'full') ?>
+          </div>
+        <?php endif; ?>
         <div class="content">

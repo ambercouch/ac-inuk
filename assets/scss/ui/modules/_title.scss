@@ -14,6 +14,7 @@
 /* colours for the article titles */
 .title--article{
   @extend .title;
+  font-family: "gooddog-new";
   color: $brand-col-2;
   &:hover{
     color: $brand-col-1;

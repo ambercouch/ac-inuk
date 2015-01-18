@@ -14,13 +14,17 @@
   margin-bottom: 0;
   a{
     text-decoration: none;
-    color: $brand-col-1;
+    color: #fff;
     background: $brand-col-4;
     text-decoration:none !important;
     &:hover{
       background: darken($brand-col-4, 10%);
       text-decoration:none !important;
     }
+  }
+  .current-menu-item > a {
+    background: darken($brand-col-4, 10%);
+    text-decoration:none !important;
   }
 }
 

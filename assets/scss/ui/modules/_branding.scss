@@ -8,6 +8,12 @@
     a{
       color: $brand-col-2;
       text-decoration: none;
+
+      display: block;
+      width:317px;
+      line-height: 0;
+      max-width: 100%;
+
     }
   }
   .branding__description{

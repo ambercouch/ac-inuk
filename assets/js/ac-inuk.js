@@ -3,6 +3,13 @@ ACINUK = {
     init: function() {
       console.log('common');
 
+
+
+      // Target your .container, .wrapper, .post, etc.
+      jQuery(".post").fitVids();
+
+
+
       $clone_nav = jQuery('#nav-main').clone();
       jQuery('#nav-main').clone();
       $clone_nav.attr('id', 'nav-responsive');
