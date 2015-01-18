@@ -1,0 +1,40 @@
+.menu-social-container{
+  .menu{
+    @extend .nav--fit;
+    @extend .nav--block;
+
+    @include media-query(palm){
+      .menu-item {
+        display: block !important;
+      }
+    }
+    text-align: center;
+    a{
+      color: #fff;
+      text-decoration: none;
+      text-shadow: 0 1px 0 rgba(#000, 0.3);
+      font-weight: 700;
+    }
+    .menu-item--twitter{
+      background: $twitter-blue;
+      a:hover{
+        background: lighten( $twitter-blue, 5% );
+      }
+    }
+    .menu-item--facebook{
+      background: $fb-blue;
+      a:hover{
+        background: lighten( $fb-blue, 5% );
+      }
+    }
+    .menu-item--bud{
+      background: $youth-service-pink;
+      a:hover{
+        background: lighten( $youth-service-pink, 5% );
+      }
+    }
+
+
+  }
+}
+
