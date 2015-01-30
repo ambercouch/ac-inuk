@@ -4378,6 +4378,89 @@ and open the template in the editor.
   max-height: 23em;
 }
 
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30-Jan-2015, 23:07:56
+    Author     : Richard
+*/
+/* line 11, ../scss/ui/modules/_gigs.scss */
+[id=cal_nav] {
+  background: rgba(170, 179, 205, 0.6);
+}
+
+/* line 14, ../scss/ui/modules/_gigs.scss */
+#cal_nav strong {
+  background: #8e6f45 !important;
+}
+
+/* line 17, ../scss/ui/modules/_gigs.scss */
+#cal_nav a {
+  background: #cdb28b !important;
+}
+
+/* line 20, ../scss/ui/modules/_gigs.scss */
+#cal_nav a:hover {
+  background: #b68e55 !important;
+}
+
+/* line 23, ../scss/ui/modules/_gigs.scss */
+.end-date {
+  background: #cdb28b !important;
+}
+
+/* line 26, ../scss/ui/modules/_gigs.scss */
+#cal .month {
+  margin-bottom: 0 !important;
+}
+
+/* line 29, ../scss/ui/modules/_gigs.scss */
+.page__content #cal .year {
+  padding: 0.25em 0;
+  color: #fff !important;
+  background: #b68e55 !important;
+}
+
+/* line 34, ../scss/ui/modules/_gigs.scss */
+#cal .weekday {
+  background: #8e6f45 !important;
+}
+
+/* line 37, ../scss/ui/modules/_gigs.scss */
+#cal .info_block {
+  background: rgba(170, 179, 205, 0.6);
+  padding: 0.5em 1em !important;
+  position: relative;
+}
+
+/* line 42, ../scss/ui/modules/_gigs.scss */
+span.details {
+  float: none !important;
+  display: block;
+}
+
+/* line 46, ../scss/ui/modules/_gigs.scss */
+a.tickets-button {
+  background: #CAD0E0 !important;
+  color: #fff;
+  float: none !important;
+  font-weight: bold;
+  padding: 5px;
+  text-decoration: none;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  margin: 0 !important;
+}
+
+/* line 58, ../scss/ui/modules/_gigs.scss */
+a.tickets-button[href=""] {
+  display: none !important;
+}
+
 /* line 4, ../scss/ui/modules/navigation/_responsive-toggle.scss */
 .menu--site .menu--responsive-toggle__toggle {
   float: right;

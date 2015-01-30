@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30-Jan-2015, 23:07:56
+    Author     : Richard
+*/
+
+[id=cal_nav]{
+  background: rgba(darken($brand-col-2,10%), .6);
+}
+#cal_nav strong{
+  background: $brand-col-1--dark !important;
+}
+#cal_nav a{
+   background: $brand-col-1--light !important;
+}
+#cal_nav a:hover{
+   background: $brand-col-1 !important;
+}
+.end-date{
+   background: $brand-col-1--light !important;
+}
+#cal .month{
+  margin-bottom: 0 !important;
+}
+.page__content #cal .year{
+  padding: 0.25em 0;
+  color: #fff !important;
+   background: $brand-col-1 !important;
+}
+#cal .weekday{
+  background: $brand-col-1--dark !important;
+}
+#cal .info_block{
+  background: rgba(darken($brand-col-2,10%), .6);
+  padding: 0.5em 1em !important;
+  position: relative;
+}
+span.details {
+    float: none !important;
+    display: block;
+}
+a.tickets-button {
+    background: $brand-col-2 !important;
+    color: #fff;
+    float:none !important;
+    font-weight: bold;
+    padding: 5px;
+    text-decoration: none;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    margin: 0 !important;
+}
+a.tickets-button[href=""] {
+    display: none !important;
+}

@@ -76,6 +76,7 @@ $ta-gold: #b68e55;
 $ta-gold--dark:  #8e6f45;
 $ta-pale-blue: #CAD0E0;
 $brand-col-1: $ta-gold;
+$brand-col-1--light: lighten($ta-gold, 15%);
 $brand-col-1--dark: $ta-gold--dark;
 $brand-col-2: $ta-pale-blue;
 $brand-col-3: #666;
