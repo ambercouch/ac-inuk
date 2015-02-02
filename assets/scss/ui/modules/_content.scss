@@ -21,3 +21,9 @@
   @extend .lap-one-third;
   @extend .desk-one-fifth;
 }
+.contnet--subsidiary{
+  @extend .content;
+}
+.contnet--subsidiary__widget-area{
+  @extend .grid;
+}

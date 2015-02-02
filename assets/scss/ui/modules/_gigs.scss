@@ -55,6 +55,8 @@ a.tickets-button {
     top: -3px;
     margin: 0 !important;
 }
-a.tickets-button[href=""] {
+a.tickets-button{
+  &[href=""],[href="#"]{
     display: none !important;
+}
 }
