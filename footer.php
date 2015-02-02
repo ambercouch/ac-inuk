@@ -8,6 +8,14 @@
  */
 ?>
 </div><!-- .content -->
+<div class="contnet--subsidiary">
+  <div id="subsidiary" class="contnet--subsidiary__widget-area sidebar" role="complementary">
+    <div class="widget-area" >
+      <?php do_action('before_sidebar'); ?>
+      <?php if (!dynamic_sidebar('subsidiary-aside')) : ?><?php endif; // end sidebar widget area ?>
+    </div>
+  </div><!-- #secondary -->
+</div>
 </div><!-- .site__content-->
 <div class="sticky__push"></div><!-- Push that footer -->
 </div><!-- .sticky__wrapper -->
