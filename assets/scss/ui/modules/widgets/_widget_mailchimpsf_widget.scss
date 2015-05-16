@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-Feb-2015, 19:50:30
+    Author     : Richard
+*/
+.widget_mailchimpsf_widget{
+  margin: 0 auto;
+    max-width: 350px;
+    .mc_var_label{
+      font-style: italic;
+    }
+    #mc_signup_submit {
+      transition: background 0.3s ease;
+    background: $brand-col-2--dark;
+    border: medium none;
+    color: #fff;
+    margin-top: 0;
+    padding: 0.25em;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(#000,0.2);
+    font-style: italic;
+    &:hover{
+      background: darken($brand-col-2--dark, 5%);
+      text-shadow: 0 1px 0 rgba(#000, 0.5);
+      box-shadow: 0 0 3px rgba(#000,0.3);
+    }
+    
+    }
+    #mc_signup_form .mc_input {
+    border: medium none;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1) inset;
+    padding: 0.25em 1em;
+    color: $brand-col-1--dark;
+    font-style: italic;
+}
+}
+

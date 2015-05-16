@@ -32,4 +32,10 @@ body{
     width: 90%
   }
 }
+#subsidiary{
+  //display:none;
+  .logged-in &{
+    display: block;
+  }
+}
 
