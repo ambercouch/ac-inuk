@@ -55,12 +55,14 @@ get_header();
                     <img class="image--album" src="<?php echo $img['src']; ?>" alt="<?php echo $album->name; ?>">
                   <?php endif; ?>
                   <?php if (get_tax_meta($album->term_id, 'ac_text_field_paypal') != '') : ?>
+                        <div class="album__paypal">
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                       <input type="hidden" name="cmd" value="_s-xclick">
                       <input type="hidden" name="hosted_button_id" value="<?php echo get_tax_meta($album->term_id, 'ac_text_field_paypal'); ?>">
                       <input type="image" src="/content/themes/ac-inuk/assets/images/svg/buynow.svg" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
                       <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
                     </form>
+                        </div>
                   <?php endif ?>
                   </div>
                 </div>
