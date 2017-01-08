@@ -24,6 +24,17 @@ module.exports = function (grunt) {
         }
       }
     },
+      sass: {
+          options: {
+              sourceMap: true,
+              outputStyle: 'compressed'
+          },
+          dist: {
+              files: {
+                  'assets/css/style.css': 'assets/scss/style.scss'
+              }
+          }
+      },
     cssmin: {
       build: {
         files: {
@@ -95,9 +106,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-svgstore');
+  grunt.loadNpmTasks('grunt-sass');
 
 
-  // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['compass', 'autoprefixer', 'cssmin']);
+
+    // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin']);
 
 };

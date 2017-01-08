@@ -13,5 +13,5 @@
 }
 .site__footer{
   padding: $base-spacing-unit 0;
-  background: rgba(tint($brand-col-1, 20%), 0.8);
+  background: rgba(lighten($brand-col-1, 20%), 0.8);
 }
