@@ -65,6 +65,11 @@ get_header();
                         <input type="image" src="/content/themes/ac-inuk/assets/images/svg/buynow.svg" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
                         <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
                       </form>
+                      <?php if (get_tax_meta($album->term_id, 'ac_text_field_paypal_text') != '') : ?>
+                          <p><?php echo get_tax_meta($album->term_id, 'ac_text_field_paypal_text') ?></p>
+                          <?php else: ?>
+                          <p>Available on CD</p>
+                    <?php endif; ?>
                     </div>
                   <?php endif ?>
                 <?php if ($album->description != '') : ?>
