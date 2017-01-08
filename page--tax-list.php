@@ -75,7 +75,7 @@ get_header();
                 <?php if ($album->description != '') : ?>
                   <div class="album__review">
                     <blockquote class="review">
-                      <p class="review__body"> <?php echo $album->description; ?></p>
+                      <q class="review__body"> <?php echo $album->description; ?></q>
                       <cite
                         class="review__cite"><?php echo get_tax_meta($album->term_id, 'ac_text_field_cite') ?></cite>
                     </blockquote>
